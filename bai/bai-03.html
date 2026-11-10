@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="vi">
-<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ôn tập HSK1 Bài 3</title>
@@ -254,8 +253,6 @@ footer{margin-top:46px; padding-top:18px; border-top:1px solid var(--line);
 .jumps a{font-size:13px; font-weight:700; text-decoration:none; padding:4px 10px; border-radius:6px;
   background:var(--cin-soft); color:var(--cin); border:1px solid var(--cin)}
 </style>
-</head>
-<body>
 
 <nav class="rail" aria-label="Năm tầng ôn tập">
   <div class="rail-in">
@@ -484,7 +481,7 @@ const TYPE = [
    {lbl:'姐姐', any:['姐姐'], tip:'Dùng đúng từ 姐姐 (chị gái) của bài này.'}],
   model:'这是我姐姐。',
   why:'Khung ba ô: <b>这</b> + <b>是</b> + <b>我姐姐</b>. Trước người thân thì bỏ 的 cho tự nhiên — người Trung nói 我姐姐 nhiều hơn 我的姐姐, tuy viết 这是我的姐姐 cũng không sai.',
-  more:'这是我的姐姐。 · 她是我姐姐。 · 这是我姐姐，她是老师。 · 这是我女朋友。 · 她是我们老师。',
+  more:'这是我的姐姐。 · 她是我姐姐。 · 她是我的姐姐。 · 这是我姐姐，她是老师。 · 这是我姐姐，她很忙。',
   avoid:[{z:'这姐姐',     w:'Thiếu động từ 是 ở ô giữa.'},
          {z:'姐姐是这',   w:'Sai thứ tự — 这 phải đứng đầu.'},
          {z:'这是谁姐姐', w:'谁 là từ HỎI, không dùng trong câu trả lời.'}]},
@@ -493,12 +490,12 @@ const TYPE = [
   ask:'她是哪国人？',
   need:[
    {lbl:'是', any:['是'], tip:'Tên nước + 人 là DANH TỪ nên bắt buộc dùng 是.'},
-   {lbl:'人', any:['人'], tip:'Phải có chữ 人 ở cuối. Thiếu nó thì 她是泰国 nghĩa thành "cô ấy là Thái Lan".'}],
+   {lbl:'泰国人', any:['泰国人'], tip:'Đề đã cho biết cô ấy là người Thái, nên phải viết đủ 泰国人 — thiếu chữ 人 thì 她是泰国 nghĩa thành "cô ấy là Thái Lan".'}],
   model:'她是泰国人。',
   why:'Ba ô: <b>她</b> (ai) + <b>是</b> (là) + <b>泰国人</b> (cái gì). Khung này dùng được cho mọi nước: 中国人 · 法国人 · 越南人. Chú ý dùng 她 vì đang nói về một người nữ.',
-  more:'她是中国人。 · 她是法国人。 · 她也是泰国人。 · 她不是中国人，她是泰国人。 · 我女朋友是泰国人。',
+  more:'她是泰国人。 · 她也是泰国人。 · 她不是中国人，她是泰国人。 · 我女朋友是泰国人。 · 陈天中的女朋友是泰国人。',
   avoid:[{z:'她很泰国人', w:'Sai đường ray — danh từ thì dùng 是, không dùng 很.'},
-         {z:'她是泰国',   w:'Thiếu chữ 人 ở cuối.'},
+         
          {z:'他是泰国人', w:'Sai chữ 他/她. Nói về người nữ thì viết 她 — hai chữ đọc giống hệt nhau, chỉ phân biệt khi VIẾT.'}]},
 
  {n:18, t:'Bạn tưởng em là giáo viên. Em là học sinh. Em sửa lại bằng một câu tiếng Trung.',
@@ -508,7 +505,7 @@ const TYPE = [
    {lbl:'学生', any:['学生'], tip:'Nói xong vế phủ định thì phải nói tiếp vế ĐÚNG cho người ta biết mình là ai.'}],
   model:'我不是老师，我是学生。',
   why:'Khuôn sửa thông tin của Bài 2, nay dùng lại với từ của Bài 1: <b>我不是⋯⋯，我是⋯⋯</b>. Nói vế SAI trước, vế ĐÚNG sau. 不 phải đứng TRƯỚC toàn bộ động từ 是 (✗我是不老师).<br>Đọc: 不是 đọc búshì — 不 đứng trước thanh 4 thì đổi thành bú.',
-  more:'不是，我是学生。 · 我不是老师，我是学生。 · 对不起，我不是老师。 · 我是学生，不是老师。 · 我不是，我是学生。',
+  more:'不是，我是学生。 · 我不是老师，我是学生。 · 对不起，我不是老师，我是学生。 · 我是学生，不是老师。 · 我不是，我是学生。',
   avoid:[{z:'我是不老师', w:'Sai vị trí 不 — phải đứng TRƯỚC 是.'},
          {z:'我不老师',   w:'Thiếu 是. 老师 là DANH TỪ nên bắt buộc có 是 nối vào.'},
          {z:'我很学生',   w:'Sai đường ray — 学生 là danh từ nên dùng 是, không dùng 很.'}]}
@@ -906,5 +903,4 @@ bSub.onclick=()=>{
 document.getElementById('reset').onclick=()=>{ try{ localStorage.removeItem(KEY); }catch(e){} location.reload(); };
 paintProgress();
 </script>
-</body>
-</html>
+

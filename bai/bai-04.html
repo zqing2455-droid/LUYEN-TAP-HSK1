@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="vi">
-<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ôn tập HSK1 Bài 4</title>
@@ -254,8 +253,6 @@ footer{margin-top:46px; padding-top:18px; border-top:1px solid var(--line);
 .jumps a{font-size:13px; font-weight:700; text-decoration:none; padding:4px 10px; border-radius:6px;
   background:var(--cin-soft); color:var(--cin); border:1px solid var(--cin)}
 </style>
-</head>
-<body>
 
 <nav class="rail" aria-label="Năm tầng ôn tập">
   <div class="rail-in">
@@ -484,7 +481,7 @@ const TYPE = [
    {lbl:'哥哥', any:['哥哥'], tip:'Nhắc lại chính danh từ 哥哥 của câu hỏi.'}],
   model:'我没有哥哥。',
   why:'Cặp cố định: <b>有 ↔ 没有</b>. Đây là động từ DUY NHẤT ở cấp 1 phủ định bằng 没. Và khi phủ định thì BỎ cụm số lượng đi — nói 我没有哥哥, không nói ✗我没有两个哥哥.',
-  more:'我没哥哥。 · 我没有哥哥。 · 我没有哥哥，我有一个姐姐。 · 没有，我有两个妹妹。 · 我家没有哥哥。',
+  more:'我没哥哥。 · 我没有哥哥。 · 我没有哥哥，我有一个姐姐。 · 我没有哥哥，我有两个妹妹。 · 我家没有哥哥。',
   avoid:[{z:'我不有哥哥', w:'Không tồn tại cách nói 不有 — lỗi nặng nhất của Bài 4.'},
          {z:'我有不哥哥', w:'Sai vị trí. 没 luôn đứng TRƯỚC động từ 有.'},
          {z:'我不哥哥',   w:'Thiếu động từ. 哥哥 là danh từ nên phải có 有 nối vào.'}]},
@@ -509,7 +506,7 @@ const TYPE = [
    {lbl:'和', any:['和'], tip:'Liệt kê thì chỉ mục CUỐI CÙNG mới dùng 和, các mục trước ngăn bằng dấu 、.'}],
   model:'我家有三口人，爸爸、妈妈和我。',
   why:'Hai phần: nêu SỐ trước (<b>我家有三口人</b>), rồi mới kể ra là ai (<b>爸爸、妈妈和我</b>). Em thay bằng gia đình thật của mình. Ba chỗ cần đúng: trước 家 bỏ 的, sau số có 口, và chỉ mục cuối mới dùng 和.',
-  more:'我家有四口人，爸爸、妈妈、妹妹和我。 · 我家有两口人，我和我姐姐。 · 我家有五口人。 · 我们家有三口人，爸爸、妈妈和我。 · 我家有三个人，爸爸、妈妈和我。',
+  more:'我家有四口人，爸爸、妈妈、妹妹和我。 · 我家有两口人，我和我姐姐。 · 我家有五口人，爸爸、妈妈、哥哥、妹妹和我。 · 我们家有三口人，爸爸、妈妈和我。 · 我家有三个人，爸爸、妈妈和我。',
   avoid:[{z:'我家有三人',       w:'Thiếu lượng từ 口.'},
          {z:'我的家有三口人',   w:'Trước 家 thì bỏ 的 cho tự nhiên: 我家。'},
          {z:'爸爸和妈妈和我',   w:'Dùng 和 nhiều lần. Chỉ mục cuối cùng mới dùng 和, các mục trước ngăn bằng dấu 、.'}]}
@@ -907,5 +904,4 @@ bSub.onclick=()=>{
 document.getElementById('reset').onclick=()=>{ try{ localStorage.removeItem(KEY); }catch(e){} location.reload(); };
 paintProgress();
 </script>
-</body>
-</html>
+
