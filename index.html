@@ -113,7 +113,8 @@ async function readLesson(n){
   const list=document.getElementById('list');
   list.innerHTML='<p class="meta">Đang tải danh sách bài…</p>';
   const found=[];
-  for(let n=1;n<=200;n++){ const l=await readLesson(n); if(!l) break; found.push(l); }
+  /* cho phép thiếu bài giữa chừng (ví dụ có bài 1 và 3, chưa có bài 2); dừng sau 3 bài trống liên tiếp */
+  for(let n=1,miss=0;n<=200&&miss<3;n++){ const l=await readLesson(n); if(l){ found.push(l); miss=0; } else miss++; }
   list.innerHTML='';
   if(!found.length){ list.innerHTML='<p class="meta">Chưa có bài nào. Hãy đặt file bai-01.html vào thư mục bai/.</p>'; return; }
   const newest=Math.max(...found.map(l=>l.so));
