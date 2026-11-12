@@ -79,13 +79,36 @@ footer{margin-top:44px; padding-top:16px; border-top:1px solid var(--line); font
   lần sau mở lại vẫn thấy mình đã làm tới đâu.</p>
 </header>
 
+<h2 class="sec">Học từ vựng qua flashcard</h2>
+<div class="list">
+  <a class="les" href="flashcard/" id="fcCard">
+    <div class="seal">词</div>
+    <div class="body">
+      <div class="meta">Bộ thẻ từ vựng<span class="new-tag">MỚI</span></div>
+      <div class="ttl">Học từ vựng qua flashcard</div>
+      <div class="tags"><span>Lật thẻ hai mặt</span><span>Nghe đọc</span>
+        <span>Mẹo nhớ chữ</span><span>Đánh dấu đã thuộc</span></div>
+    </div>
+    <div class="prog" id="fcNum">&nbsp;</div>
+  </a>
+</div>
+
+<h2 class="sec">Trò chơi ôn tập</h2>
+<div class="list">
+  <a class="les" href="tro-choi/" id="gCard">
+    <div class="seal">玩</div>
+    <div class="body">
+      <div class="meta">Trò chơi ôn tập<span class="new-tag">MỚI</span></div>
+      <div class="ttl">Vòng xoay câu hỏi</div>
+      <div class="tags"><span>Nhìn ảnh nói câu</span><span>Nói thành tiếng</span>
+        <span>Tự chấm nói được</span></div>
+    </div>
+    <div class="prog" id="gNum">&nbsp;</div>
+  </a>
+</div>
+
 <h2 class="sec">Các bài ôn</h2>
 <div class="list" id="list"></div>
-
-<div id="games" hidden>
-  <h2 class="sec">Trò chơi ôn tập</h2>
-  <div class="list" id="glist"></div>
-</div>
 
 <footer>Bài mới nhất nằm trên cùng.</footer>
 </div>
@@ -139,31 +162,31 @@ async function readLesson(n){
     list.append(a);
   });
 
-  /* ═════════ TRÒ CHƠI ÔN TẬP ═════════
-     Tự dò tro-choi/bai-01.html, bai-02.html, … (cũng cho phép thiếu giữa chừng). */
-  const zhOf={}; found.forEach(l=>zhOf[l.so]=l.zh);
-  const games=[];
-  for(let n=1,miss=0;n<=200&&miss<3;n++){
-    const f='tro-choi/bai-'+pad(n)+'.html';
-    let ok=false; try{ ok=(await fetch(f,{method:'HEAD'})).ok; }catch(e){}
-    if(ok){ games.push({so:n,file:f}); miss=0; } else miss++;
+})();
+
+/* Đếm số trò chơi trong thư mục tro-choi/ (cho phép thiếu bài giữa chừng) để hiện lên thẻ dẫn đường. */
+(async()=>{
+  const el=document.getElementById('gNum'); if(!el) return;
+  let n=0;
+  for(let i=1,miss=0;i<=200&&miss<3;i++){
+    let ok=false;
+    try{ ok=(await fetch('tro-choi/bai-'+String(i).padStart(2,'0')+'.html',
+      {method:'HEAD',cache:'no-cache'})).ok; }catch(e){}
+    if(ok){ n++; miss=0; } else miss++;
   }
-  if(games.length){
-    const glist=document.getElementById('glist');
-    games.sort((a,b)=>b.so-a.so).forEach(g=>{
-      const a=document.createElement('a');
-      a.className='les game'; a.href=g.file;
-      a.innerHTML=
-        '<div class="seal">玩</div>'+
-        '<div class="body">'+
-          '<div class="meta">Bài '+g.so+' · Trò chơi</div>'+
-          '<div class="ttl">Nhìn ảnh nói câu · Vòng xoay câu hỏi</div>'+
-          (zhOf[g.so]?'<div class="tags"><span>'+esc(zhOf[g.so])+'</span></div>':'')+
-        '</div>';
-      glist.append(a);
-    });
-    document.getElementById('games').hidden=false;
+  el.textContent = n ? n+' bài' : '';
+})();
+
+/* Đếm số bộ thẻ trong thư mục flashcard/ để hiện lên thẻ dẫn đường. */
+(async()=>{
+  const el=document.getElementById('fcNum'); if(!el) return;
+  let n=0;
+  for(let i=1;i<=60;i++){
+    try{ const r=await fetch('flashcard/bai-'+String(i).padStart(2,'0')+'.html',
+      {method:'HEAD',cache:'no-cache'});
+      if(!r.ok) break; n++; }catch(e){ break; }
   }
+  el.textContent = n ? n+' bài' : '';
 })();
 </script>
 </body>
