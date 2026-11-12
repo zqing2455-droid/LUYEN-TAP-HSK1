@@ -98,7 +98,7 @@ footer{margin-top:40px; padding-top:16px; border-top:1px solid var(--line); font
 /* ═════════ TỰ ĐỘNG TÌM TRÒ CHƠI ═════════
    Không cần sửa gì ở đây. Trang tự dò bai-01.html, bai-02.html… trong CÙNG thư mục
    (cho phép thiếu bài giữa chừng, dừng sau 3 bài trống liên tiếp). Tên bài lấy từ
-   ../bai/bai-XX.html; số mẫu đã nói được lấy từ localStorage (khoá nhin-anh-noi-cau-baiN). */
+   chính file trò chơi; số mẫu đã nói được lấy từ localStorage (khoá nhin-anh-noi-cau-baiN). */
 const NUM='零一二三四五六七八九十';
 const cn=n=> n<=10?NUM[n] : n<20?'十'+(n%10?NUM[n%10]:'') : NUM[Math.floor(n/10)]+'十'+(n%10?NUM[n%10]:'');
 const pad=n=>String(n).padStart(2,'0');
@@ -112,12 +112,25 @@ function noiDuoc(n){
   }catch(e){ return 0; }
 }
 
-async function tenBai(n){
+/* Tên bài nằm ngay đầu mỗi file trò chơi ("Bài 6 《……》"). File trò chơi nặng (~0,5 MB, nhúng sẵn ảnh)
+   nên chỉ đọc phần đầu rồi dừng, không tải hết. */
+async function tenBai(file){
   try{
-    const r=await fetch('../bai/bai-'+pad(n)+'.html',{cache:'no-cache'});
+    const r=await fetch(file);
     if(!r.ok) return '';
-    const doc=new DOMParser().parseFromString(await r.text(),'text/html');
-    return doc.querySelector('h1 .zh')?.textContent.trim() || '';
+    const re=/Bài\s*\d+\s*《([^》]+)》/;
+    if(!r.body||!r.body.getReader){ const m=(await r.text()).match(re); return m?m[1]:''; }
+    const rd=r.body.getReader(), dec=new TextDecoder();
+    let txt='';
+    while(txt.length<60000){
+      const {done,value}=await rd.read();
+      if(done) break;
+      txt+=dec.decode(value,{stream:true});
+      const m=txt.match(re);
+      if(m){ rd.cancel(); return m[1]; }
+    }
+    rd.cancel();
+    return '';
   }catch(e){ return ''; }
 }
 
@@ -130,7 +143,7 @@ async function tenBai(n){
     let r=null; try{ r=await fetch(file,{method:'HEAD',cache:'no-cache'}); }catch(e){}
     if(r&&r.ok){
       const mod=r.headers.get('last-modified');
-      found.push({so:n,file,zh:await tenBai(n),mod:mod?new Date(mod).getTime():0});
+      found.push({so:n,file,zh:await tenBai(file),mod:mod?new Date(mod).getTime():0});
       miss=0;
     } else miss++;
   }
