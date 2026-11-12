@@ -82,6 +82,11 @@ footer{margin-top:44px; padding-top:16px; border-top:1px solid var(--line); font
 <h2 class="sec">Các bài ôn</h2>
 <div class="list" id="list"></div>
 
+<div id="games" hidden>
+  <h2 class="sec">Trò chơi ôn tập</h2>
+  <div class="list" id="glist"></div>
+</div>
+
 <footer>Bài mới nhất nằm trên cùng.</footer>
 </div>
 
@@ -133,6 +138,32 @@ async function readLesson(n){
       '<div class="prog">'+(pct===100?'✓ Xong':d+'/'+l.total)+'<div class="bar"><i style="width:'+pct+'%"></i></div></div>';
     list.append(a);
   });
+
+  /* ═════════ TRÒ CHƠI ÔN TẬP ═════════
+     Tự dò tro-choi/bai-01.html, bai-02.html, … (cũng cho phép thiếu giữa chừng). */
+  const zhOf={}; found.forEach(l=>zhOf[l.so]=l.zh);
+  const games=[];
+  for(let n=1,miss=0;n<=200&&miss<3;n++){
+    const f='tro-choi/bai-'+pad(n)+'.html';
+    let ok=false; try{ ok=(await fetch(f,{method:'HEAD'})).ok; }catch(e){}
+    if(ok){ games.push({so:n,file:f}); miss=0; } else miss++;
+  }
+  if(games.length){
+    const glist=document.getElementById('glist');
+    games.sort((a,b)=>b.so-a.so).forEach(g=>{
+      const a=document.createElement('a');
+      a.className='les game'; a.href=g.file;
+      a.innerHTML=
+        '<div class="seal">玩</div>'+
+        '<div class="body">'+
+          '<div class="meta">Bài '+g.so+' · Trò chơi</div>'+
+          '<div class="ttl">Nhìn ảnh nói câu · Vòng xoay câu hỏi</div>'+
+          (zhOf[g.so]?'<div class="tags"><span>'+esc(zhOf[g.so])+'</span></div>':'')+
+        '</div>';
+      glist.append(a);
+    });
+    document.getElementById('games').hidden=false;
+  }
 })();
 </script>
 </body>
