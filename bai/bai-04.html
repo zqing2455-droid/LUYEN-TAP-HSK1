@@ -555,8 +555,13 @@ function buildSort(d, host){
   const q=card(d.n, d.t, d.sit);
   const line=el('div','line'); line.dataset.ph='Kéo hoặc chạm từng ô chữ vào đây';
   const tray=el('div','tray');
-  [...d.words].map(w=>({w,r:Math.random()})).sort((a,b)=>a.r-b.r)
-    .forEach(({w})=>{ const c=el('div','chip',w); c.tabIndex=0; tray.append(c); });
+  /* Xáo ô chữ, và xáo lại nếu thứ tự bày ra đã chính là một đáp án đúng —
+     nếu không, học viên chạm lần lượt từ trái sang phải là trúng ngay. */
+  const _dung = (d.ans||[]).map(norm);
+  let _xep = [...d.words], _lan = 0;
+  do { _xep = [...d.words].map(w=>({w,r:Math.random()})).sort((a,b)=>a.r-b.r).map(x=>x.w); }
+  while (_dung.indexOf(norm(_xep.join(''))) > -1 && ++_lan < 40);
+  _xep.forEach(w=>{ const c=el('div','chip',w); c.tabIndex=0; tray.append(c); });
   q.append(line,tray);
   const btns=el('div','btns');
   const bClr=el('button','act ghost','Trả lại ô chữ'); bClr.type='button';
