@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flashcard Bài 15 — 新HSK教程1</title>
+<meta name="fc-lesson" content="15">
+<meta name="fc-title" content="大兴机场见！">
+<meta name="fc-py" content="Dàxīng Jīchǎng jiàn">
+<meta name="fc-vn" content="Đi lại · sân bay · thời gian">
+<meta name="fc-count" content="17">
+<meta name="fc-key" content="flashcard-hsk1-bai15">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Quicksand:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* ===== BẢNG MÀU & BIẾN CHUNG ===== */
+:root{
+  --bg:#F6F4EC; --card:#FFFDF7; --ink:#26221A; --ink2:#7A6E64; --line:#E4DCCB;
+  --accent:#E3963B;        /* cam nhấn */
+  --hz:#C2697A;            /* chữ Hán */
+  --sent:#4F7E62;          /* nghĩa câu / xanh "đã thuộc" */
+  --pos:#4A7398;           /* nhãn từ loại */
+  --r:18px;
+  --shadow:0 1px 2px rgba(38,34,26,.04),0 10px 26px -18px rgba(38,34,26,.35);
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Quicksand',system-ui,sans-serif;font-size:16px;line-height:1.6;
+  -webkit-text-size-adjust:100%;
+}
+.hz{font-family:'Noto Serif SC','KaiTi','STKaiti',serif;word-break:break-word}
+.py{font-family:'Space Mono',monospace;color:var(--ink2);font-size:.82em;letter-spacing:-.01em}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 80px}
+button{font-family:inherit;font-size:inherit;cursor:pointer;color:inherit}
+
+/* ===== ĐẦU TRANG ===== */
+header{padding:26px 0 6px;text-align:center}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{margin:6px 0 2px;font-size:clamp(21px,5vw,27px);font-weight:700;letter-spacing:-.01em}
+h1 .hz{color:var(--hz);font-weight:900}
+.lead{margin:0;color:var(--ink2);font-size:13.5px}
+
+/* ===== THANH CÔNG CỤ ===== */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);padding:12px;margin:18px 0 0}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.row+.row{margin-top:9px}
+.seg{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px;gap:3px;flex:1 1 auto}
+.seg button{flex:1;min-height:44px;border:0;background:transparent;border-radius:999px;
+  font-size:13.5px;font-weight:600;color:var(--ink2);padding:0 12px;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:0 2px 8px -3px var(--accent)}
+.tool{min-height:44px;border:1px solid var(--line);background:var(--bg);border-radius:12px;
+  padding:0 14px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.tool:hover{border-color:var(--accent);color:var(--accent)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{min-height:38px;border:1px solid var(--line);background:var(--bg);border-radius:999px;
+  padding:0 13px;font-size:12.5px;font-weight:600;color:var(--ink2)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--card)}
+.chip .n{opacity:.65;font-family:'Space Mono',monospace;font-size:11.5px;margin-left:3px}
+.stats{font-size:12.5px;color:var(--ink2);text-align:center;margin:10px 0 0}
+.stats b{font-weight:700}
+.stats .g{color:var(--sent)} .stats .o{color:var(--accent)}
+
+/* thanh tiến độ + số thứ tự */
+.prog{display:flex;align-items:center;gap:10px;margin:16px 0 4px}
+.prog .num{font-family:'Space Mono',monospace;font-size:13px;color:var(--ink2);white-space:nowrap}
+.bar{flex:1;height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s ease}
+
+/* ===== THẺ HAI MẶT ===== */
+#stage{margin-top:16px}
+#stage.all{display:flex;flex-direction:column;gap:16px}
+.card{perspective:1600px}
+.card-in{position:relative;transform-style:preserve-3d;
+  transition:transform .55s cubic-bezier(.4,.15,.2,1),height .35s ease}
+.card.flipped .card-in{transform:rotateY(180deg)}
+.face{position:absolute;top:0;left:0;width:100%;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);padding:20px 18px;cursor:pointer}
+.face.back{transform:rotateY(180deg)}
+.card.known .face{border-color:var(--sent)}
+.card.review .face{border-color:var(--accent)}
+
+/* --- mặt trước --- */
+.front{min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}
+.front .big{font-size:clamp(60px,20vw,112px);font-weight:900;line-height:1.08;color:var(--hz)}
+.front .big-vn{font-family:'Quicksand',sans-serif;font-size:clamp(22px,6vw,30px);font-weight:700;color:var(--ink);line-height:1.3}
+.front .sub{font-size:12.5px;color:var(--ink2)}
+.flag{position:absolute;top:12px;left:14px;font-size:11px;font-weight:700;border-radius:999px;padding:3px 10px}
+.flag.g{background:rgba(79,126,98,.12);color:var(--sent)}
+.flag.o{background:rgba(227,150,59,.15);color:#B9741F}
+.card:not(.known):not(.review) .flag{display:none}
+.num-tag{position:absolute;top:12px;right:14px;font-family:'Space Mono',monospace;font-size:11.5px;color:var(--ink2)}
+
+/* --- nút loa --- */
+.spk{min-width:44px;min-height:44px;border:1px solid var(--line);background:var(--bg);
+  border-radius:999px;display:inline-flex;align-items:center;justify-content:center;
+  color:var(--accent);font-size:17px;padding:0;flex:0 0 auto}
+.spk:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.spk.sm{min-width:32px;min-height:32px;width:32px;height:32px;font-size:13px}
+.spk.on{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* --- mặt sau --- */
+.b-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.b-top .hz{font-size:34px;font-weight:900;color:var(--hz);line-height:1.15}
+.b-top .py{font-size:15px;font-weight:700;color:var(--ink2)}
+.poslabel{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--pos);
+  background:rgba(74,115,152,.1);border-radius:999px;padding:4px 11px}
+.mean{margin-top:10px;font-size:18px;font-weight:600;line-height:1.4}
+.hv{margin-top:2px;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink2)}
+.use{margin-top:13px;background:rgba(227,150,59,.09);border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;padding:11px 13px;font-size:13.5px;line-height:1.6}
+.use .lbl{display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;color:#B9741F;margin-bottom:4px}
+.tip{margin-top:15px;background:rgba(79,126,98,.09);border-left:3px solid var(--sent);border-radius:0 12px 12px 0;padding:11px 13px;font-size:13.5px;line-height:1.6}
+.tip .lbl{display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;color:var(--sent);margin-bottom:4px}
+.sec{margin-top:15px;padding-top:13px;border-top:1px dashed var(--line)}
+.lbl{display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px}
+.item{display:flex;gap:9px;align-items:flex-start;margin-bottom:10px}
+.item:last-child{margin-bottom:0}
+.item .no{font-size:15px;color:var(--accent);font-weight:700;line-height:1.5;flex:0 0 auto}
+.item .body{flex:1;min-width:0}
+.item .zh{font-size:19px;font-weight:600;line-height:1.5;color:var(--ink)}
+.item .zh mark{background:rgba(227,150,59,.28);color:var(--hz);border-radius:4px;padding:0 2px;font-weight:900}
+.item .py{display:block;margin-top:1px}
+.item .vi{display:block;margin-top:2px;font-size:13.5px;color:var(--sent);font-weight:600}
+.item .vi-ph{color:var(--ink2);font-weight:600}
+.marks{display:flex;gap:9px;margin-top:17px;padding-top:14px;border-top:1px solid var(--line)}
+.marks button{flex:1;min-height:46px;border-radius:13px;border:1px solid var(--line);
+  background:var(--bg);font-size:13.5px;font-weight:700;color:var(--ink2)}
+.marks .mk-known:hover,.card.known .mk-known{background:var(--sent);border-color:var(--sent);color:#fff}
+.marks .mk-review:hover,.card.review .mk-review{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ===== ĐIỀU HƯỚNG ===== */
+.nav{display:flex;gap:9px;margin-top:16px;align-items:center}
+.nav button{min-height:48px;border:1px solid var(--line);background:var(--card);border-radius:13px;
+  padding:0 16px;font-size:14px;font-weight:700;color:var(--ink2);box-shadow:var(--shadow)}
+.nav .flip{flex:1;background:var(--ink);border-color:var(--ink);color:var(--card)}
+.empty{text-align:center;color:var(--ink2);padding:46px 16px;border:1px dashed var(--line);
+  border-radius:var(--r);background:var(--card);font-size:14.5px}
+
+/* ===== HỘP THOẠI & THÔNG BÁO ===== */
+.modal{position:fixed;inset:0;background:rgba(38,34,26,.45);display:none;align-items:center;
+  justify-content:center;padding:20px;z-index:60}
+.modal.on{display:flex}
+.modal .box{background:var(--card);border-radius:var(--r);padding:22px;max-width:360px;width:100%;
+  box-shadow:0 20px 50px -20px rgba(38,34,26,.6);text-align:center}
+.modal .box p{margin:0 0 16px;font-size:14.5px}
+.modal .box .acts{display:flex;gap:9px}
+.modal .box button{flex:1;min-height:46px;border-radius:12px;border:1px solid var(--line);
+  background:var(--bg);font-weight:700;font-size:13.5px}
+.modal .box .yes{background:var(--accent);border-color:var(--accent);color:#fff}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,16px);opacity:0;pointer-events:none;
+  background:var(--ink);color:var(--card);font-size:13px;padding:10px 16px;border-radius:999px;
+  transition:.25s ease;z-index:70;max-width:90vw;text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+footer{margin-top:28px;text-align:center;font-size:12px;color:var(--ink2);line-height:1.8}
+footer kbd{font-family:'Space Mono',monospace;background:var(--card);border:1px solid var(--line);
+  border-bottom-width:2px;border-radius:6px;padding:1px 6px;font-size:11px;color:var(--ink)}
+@media (max-width:420px){
+  .face{padding:18px 15px}
+  .nav button{padding:0 12px;font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow" id="hCourse">新HSK教程1 · HSK1 (khung 3.0)</div>
+    <h1 id="hTitle">Bài 1 · <span class="hz">AI小语，你好！</span></h1>
+    <p class="lead" id="hLead">13 thẻ từ vựng · chạm vào thẻ để lật</p>
+  </header>
+
+  <div class="panel">
+    <div class="row">
+      <div class="seg" role="group" aria-label="Chế độ học">
+        <button id="mOne" aria-pressed="true">Lật từng thẻ</button>
+        <button id="mAll" aria-pressed="false">Xem tất cả</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="seg" role="group" aria-label="Chiều học">
+        <button id="dZh" aria-pressed="true">汉字 → Việt</button>
+        <button id="dVi" aria-pressed="false">Việt → 汉字</button>
+      </div>
+    </div>
+    <div class="row">
+      <button class="tool" id="shuffle">🔀 Trộn thẻ</button>
+      <button class="tool" id="order">↕ Thứ tự gốc</button>
+      <button class="tool" id="clear">🗑 Xoá phân loại</button>
+    </div>
+    <div class="row chips" role="group" aria-label="Bộ lọc">
+      <button class="chip" data-f="all" aria-pressed="true">Tất cả <span class="n" id="cAll">0</span></button>
+      <button class="chip" data-f="none" aria-pressed="false">Chưa phân loại <span class="n" id="cNone">0</span></button>
+      <button class="chip" data-f="review" aria-pressed="false">Cần ôn thêm <span class="n" id="cRev">0</span></button>
+      <button class="chip" data-f="known" aria-pressed="false">Đã thuộc <span class="n" id="cKnown">0</span></button>
+    </div>
+    <p class="stats" id="stats"></p>
+  </div>
+
+  <div class="prog" id="prog">
+    <span class="num" id="pNum">1 / 13</span>
+    <span class="bar"><i id="pBar"></i></span>
+  </div>
+
+  <div id="stage"></div>
+
+  <div class="nav" id="nav">
+    <button id="prev">←</button>
+    <button class="flip" id="flip">Lật thẻ</button>
+    <button id="next">→</button>
+  </div>
+
+  <footer>
+    <b>Phím tắt:</b> <kbd>←</kbd> <kbd>→</kbd> đổi thẻ · <kbd>space</kbd> lật thẻ ·
+    <kbd>1</kbd> đã thuộc · <kbd>2</kbd> cần ôn thêm<br>
+    Phân loại được lưu ngay trên máy của em. Nút 🔊 dùng giọng tiếng Trung của máy;
+    máy chưa có giọng thì tự chuyển sang giọng đọc trực tuyến (cần mạng).
+  </footer>
+</div>
+
+<div class="modal" id="modal">
+  <div class="box">
+    <p>Xoá toàn bộ phân loại “đã thuộc” và “cần ôn thêm” của bài này?</p>
+    <div class="acts">
+      <button id="mNo">Không</button>
+      <button class="yes" id="mYes">Xoá</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* =======================================================================
+   DỮ LIỆU BÀI HỌC — lần sau chỉ cần thay khối này là có bài mới.
+   Mỗi từ: {hz, py, pos, vn, hv, use, tip, ph:[[cụm,pinyin,nghĩa],…],
+            se:[[câu,pinyin,nghĩa,chuỗi-chữ-Hán-cần-tô-màu],…]}
+   Quy ước: cụm ① ứng với câu ①, cụm ② ứng với câu ②.
+   ======================================================================= */
+const DATA = {
+  course: "新HSK教程1 (New HSK Course 1, 外研社)",
+  level:  "HSK1 (khung HSK 3.0)",
+  lesson: 15,
+  lessonTitle: "大兴机场见！",
+  words: [
+    {
+      hz:"飞机", py:"fēijī", pos:"danh từ · n. 名词",
+      vn:"máy bay", hv:"PHI CƠ",
+      use:"飞机 là máy bay; đi máy bay vẫn dùng động từ 坐 như mọi phương tiện ngồi vào trong: 坐飞机. Lái máy bay thì nói 开飞机 — cùng chữ 开 với 开车. Nơi có máy bay là 机场.",
+      tip:"飞 (bay) + 机 (máy) = máy bay. Nhóm chữ 机 giờ đã đủ: 手机、飞机、机场.",
+      ph:[["坐飞机","zuò fēijī","đi máy bay"],
+          ["飞机来了","fēijī lái le","máy bay tới rồi"]],
+      se:[["我坐飞机去北京。","Wǒ zuò fēijī qù Běijīng.","Mình đi máy bay tới Bắc Kinh.","坐飞机"],
+          ["飞机来了。","Fēijī lái le.","Máy bay tới rồi.","飞机来了"]]
+    },
+    {
+      hz:"机场", py:"jīchǎng", pos:"danh từ · n. 名词",
+      vn:"sân bay", hv:"CƠ TRƯỜNG",
+      use:"机场 là sân bay (sách đánh dấu *, thuộc cấp 2 của khung HSK). Đi đón người ở sân bay nói theo mẫu liên động: 去机场接人. Sân bay mới và lớn nhất Bắc Kinh chính là 大兴机场 trong bài.",
+      tip:"机 (máy bay) + 场 (sân, bãi). Chữ 场 còn nằm trong 广场 (quảng trường), 商场 (trung tâm thương mại).",
+      ph:[["去机场","qù jīchǎng","đi sân bay"],
+          ["在机场","zài jīchǎng","ở sân bay"]],
+      se:[["我去机场接你。","Wǒ qù jīchǎng jiē nǐ.","Mình ra sân bay đón bạn.","去机场"],
+          ["我现在在机场。","Wǒ xiànzài zài jīchǎng.","Giờ mình đang ở sân bay.","在机场"]]
+    },
+    {
+      hz:"大兴机场", py:"Dàxīng Jīchǎng", pos:"danh từ riêng · n.pr. 专有名词", proper:true,
+      vn:"sân bay Đại Hưng (Bắc Kinh)", hv:"ĐẠI HƯNG CƠ TRƯỜNG",
+      use:"大兴机场 là sân bay quốc tế Đại Hưng ở Bắc Kinh, khánh thành năm 2019, nổi tiếng với kiến trúc hình sao biển. Tên bài học chính là câu hẹn gặp: 大兴机场见 — theo đúng mẫu X + 见 đã học từ bài 1.",
+      tip:"Mẫu hẹn gặp X + 见 giờ dùng được cả với địa điểm: 大兴机场见、学校见, chứ không chỉ với thời gian như 明天见.",
+      ph:[["去大兴机场","qù Dàxīng Jīchǎng","đi sân bay Đại Hưng"],
+          ["大兴机场见","Dàxīng Jīchǎng jiàn","hẹn gặp ở sân bay Đại Hưng"]],
+      se:[["我们去大兴机场。","Wǒmen qù Dàxīng Jīchǎng.","Chúng mình tới sân bay Đại Hưng.","去大兴机场"],
+          ["大兴机场见！","Dàxīng Jīchǎng jiàn!","Hẹn gặp ở sân bay Đại Hưng nhé!","大兴机场见"]]
+    },
+    {
+      hz:"北京", py:"Běijīng", pos:"danh từ riêng · n.pr. 专有名词", proper:true,
+      vn:"Bắc Kinh", hv:"BẮC KINH",
+      use:"北京 là thủ đô Trung Quốc — nghĩa đen “kinh đô phía Bắc”. Người Bắc Kinh là 北京人. Giọng Bắc Kinh hay thêm âm cuốn lưỡi 儿 như 这儿、哪儿、好玩儿 mà học viên đã gặp suốt quyển sách.",
+      tip:"北 (phía bắc) + 京 (kinh đô). Đối lại có 南京 (Nam Kinh) — “kinh đô phía Nam”, cũng là một thành phố lớn.",
+      ph:[["去北京","qù Běijīng","đi Bắc Kinh"],
+          ["在北京","zài Běijīng","ở Bắc Kinh"]],
+      se:[["我明年去北京。","Wǒ míngnián qù Běijīng.","Sang năm mình đi Bắc Kinh.","去北京"],
+          ["我姐姐在北京工作。","Wǒ jiějie zài Běijīng gōngzuò.","Chị mình làm việc ở Bắc Kinh.","在北京"]]
+    },
+    {
+      hz:"西安", py:"Xī'ān", pos:"danh từ riêng · n.pr. 专有名词", proper:true,
+      vn:"Tây An", hv:"TÂY AN",
+      use:"西安 là cố đô của Trung Quốc, nơi có đội quân đất nung (兵马俑) — điểm du lịch hầu như học viên nào cũng từng nghe. Nhà hàng 西安饭店 ở bài 6 cũng lấy tên từ thành phố này.",
+      tip:"Nhớ dấu ngăn cách trong pinyin Xī'ān, giống 女儿 (nǚ'ér) — khi hai nguyên âm đứng liền dễ đọc nhầm thì phải thêm dấu này.",
+      ph:[["去西安","qù Xī'ān","đi Tây An"],
+          ["西安人","Xī'ān rén","người Tây An"]],
+      se:[["我想去西安。","Wǒ xiǎng qù Xī'ān.","Mình muốn đi Tây An.","去西安"],
+          ["他是西安人。","Tā shì Xī'ān rén.","Cậu ấy là người Tây An.","西安人"]]
+    },
+    {
+      hz:"接", py:"jiē", pos:"động từ · v. 动词",
+      vn:"đón; nhận", hv:"TIẾP",
+      use:"接 là đón người: 接你、接孩子, theo mẫu 去 + nơi chốn + 接 + người. Nó còn nghĩa “nghe máy” (接电话) và “nhận được” (接到). Sách đánh dấu * cho từ này.",
+      tip:"接 có bộ 扌 (tay) — đưa tay ra đón, ra nhận. Cùng nhóm động tác tay với 打、找.",
+      ph:[["接你","jiē nǐ","đón bạn"],
+          ["去接","qù jiē","đi đón"]],
+      se:[["我去机场接你。","Wǒ qù jīchǎng jiē nǐ.","Mình ra sân bay đón bạn.","接你"],
+          ["我开车去接。","Wǒ kāichē qù jiē.","Mình lái xe đi đón.","去接"]]
+    },
+    {
+      hz:"住", py:"zhù", pos:"động từ · v. 动词",
+      vn:"ở, cư trú", hv:"TRÚ",
+      use:"住 là ở lâu dài, cư trú: 我住在北京. Khác 在 chỉ nơi có mặt lúc này: 我在学校 nghĩa là giờ đang ở trường. Hỏi chỗ ở: 你住哪里？ hoặc 你住在哪儿？",
+      tip:"住 = 亻 (người) + 主 (chủ) — người làm chủ một chỗ tức là ở đó. Nhớ: 住 là ở lâu, 在 là đang ở.",
+      ph:[["住在北京","zhù zài Běijīng","sống ở Bắc Kinh"],
+          ["住哪里","zhù nǎli","ở đâu"]],
+      se:[["我住在北京。","Wǒ zhù zài Běijīng.","Mình sống ở Bắc Kinh.","住在北京"],
+          ["你住哪里？","Nǐ zhù nǎli?","Bạn ở chỗ nào?","住哪里"]]
+    },
+    {
+      hz:"家人", py:"jiārén", pos:"danh từ · n. 名词",
+      vn:"người nhà, người trong gia đình", hv:"GIA NHÂN",
+      use:"家人 là thành viên gia đình — khác 家 là ngôi nhà hoặc gia đình nói chung. Giới thiệu ảnh gia đình thì nói 这是我的家人. Lưu ý: 家人 không dùng để gọi trực tiếp ai cả.",
+      tip:"家 (nhà) + 人 (người) = người trong nhà. Ghép thẳng nên nghĩa hiện ra ngay.",
+      ph:[["我的家人","wǒ de jiārén","người nhà tôi"],
+          ["家人都","jiārén dōu","người nhà đều"]],
+      se:[["这是我的家人。","Zhè shì wǒ de jiārén.","Đây là gia đình mình.","我的家人"],
+          ["我的家人都很好。","Wǒ de jiārén dōu hěn hǎo.","Người nhà mình đều khoẻ cả.","家人都"]]
+    },
+    {
+      hz:"男朋友", py:"nánpéngyou", pos:"danh từ · n. 名词",
+      vn:"bạn trai (người yêu)", hv:"NAM BẰNG HỮU",
+      use:"男朋友 là bạn trai theo nghĩa người yêu, KHÔNG phải “bạn nam” — bạn nam bình thường là 男的朋友 hoặc 男同学. Cặp với 女朋友 đã học ở bài 3. Giới thiệu thì bỏ 的: 这是我男朋友.",
+      tip:"男 (nam) + 朋友 (bạn). Nhớ: 男朋友/女朋友 là người yêu, còn thêm 的 vào giữa thì lại thành bạn bè bình thường.",
+      ph:[["我男朋友","wǒ nánpéngyou","bạn trai tôi"],
+          ["男朋友的","nánpéngyou de","của bạn trai"]],
+      se:[["这是我男朋友。","Zhè shì wǒ nánpéngyou.","Đây là bạn trai mình.","我男朋友"],
+          ["男朋友的工作很忙。","Nánpéngyou de gōngzuò hěn máng.","Công việc bạn trai mình rất bận.","男朋友的"]]
+    },
+    {
+      hz:"爱", py:"ài", pos:"động từ · v. 动词",
+      vn:"yêu; rất thích", hv:"ÁI",
+      use:"爱 là yêu — dùng với người thân, người yêu: 我爱你、我爱我的家人. Với sở thích thì 爱 + động từ nghĩa là “rất thích, hay làm”: 我爱吃中国菜. Người Trung nói 我爱你 dè dặt hơn người phương Tây nhiều.",
+      tip:"Bản giản thể 爱 đã bỏ mất chữ 心 (trái tim) so với phồn thể 愛 — người Trung hay đùa là “yêu mà không có tim”.",
+      ph:[["爱你","ài nǐ","yêu bạn"],
+          ["爱吃","ài chī","rất thích ăn"]],
+      se:[["我爱你。","Wǒ ài nǐ.","Mình yêu bạn.","爱你"],
+          ["我爱吃中国菜。","Wǒ ài chī Zhōngguó cài.","Mình rất thích ăn món Trung.","爱吃"]]
+    },
+    {
+      hz:"好玩儿", py:"hǎowánr", pos:"hình dung từ · adj. 形容词",
+      vn:"vui, thú vị", hv:"HẢO NGOẠN NHI",
+      use:"好玩儿 là vui, thú vị — dùng cho chỗ chơi, trò chơi, hoạt động: 北京很好玩儿. Đến đây bộ 好 + động từ đã trọn vẹn: 好吃、好喝、好看、好听、好玩儿 — năm từ một mẫu.",
+      tip:"Vẫn công thức 好 + động từ giác quan. Âm cuốn lưỡi 儿 là giọng Bắc Kinh: hǎowánr.",
+      ph:[["很好玩儿","hěn hǎowánr","rất vui"],
+          ["不好玩儿","bù hǎowánr","không vui"]],
+      se:[["北京很好玩儿。","Běijīng hěn hǎowánr.","Bắc Kinh vui lắm.","很好玩儿"],
+          ["这个不好玩儿。","Zhège bù hǎowánr.","Cái này chán ngắt.","不好玩儿"]]
+    },
+    {
+      hz:"时间", py:"shíjiān", pos:"danh từ · n. 名词",
+      vn:"thời gian", hv:"THỜI GIAN",
+      use:"时间 là thời gian nói chung. Rủ ai đi chơi thì hỏi 你有时间吗？ (bạn rảnh không). Khác 时候 (bài 11) chỉ thời điểm: 什么时候 là “khi nào”, còn 多长时间 là “bao lâu”.",
+      tip:"Phân biệt cho rõ: 时间 là lượng thời gian, 时候 là thời điểm. Cả hai đều mang chữ 时.",
+      ph:[["有时间","yǒu shíjiān","có thời gian, rảnh"],
+          ["没有时间","méiyǒu shíjiān","không có thời gian"]],
+      se:[["你明天有时间吗？","Nǐ míngtiān yǒu shíjiān ma?","Mai bạn rảnh không?","有时间"],
+          ["我今天没有时间。","Wǒ jīntiān méiyǒu shíjiān.","Hôm nay mình không rảnh.","没有时间"]]
+    },
+    {
+      hz:"小时", py:"xiǎoshí", pos:"lượng từ · m. 量词",
+      vn:"tiếng, giờ đồng hồ", hv:"TIỂU THỜI",
+      use:"小时 là độ dài một tiếng đồng hồ và luôn đi với 个: 一个小时. Khác 点 là thời điểm trên đồng hồ — 两点 là 2 giờ, còn 两个小时 là hai tiếng. Cặp này y hệt cặp 分 và 分钟 ở bài 7.",
+      tip:"Nhóm từ phải có 个: 星期、小时; nhóm tự làm lượng từ, không cần 个: 年、天.",
+      ph:[["一个小时","yí ge xiǎoshí","một tiếng"],
+          ["两个小时","liǎng ge xiǎoshí","hai tiếng"]],
+      se:[["我学习一个小时。","Wǒ xuéxí yí ge xiǎoshí.","Mình học một tiếng.","一个小时"],
+          ["我在这儿两个小时。","Wǒ zài zhèr liǎng ge xiǎoshí.","Mình ở đây hai tiếng rồi.","两个小时"]]
+    },
+    {
+      hz:"年", py:"nián", pos:"danh từ / lượng từ · n./m. 名词·量词",
+      vn:"năm", hv:"NIÊN",
+      use:"年 tự nó đã là lượng từ nên không thêm 个: 一年、两年, nói ×一个年 là sai. Năm cụ thể thì đọc từng chữ số: 二零二六年. Bộ ba thời gian: 去年 — 今年 — 明年.",
+      tip:"Nhóm tự làm lượng từ: 年 (năm), 天 (ngày) — không cần 个; còn 星期 và 小时 thì bắt buộc phải có 个.",
+      ph:[["一年","yì nián","một năm"],
+          ["两年","liǎng nián","hai năm"]],
+      se:[["我在中国一年。","Wǒ zài Zhōngguó yì nián.","Mình ở Trung Quốc một năm.","一年"],
+          ["我住在这里两年。","Wǒ zhù zài zhèli liǎng nián.","Mình sống ở đây hai năm rồi.","两年"]]
+    },
+    {
+      hz:"去年", py:"qùnián", pos:"danh từ chỉ thời gian · n. 时间词",
+      vn:"năm ngoái", hv:"KHỨ NIÊN",
+      use:"去年 là năm ngoái — hoàn chỉnh bộ ba 去年 — 今年 — 明年. Chữ 去 ở đây mang nghĩa “đã qua” chứ không phải “đi”. Việc đã xảy ra thường thêm 了: 我去年去了西安.",
+      tip:"去 trong 去年 nghĩa là “qua đi”, khác hẳn 去 là “đi” ở bài 6 — một chữ hai nghĩa, cô nhắc để học viên khỏi lẫn.",
+      ph:[["去年来","qùnián lái","năm ngoái đến"],
+          ["去年去","qùnián qù","năm ngoái đi"]],
+      se:[["我去年来中国。","Wǒ qùnián lái Zhōngguó.","Năm ngoái mình sang Trung Quốc.","去年来"],
+          ["我去年去西安。","Wǒ qùnián qù Xī'ān.","Năm ngoái mình đi Tây An.","去年去"]]
+    },
+    {
+      hz:"早", py:"zǎo", pos:"hình dung từ · adj. 形容词",
+      vn:"sớm", hv:"TẢO",
+      use:"早 là sớm, trái nghĩa với 晚 (bài 14): 我起床很早. Nó cũng là lời chào buổi sáng gọn nhất — chỉ cần nói 早！ là đủ. Chính chữ này nằm trong 早上、早饭.",
+      tip:"早 = 日 (mặt trời) + 十 — mặt trời vừa lên cao. Cặp đối phải thuộc: 早 (sớm) — 晚 (muộn).",
+      ph:[["很早","hěn zǎo","rất sớm"],
+          ["太早了","tài zǎo le","sớm quá"]],
+      se:[["我起床很早。","Wǒ qǐchuáng hěn zǎo.","Mình dậy sớm lắm.","很早"],
+          ["现在太早了。","Xiànzài tài zǎo le.","Giờ còn sớm quá.","太早了"]]
+    },
+    {
+      hz:"哪个", py:"nǎge", pos:"đại từ nghi vấn · pron. 疑问代词",
+      vn:"cái nào, người nào", hv:"NA CÁ",
+      use:"哪个 hỏi chọn MỘT trong nhiều cái: 你要哪个？ Hỏi nhiều cái thì dùng 哪些 (bài 14). Đi mua sắm chỉ cần thuộc ba chữ 这个、那个、哪个 là xoay xở được mọi tình huống.",
+      tip:"Bộ bốn hoàn chỉnh cả sách: 这个 (này) — 那个 (kia) — 哪个 (nào), và số nhiều 这些/那些/哪些. Đọc nǎge hay něige đều được.",
+      ph:[["哪个人","nǎge rén","người nào"],
+          ["要哪个","yào nǎge","lấy cái nào"]],
+      se:[["哪个人是你男朋友？","Nǎge rén shì nǐ nánpéngyou?","Người nào là bạn trai bạn thế?","哪个人"],
+          ["你要哪个？","Nǐ yào nǎge?","Bạn lấy cái nào?","要哪个"]]
+    }
+  ]
+};
+
+/* ======================= TRẠNG THÁI ======================= */
+const LS_KEY = "flashcard-hsk1-bai" + String(DATA.lesson).padStart(2, "0");
+let order   = DATA.words.map((_, i) => i);  // thứ tự thẻ hiện tại
+let marks   = {};                           // {chữ Hán: "known" | "review"}
+let filter  = "all";
+let mode    = "one";                        // "one" | "all"
+let dir     = "zh";                         // "zh" = 汉字→Việt, "vi" = Việt→汉字
+let idx     = 0;                            // vị trí trong danh sách đã lọc
+const RATE  = 0.8;                          // tốc độ đọc
+
+/* đọc / ghi localStorage, bọc try-catch phòng trình duyệt chặn */
+function loadMarks(){ try{ marks = JSON.parse(localStorage.getItem(LS_KEY) || "{}") || {}; }catch(e){ marks = {}; } }
+function saveMarks(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(marks)); }catch(e){} }
+loadMarks();
+
+/* ======================= PHÁT ÂM ======================= */
+let zhVoice = null;
+function pickVoice(){
+  if(!("speechSynthesis" in window)) return false;
+  const vs = speechSynthesis.getVoices().filter(v => /^zh/i.test(v.lang));
+  if(!vs.length) return false;
+  zhVoice = vs.find(v => /CN|Hans|Mandarin|普通话|中国/i.test(v.lang + v.name)) || vs[0];
+  return true;
+}
+if("speechSynthesis" in window){
+  if(!pickVoice()){
+    speechSynthesis.onvoiceschanged = pickVoice;
+    [300, 900, 2000].forEach(t => setTimeout(() => { if(!zhVoice) pickVoice(); }, t));
+  }
+}
+/* đọc chữ Hán: ưu tiên giọng máy, không có thì dùng giọng đọc trực tuyến */
+function speak(text, btn){
+  const t = String(text).replace(/[——–—-]+/g, " ").replace(/\s+/g, " ").trim();
+  if(!t) return;
+  if(btn){ btn.classList.add("on"); setTimeout(() => btn.classList.remove("on"), 900); }
+  if(zhVoice && "speechSynthesis" in window){
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(t);
+    u.lang = "zh-CN"; u.voice = zhVoice; u.rate = RATE;
+    speechSynthesis.speak(u);
+    return;
+  }
+  try{
+    const a = new Audio("https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=zh-CN&q=" + encodeURIComponent(t));
+    a.playbackRate = 0.9;
+    a.play().catch(() => toast("Máy chưa có giọng tiếng Trung — hãy cài giọng zh-CN hoặc kiểm tra kết nối mạng."));
+  }catch(e){ toast("Máy chưa có giọng tiếng Trung."); }
+}
+let toastTimer = null;
+function toast(msg){
+  const el = document.getElementById("toast");
+  el.textContent = msg; el.classList.add("on");
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove("on"), 3200);
+}
+
+/* ======================= DỰNG THẺ ======================= */
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+/* tô màu cụm từ tương ứng bên trong câu ví dụ */
+function highlight(sentence, key){
+  const s = esc(sentence), k = esc(key);
+  if(!k || s.indexOf(k) < 0) return s;
+  return s.split(k).join('<mark>' + k + '</mark>');
+}
+const NO = ["①","②","③","④"];
+
+function cardHTML(w, n){
+  const st = marks[w.hz] || "";
+  const flag = st === "known" ? '<span class="flag g">✓ Đã thuộc</span>'
+             : st === "review" ? '<span class="flag o">↻ Cần ôn thêm</span>' : "";
+
+  /* --- mặt trước: tuỳ chiều học --- */
+  const frontBody = dir === "zh"
+    ? '<div class="big hz">' + esc(w.hz) + '</div>' +
+      '<button class="spk" data-say="' + esc(w.hz) + '" aria-label="Nghe">🔊</button>' +
+      '<div class="sub">Chạm để xem nghĩa</div>'
+    : '<div class="big-vn">' + esc(w.vn) + '</div>' +
+      '<div class="poslabel">' + esc(w.pos) + '</div>' +
+      '<div class="sub">Chạm để xem chữ Hán</div>';
+
+  /* --- cụm từ & câu ví dụ, ghép cặp ① ② --- */
+  const phrases = w.ph.map((p, i) =>
+    '<div class="item"><span class="no">' + NO[i] + '</span><div class="body">' +
+      '<div class="zh hz">' + esc(p[0]) + '</div>' +
+      '<span class="py">' + esc(p[1]) + '</span>' +
+      '<span class="vi vi-ph">' + esc(p[2]) + '</span>' +
+    '</div><button class="spk sm" data-say="' + esc(p[0]) + '" aria-label="Nghe">🔊</button></div>').join("");
+
+  const sents = w.se.map((s, i) =>
+    '<div class="item"><span class="no">' + NO[i] + '</span><div class="body">' +
+      '<div class="zh hz">' + highlight(s[0], s[3]) + '</div>' +
+      '<span class="py">' + esc(s[1]) + '</span>' +
+      '<span class="vi">' + esc(s[2]) + '</span>' +
+    '</div><button class="spk sm" data-say="' + esc(s[0]) + '" aria-label="Nghe">🔊</button></div>').join("");
+
+  return '' +
+  '<div class="card ' + st + '" data-hz="' + esc(w.hz) + '">' +
+    '<div class="card-in">' +
+
+      '<div class="face front">' + flag +
+        '<span class="num-tag">' + n + "/" + DATA.words.length + '</span>' +
+        frontBody +
+      '</div>' +
+
+      '<div class="face back">' +
+        '<span class="num-tag">' + n + "/" + DATA.words.length + '</span>' +
+        '<div class="b-top">' +
+          '<span class="hz">' + esc(w.hz) + '</span>' +
+          '<span class="py">' + esc(w.py) + '</span>' +
+          '<button class="spk sm" data-say="' + esc(w.hz) + '" aria-label="Nghe">🔊</button>' +
+        '</div>' +
+        '<div class="poslabel">' + esc(w.pos) + '</div>' +
+        '<div class="mean">' + esc(w.vn) + '</div>' +
+        '<div class="hv">Âm Hán Việt: ' + esc(w.hv) + '</div>' +
+        '<div class="use"><span class="lbl">DÙNG KHI NÀO</span>' + esc(w.use) + '</div>' +
+        '<div class="sec"><span class="lbl">Cụm từ thường dùng</span>' + phrases + '</div>' +
+        '<div class="sec"><span class="lbl">Câu ví dụ</span>' + sents + '</div>' +
+        (w.tip ? '<div class="tip"><span class="lbl">MẸO NHỚ</span>' + esc(w.tip) + '</div>' : '') +
+        '<div class="marks">' +
+          '<button class="mk-known">✓ Đã thuộc</button>' +
+          '<button class="mk-review">↻ Cần ôn thêm</button>' +
+        '</div>' +
+      '</div>' +
+
+    '</div>' +
+  '</div>';
+}
+
+/* chiều cao thẻ co giãn theo mặt đang hiện — không bao giờ cắt chữ */
+function fitCard(card){
+  const inner = card.querySelector(".card-in");
+  const face  = card.classList.contains("flipped") ? card.querySelector(".back") : card.querySelector(".front");
+  if(inner && face) inner.style.height = face.offsetHeight + "px";
+}
+function fitAll(){ document.querySelectorAll(".card").forEach(fitCard); }
+
+/* ======================= LỌC & VẼ ======================= */
+function visibleList(){
+  return order.filter(i => {
+    const st = marks[DATA.words[i].hz] || "none";
+    return filter === "all" ? true : st === filter;
+  });
+}
+function render(){
+  const stage = document.getElementById("stage");
+  const list  = visibleList();
+  stage.className = mode === "all" ? "all" : "";
+
+  if(!list.length){
+    stage.innerHTML = '<div class="empty">Không có thẻ nào trong mục này.</div>';
+    document.getElementById("prog").style.display = "none";
+    document.getElementById("nav").style.display  = "none";
+    updateCounters(); return;
+  }
+  document.getElementById("nav").style.display = mode === "one" ? "flex" : "none";
+  document.getElementById("prog").style.display = mode === "one" ? "flex" : "none";
+
+  if(mode === "one"){
+    if(idx >= list.length) idx = 0;
+    const i = list[idx];
+    stage.innerHTML = cardHTML(DATA.words[i], order.indexOf(i) + 1);
+    document.getElementById("pNum").textContent = (idx + 1) + " / " + list.length;
+    document.getElementById("pBar").style.width = ((idx + 1) / list.length * 100) + "%";
+  }else{
+    stage.innerHTML = list.map(i => cardHTML(DATA.words[i], order.indexOf(i) + 1)).join("");
+  }
+  requestAnimationFrame(fitAll);
+  updateCounters();
+}
+function updateCounters(){
+  let k = 0, r = 0;
+  DATA.words.forEach(w => { if(marks[w.hz] === "known") k++; else if(marks[w.hz] === "review") r++; });
+  const n = DATA.words.length - k - r;
+  document.getElementById("cAll").textContent   = DATA.words.length;
+  document.getElementById("cKnown").textContent = k;
+  document.getElementById("cRev").textContent   = r;
+  document.getElementById("cNone").textContent  = n;
+  document.getElementById("stats").innerHTML =
+    'Đã thuộc <b class="g">' + k + '</b> · Cần ôn thêm <b class="o">' + r + '</b> · Chưa phân loại <b>' + n + '</b>';
+}
+
+/* ======================= TƯƠNG TÁC ======================= */
+function flipCard(card){
+  card.classList.toggle("flipped");
+  fitCard(card);
+}
+function setMark(hz, type){
+  if(marks[hz] === type) delete marks[hz];   /* bấm lại lần nữa thì bỏ đánh dấu */
+  else marks[hz] = type;
+  saveMarks();
+  const card = document.querySelector('.card[data-hz="' + hz + '"]');
+  if(card){
+    card.classList.remove("known", "review");
+    if(marks[hz]) card.classList.add(marks[hz]);
+  }
+  updateCounters();
+  /* chọn xong tự sang thẻ kế tiếp */
+  if(mode === "one"){ setTimeout(() => { if(filter !== "all") render(); else next(); }, 220); }
+  else if(card){ card.classList.remove("flipped"); fitCard(card);
+    const nx = card.nextElementSibling;
+    if(nx) setTimeout(() => nx.scrollIntoView({behavior:"smooth", block:"center"}), 240); }
+}
+function next(){ const n = visibleList().length; if(!n) return; idx = (idx + 1) % n; render(); }
+function prev(){ const n = visibleList().length; if(!n) return; idx = (idx - 1 + n) % n; render(); }
+
+document.addEventListener("click", e => {
+  const spk = e.target.closest(".spk");
+  if(spk){ e.stopPropagation(); speak(spk.dataset.say, spk); return; }
+
+  const mk = e.target.closest(".mk-known, .mk-review");
+  if(mk){ e.stopPropagation();
+    setMark(mk.closest(".card").dataset.hz, mk.classList.contains("mk-known") ? "known" : "review"); return; }
+
+  const card = e.target.closest(".card");
+  if(card){ flipCard(card); return; }
+
+  const chip = e.target.closest(".chip");
+  if(chip){
+    filter = chip.dataset.f; idx = 0;
+    document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c === chip));
+    render(); return;
+  }
+});
+
+/* chế độ học */
+const bOne = document.getElementById("mOne"), bAll = document.getElementById("mAll");
+bOne.onclick = () => { mode = "one"; bOne.setAttribute("aria-pressed", true);  bAll.setAttribute("aria-pressed", false); idx = 0; render(); };
+bAll.onclick = () => { mode = "all"; bOne.setAttribute("aria-pressed", false); bAll.setAttribute("aria-pressed", true);  render(); };
+
+/* chiều học */
+const bZh = document.getElementById("dZh"), bVi = document.getElementById("dVi");
+bZh.onclick = () => { dir = "zh"; bZh.setAttribute("aria-pressed", true);  bVi.setAttribute("aria-pressed", false); render(); };
+bVi.onclick = () => { dir = "vi"; bZh.setAttribute("aria-pressed", false); bVi.setAttribute("aria-pressed", true);  render(); };
+
+/* trộn thẻ / thứ tự gốc */
+document.getElementById("shuffle").onclick = () => {
+  for(let i = order.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+  idx = 0; render(); toast("Đã trộn thẻ.");
+};
+document.getElementById("order").onclick = () => { order = DATA.words.map((_, i) => i); idx = 0; render(); };
+
+/* xoá phân loại — hộp thoại xác nhận tự dựng (không dùng confirm của trình duyệt) */
+const modal = document.getElementById("modal");
+document.getElementById("clear").onclick = () => modal.classList.add("on");
+document.getElementById("mNo").onclick  = () => modal.classList.remove("on");
+document.getElementById("mYes").onclick = () => {
+  marks = {}; saveMarks(); modal.classList.remove("on"); idx = 0; render(); toast("Đã xoá toàn bộ phân loại.");
+};
+modal.addEventListener("click", e => { if(e.target === modal) modal.classList.remove("on"); });
+
+/* điều hướng */
+document.getElementById("prev").onclick = prev;
+document.getElementById("next").onclick = next;
+document.getElementById("flip").onclick = () => { const c = document.querySelector("#stage .card"); if(c) flipCard(c); };
+
+/* phím tắt */
+document.addEventListener("keydown", e => {
+  if(e.target.tagName === "INPUT" || modal.classList.contains("on")) return;
+  const c = document.querySelector("#stage .card");
+  if(e.code === "Space"){ e.preventDefault(); if(mode === "one" && c) flipCard(c); }
+  else if(e.key === "ArrowRight"){ if(mode === "one") next(); }
+  else if(e.key === "ArrowLeft"){ if(mode === "one") prev(); }
+  else if(e.key === "1"){ if(mode === "one" && c) setMark(c.dataset.hz, "known"); }
+  else if(e.key === "2"){ if(mode === "one" && c) setMark(c.dataset.hz, "review"); }
+});
+
+/* đo lại chiều cao khi đổi khổ màn hình hoặc khi font tải xong */
+window.addEventListener("resize", fitAll);
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
+setTimeout(fitAll, 400); setTimeout(fitAll, 1200);
+
+/* khởi tạo */
+document.getElementById("hCourse").textContent = DATA.course + " · " + DATA.level;
+document.getElementById("hTitle").innerHTML = "Bài " + DATA.lesson + ' · <span class="hz">' + esc(DATA.lessonTitle) + "</span>";
+document.getElementById("hLead").textContent = DATA.words.length + " thẻ từ vựng · chạm vào thẻ để lật";
+render();
+</script>
+</body>
+</html>
