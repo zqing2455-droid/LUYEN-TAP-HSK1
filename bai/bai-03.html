@@ -361,10 +361,10 @@ footer{margin-top:46px; padding-top:18px; border-top:1px solid var(--line);
 
 /* Tầng 1 — xếp câu (ô chữ đã xáo, không theo trình tự đáp án) */
 const SORT = [
- {n:1, t:'Em đưa bạn xem ảnh và giới thiệu người trong ảnh. Xếp lại câu.',
-  sit:'Khung giới thiệu: <b>这 + 是 + ai</b>. Trước danh từ chỉ NGƯỜI THÂN hay người gần gũi thì chữ 的 được bỏ đi.',
-  words:['女朋友','是','这','我'], ans:['这是我女朋友。','这是我的女朋友。'],
-  why:'Khung ba ô: <b>这</b> (cái này) + <b>是</b> (là) + <b>我女朋友</b> (ai). Chữ 的 ở đây bỏ được vì 女朋友 là người thân thiết — nói 我女朋友 nghe tự nhiên hơn 我的女朋友. Quy tắc này áp dụng cho cả 我姐姐 · 我老师 · 我家.<br>Từ Bài 2 gặp lại: <b>我</b> · <b>是</b>.'},
+ {n:1, t:'Em chỉ vào ảnh và giới thiệu bạn gái của chị gái em. Xếp lại câu.',
+  sit:'Hai tầng sở hữu trong một câu. Tầng NGƯỜI THÂN bỏ 的 được, nhưng tầng sau thì <b>的</b> bắt buộc phải có.',
+  words:['她','是','我','姐姐','的','女朋友'], ans:['她是我姐姐的女朋友。'],
+  why:'Tháo câu ra: <b>她</b> (ai) + <b>是</b> (là) + <b>我姐姐的</b> (của ai) + <b>女朋友</b> (người nào).<br>Chỗ cốt lõi: trong 我姐姐 thì 的 bỏ được vì là người thân ruột thịt; nhưng giữa 姐姐 và 女朋友 thì 的 BẮT BUỘC giữ — bỏ đi là câu vỡ nghĩa (✗我姐姐女朋友).<br>Từ Bài 2 gặp lại: <b>我</b> · <b>是</b>.'},
  {n:2, t:'Chị gái em làm việc rất bận. Xếp lại câu.',
   sit:'Hai việc cùng lúc: người SỞ HỮU đứng TRƯỚC 的, và tính từ thì dùng <b>很</b> chứ không dùng 是.',
   words:['很','的','工作','我','忙','姐姐'], ans:['我姐姐的工作很忙。'],

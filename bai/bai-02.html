@@ -359,18 +359,18 @@ footer{margin-top:46px; padding-top:18px; border-top:1px solid var(--line);
 
 /* Tầng 1 — xếp câu */
 const SORT = [
- {n:1, t:'Em gặp một người LẠ và muốn biết tên họ. Xếp lại câu cho lịch sự.',
-  sit:'Hỏi người lạ thì phải mở lời bằng <b>请问</b>. Phần còn lại giữ nguyên trật tự của câu kể: ai → làm gì → cái gì.',
-  words:['名字','叫','请问','什么','你'], ans:['请问，你叫什么名字？'],
-  why:'Khuôn cố định: <b>请问 + câu hỏi</b>. Chữ 什么 nằm đúng ô mà câu trả lời sẽ điền vào — hỏi 你叫什么名字, đáp 我叫李文, chữ 李文 rơi trúng ô của 什么. Tiếng Trung KHÔNG đảo từ hỏi lên đầu câu như tiếng Anh.<br><br>Từ Bài 1 gặp lại: <b>你</b>.'},
- {n:2, t:'Bạn gọi em bằng tên người khác. Em sửa lại. Xếp lại câu.',
-  sit:'Nói vế SAI trước, vế ĐÚNG sau. <b>不</b> đứng ngay trước động từ 是, không chen vào sau.',
-  words:['是','我','白家月','不','我','安妮','是'], ans:['我不是安妮，我是白家月。'],
-  why:'Khuôn sửa thông tin: <b>我不是⋯⋯，我是⋯⋯</b>. 不 phải đứng TRƯỚC toàn bộ động từ 是 (✗我是不安妮). Đây đúng là câu Bạch Gia Nguyệt nói ở bài khoá 2.<br><br>Đọc: 不是 đọc là búshì — 不 đứng trước thanh 4 thì đổi thành bú.'},
- {n:3, t:'Bạn vừa nói với em 很高兴认识你。Em đáp lại. Xếp lại câu.',
+ {n:1, t:'Em muốn hỏi tên cô giáo. Xếp lại câu cho lịch sự.',
+  sit:'Gọi người ta TRƯỚC rồi mới hỏi. Với thầy cô phải dùng <b>您</b>, không dùng 你.',
+  words:['名字','叫','老师','什么','您'], ans:['老师，您叫什么名字？'],
+  why:'Hai tầng lịch sự trong một câu: gọi <b>老师</b> trước, và dùng <b>您</b> thay 你.<br><br>Chữ 什么 nằm đúng ô mà câu trả lời sẽ điền vào — hỏi 您叫什么名字, đáp 我叫李文, chữ 李文 rơi trúng ô của 什么. Tiếng Trung KHÔNG đảo từ hỏi lên đầu câu như tiếng Anh.<br><br>Từ Bài 1 gặp lại: <b>老师</b> · <b>您</b>.'},
+ {n:2, t:'Bạn gọi em là 安妮. Em sửa lại tên mình. Xếp lại câu.',
+  sit:'Nói vế ĐÚNG trước, vế phủ định sau. <b>不</b> đứng ngay trước động từ 叫, không chen vào sau.',
+  words:['叫','我','白家月','不','叫','安妮'], ans:['我叫白家月，不叫安妮。'],
+  why:'Khuôn sửa tên: <b>我叫⋯⋯，不叫⋯⋯</b>. 不 phải đứng TRƯỚC động từ 叫 (✗我叫不安妮). Vế sau lược chủ ngữ 我 vì vẫn đang nói về mình.<br><br>Phân biệt với khuôn 是: nói TÊN thì dùng 叫, nói THÂN PHẬN mới dùng 是 (我是学生).<br><br>Đọc: 不叫 đọc là bújiào — 不 đứng trước thanh 4 thì đổi thành bú.'},
+ {n:3, t:'Bạn vừa nói 我不是老师。Em cũng không phải giáo viên. Xếp lại câu.',
   sit:'Muốn nghe ra ý "CŨNG" thì phải có <b>也</b>, và 也 bị kẹp giữa chủ ngữ với phần còn lại.',
-  words:['很','我','高兴','认识','也','你'], ans:['认识你我也很高兴。'],
-  why:'Thứ tự bắt buộc: <b>chủ ngữ + 也 + 很 + tính từ</b> → 我也很高兴. 也 KHÔNG BAO GIỜ đứng đầu câu (✗也我很高兴). Cụm 认识你 được đẩy lên đầu để nhấn, cho thấy mình nghe kỹ câu của người kia.<br><br>Từ Bài 1 gặp lại: <b>你</b>.'}
+  words:['也','我','不','是','老师'], ans:['我也不是老师。'],
+  why:'Thứ tự bắt buộc: <b>chủ ngữ + 也 + 不 + 是</b> → 我也不是老师. Hai chỗ dễ sai:<br>① 也 KHÔNG BAO GIỜ đứng đầu câu (✗也我不是老师).<br>② 也 đứng TRƯỚC 不, không đứng sau (✗我不也是老师).<br><br>Nhớ một dòng: 也 bám sát ngay sau chủ ngữ, rồi mới tới mọi thứ khác.'}
 ];
 
 /* Tầng 2 — nghe và viết lại (giọng đọc của trình duyệt) */
@@ -463,9 +463,9 @@ const CHATS = [
      {z:'我是⋯⋯名字。', ok:false, note:'Lẫn hai khung. Nói tên thì dùng 叫 (我叫李文); 是 dùng để nói thân phận (我是学生).', to:'c'},
      {z:'叫我⋯⋯。',     ok:false, note:'Thiếu chủ ngữ ở ô đầu, và 叫我 lại thành nghĩa "hãy gọi tôi là⋯". Phải là 我叫⋯⋯。', to:'c'}]},
    c:{them:'很高兴认识你。', picks:[
-     {z:'认识你我也很高兴。', ok:true,  note:'Đúng. Có 也 nên nghe ra ngay là đang ĐÁP LẠI, không phải nói độc lập.', to:null},
-     {z:'很高兴认识你。',     ok:false, note:'Nhắc lại y nguyên thì mất chữ 也 — nghe như hai người nói rời nhau. Thêm 也 vào: 我也很高兴。', to:null},
-     {z:'也我很高兴。',       ok:false, note:'也 không đứng đầu câu được. Phải là 我也很高兴。', to:null}]}
+     {z:'我也很高兴认识你。', ok:true,  note:'Đúng. Có 也 nên nghe ra ngay là đang ĐÁP LẠI, không phải nói độc lập. 也 nằm sát sau chủ ngữ 我.', to:null},
+     {z:'很高兴认识你。',     ok:false, note:'Nhắc lại y nguyên thì mất chữ 也 — nghe như hai người nói rời nhau. Thêm 也 vào: 我也很高兴认识你。', to:null},
+     {z:'也我很高兴认识你。', ok:false, note:'也 không đứng đầu câu được. Phải là 我也很高兴⋯⋯。', to:null}]}
   },
   done:'Xong. Ba lượt vừa rồi đi trọn một lần gặp cô giáo: chào bằng 您 → nói tên bằng khung 我叫⋯ → và nhớ 也 khi đáp lời.'},
 
@@ -474,7 +474,7 @@ const CHATS = [
   start:'a',
   nodes:{
    a:{them:'你好，安妮！', picks:[
-     {z:'你好！我不是安妮，我是白家月。', ok:true,  note:'Đúng. Chào lại trước cho lịch sự, rồi mới sửa: vế phủ định trước, vế đúng sau.', to:'b'},
+     {z:'你好！我不是安妮，我叫白家月。', ok:true,  note:'Đúng. Chào lại trước cho lịch sự, rồi mới sửa. Chú ý vế sau đổi sang 叫 vì đang nói TÊN.', to:'b'},
      {z:'我是不安妮。',                   ok:false, note:'Sai vị trí 不 — phải đứng TRƯỚC 是: 我不是安妮。', to:'b'},
      {z:'不是！',                         ok:false, note:'Cộc quá. Nói trống hai chữ thì người kia không biết mình là ai. Nên nói đủ: 我不是⋯⋯，我是⋯⋯。', to:'b'}]},
    b:{them:'对不起！', picks:[
@@ -494,9 +494,10 @@ const CHATS = [
    a:{them:'你好！我叫李文。', picks:[
      {z:'你好！我叫⋯⋯。', ok:true,  note:'Đúng. Đáp lại đúng khuôn bạn ấy vừa dùng — chào trước, nói tên sau.', to:'b'},
      {z:'我叫⋯⋯。',       ok:false, note:'Thiếu lời chào đáp lại. Bạn ấy chào trước rồi, mình nên chào lại cho cân.', to:'b'}]},
-   b:{them:'很高兴认识你。', picks:[
-     {z:'认识你我也很高兴。', ok:true,  note:'Đúng. Có 也 nên nghe ra là đang đáp lại. Đây là cặp đối đáp thứ ba em học, sau 谢谢↔不客气 và 对不起↔没关系。', to:'c'},
-     {z:'我很高兴。',         ok:false, note:'Đúng ngữ pháp nhưng cụt — thiếu 认识你 và thiếu 也, nghe như đang nói chuyện khác.', to:'c'}]},
+   b:{them:'我是学生。', picks:[
+     {z:'我也是学生。', ok:true,  note:'Đúng. 也 kẹp giữa chủ ngữ 我 và phần còn lại — đây là chỗ khó nhất của Bài 2.', to:'c'},
+     {z:'也我是学生。', ok:false, note:'也 KHÔNG BAO GIỜ đứng đầu câu. Phải là 我也是学生。', to:'c'},
+     {z:'我是也学生。', ok:false, note:'Sai vị trí — 也 đứng TRƯỚC động từ 是, không chen vào sau nó.', to:'c'}]},
    c:{them:'同学，再见！', picks:[
      {z:'再见！',     ok:true,  note:'Đúng. 再见 là từ của Bài 1, đáp ngắn gọn là được.', to:null},
      {z:'对不起！',   ok:false, note:'Không có gì để xin lỗi. Lúc chia tay thì dùng 再见。', to:null},
@@ -519,28 +520,29 @@ const TYPE = [
          {z:'叫我',     w:'Thiếu chủ ngữ, và 叫我 lại thành "hãy gọi tôi là⋯". Phải là 我叫⋯⋯。'},
          {z:'我的名字叫', w:'Dài dòng và sai khung ở cấp 1. Nói gọn: 我叫⋯⋯。'}]},
 
- {n:19, t:'Em vừa va phải một bạn, bạn ấy xin lỗi trước. Em đáp lại bằng một câu tiếng Trung.',
-  ask:'对不起！',
+ {n:19, t:'Em gọi một bạn là 安妮, nhưng bạn ấy bảo không phải. Em xin lỗi bạn ấy bằng một câu tiếng Trung.',
+  ask:'我不是安妮，我是白家月。',
   need:[
-   {lbl:'没关系 hoặc 没事', any:['没关系','没事'], tip:'Vế đáp của 对不起 là 没关系 (trung tính) hoặc 没事 (thân mật hơn). Đừng nhầm sang 不客气 — đó là vế đáp của 谢谢。'}],
-  model:'没关系！',
-  why:'Cặp cố định: <b>对不起 → 没关系</b>. Nghĩa đen của 没关系 là "không có quan hệ gì" → chuyện này chẳng ảnh hưởng gì tới tôi. Với bạn thân, khẩu ngữ hay nói đôi cho nhẹ giọng: 没事没事。',
-  more:'没关系！ · 没事！ · 没事没事。 · 没关系没关系。 · 没关系，没事。',
-  avoid:[{z:'不客气', w:'Nhầm cặp — 不客气 đáp lời 谢谢 (Bài 1), còn 没关系 mới đáp lời 对不起。'},
-         {z:'谢谢',   w:'Bạn ấy đang xin lỗi mình, không có gì để cảm ơn cả.'}]},
+   {lbl:'对不起', any:['对不起'], tip:'Gọi nhầm tên người ta là lỗi của mình, nên phải mở lời bằng 对不起. Đừng dùng 没关系 — đó là câu NGƯỜI KIA đáp lại mình.'}],
+  model:'对不起，白家月！',
+  why:'Vế mình nói là <b>对不起</b>, vế người kia đáp mới là 没关系. Hai câu này luôn đi thành cặp nhưng thuộc về HAI người khác nhau — đây là chỗ học viên hay đảo ngược.<br><br>Gọi kèm tên vừa nghe được (白家月) thì lời xin lỗi nghe thật lòng hơn là nói trống không.',
+  more:'对不起！ · 对不起，白家月！ · 白家月，对不起！ · 对不起，白家月，很高兴认识你。',
+  avoid:[{z:'没关系', w:'Ngược vai rồi. 没关系 là câu người bị gọi nhầm đáp lại mình, không phải lời xin lỗi.'},
+         {z:'不客气', w:'Nhầm cặp — 不客气 đáp lời 谢谢 (Bài 1), không dùng ở đây.'},
+         {z:'谢谢',   w:'Mình đang có lỗi, không phải đang cảm ơn.'}]},
 
- {n:20, t:'Bạn mới quen vừa nói với em 很高兴认识你。Em đáp lại bằng một câu tiếng Trung.',
-  ask:'很高兴认识你。',
+ {n:20, t:'Buổi học đầu tiên, em đứng lên tự giới thiệu với cả lớp: chào mọi người, nói tên em, và nói em là học sinh.',
+  ask:'同学们，大家好！',
   need:[
-   {lbl:'也', any:['也'], tip:'Thiếu 也 thì mất hẳn ý "mình CŨNG vậy" — nghe như hai người nói rời nhau. 也 đứng SAU chủ ngữ.'},
-   {lbl:'高兴', any:['高兴'], tip:'Dùng lại chính tính từ 高兴 của câu người kia, nhớ có 很 đỡ phía trước.'}],
-  order:['我','高兴','Đủ thành phần nhưng sai trật tự: chủ ngữ <b>我</b> phải đứng TRƯỚC <b>也很高兴</b> — 也 không bao giờ mở đầu câu.'],
-  model:'认识你我也很高兴。',
-  why:'Không cần giống hệt câu mẫu. Bắt buộc phải có: một chủ ngữ, rồi <b>也</b>, rồi <b>很高兴</b>. Nói gọn 我也很高兴。cũng đúng. Cụm 认识你 đẩy lên đầu để nhấn, cho thấy mình nghe kỹ câu của người kia.',
-  more:'我也很高兴。 · 认识你我也很高兴。 · 我也很高兴认识你。 · 我也是，很高兴认识你。 · 认识你，我也很高兴！',
-  avoid:[{z:'也我',   w:'也 không đứng đầu câu. Phải là 我也⋯⋯。'},
-         {z:'我很也', w:'Sai thứ tự: 也 trước, 很 sau — 我也很高兴。'},
-         {z:'我是高兴', w:'高兴 là tính từ nên không dùng 是. Phải là 我很高兴。'}]}
+   {lbl:'lời chào cả lớp', any:['大家好','你们好'], tip:'Nói với CẢ LỚP thì chào bằng 大家好 hoặc 你们好, không chào 你好 (chỉ dành cho một người).'},
+   {lbl:'我叫⋯', any:['我叫'], tip:'Nói TÊN thì dùng động từ 叫: 我叫⋯⋯。'},
+   {lbl:'我是学生', any:['我是学生'], tip:'Nói THÂN PHẬN thì đổi sang động từ 是: 我是学生。'}],
+  model:'大家好！我叫李文，我是学生。',
+  why:'Ba mảnh ghép của một lời tự giới thiệu, đúng thứ tự: <b>chào</b> → <b>tên</b> → <b>thân phận</b>.<br><br>Chỗ cốt lõi của bài: nói TÊN dùng <b>叫</b>, nói THÂN PHẬN dùng <b>是</b> — hai động từ không thay nhau được (✗我是李文名字 · ✗我叫学生).<br><br>Em thay 李文 bằng tên mình hoặc tên tiếng Trung của mình.',
+  more:'大家好！我叫李文，我是学生。 · 你们好！我叫安妮，我是学生。 · 大家好，我叫白家月。我是学生。 · 同学们好！我叫陈天中，我也是学生。',
+  avoid:[{z:'你好', w:'Nói với cả lớp thì phải là 大家好 hoặc 你们好 — 你好 chỉ chào được một người.'},
+         {z:'我的名字叫', w:'Dài dòng và sai khung ở cấp 1. Nói gọn: 我叫⋯⋯。'},
+         {z:'我叫学生', w:'Lẫn hai động từ. Thân phận thì dùng 是: 我是学生。'}]}
 ];
 
 

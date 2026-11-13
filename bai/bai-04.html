@@ -365,10 +365,10 @@ const SORT = [
   sit:'Giữa SỐ và DANH TỪ luôn phải có một ô ở giữa — đó là lượng từ. Số 2 đứng trước lượng từ thì dùng <b>两</b>, không dùng 二.',
   words:['哥哥','我','个','有','两'], ans:['我有两个哥哥。'],
   why:'Khung bốn ô: <b>我</b> + <b>有</b> + <b>两个</b> + <b>哥哥</b>. Hai chỗ dễ sai: bỏ mất 个 (✗我有两哥哥), và dùng 二 thay 两 (✗我有二个哥哥).<br>Quy tắc: đếm người, đếm vật thì dùng 两; đọc số, đọc ngày tháng thì dùng 二.'},
- {n:2, t:'Con trai của chị ấy năm nay 5 tuổi. Xếp lại câu.',
+ {n:2, t:'Con trai em năm nay 9 tuổi. Xếp lại câu.',
   sit:'Câu nói tuổi KHÔNG cần động từ 是. Danh từ chỉ thời gian <b>今年</b> đứng ngay sau chủ ngữ.',
-  words:['五','他','岁','今年'], ans:['他今年五岁。'],
-  why:'Đây là câu vị ngữ danh từ — cả câu không có động từ nào mà vẫn đủ nghĩa. Tuyệt đối không viết ✗他今年是五岁.<br>Thứ tự bốn ô: <b>ai + khi nào + bao nhiêu + 岁</b>. Với trẻ dưới 10 tuổi thì nói đủ chữ 岁.'},
+  words:['九','我','儿子','岁','今年'], ans:['我儿子今年九岁。'],
+  why:'Đây là câu vị ngữ danh từ — cả câu không có động từ nào mà vẫn đủ nghĩa. Tuyệt đối không viết ✗我儿子今年是九岁.<br>Thứ tự bốn ô: <b>ai + khi nào + bao nhiêu + 岁</b>. Trước 儿子 bỏ 的 được vì là người thân.<br>Với trẻ dưới 10 tuổi thì nói đủ chữ 岁.'},
  {n:3, t:'Em muốn hỏi tuổi con gái 12 tuổi của chị đồng nghiệp. Xếp lại câu.',
   sit:'Hỏi tuổi phải chọn khuôn theo NGƯỜI: trẻ nhỏ dùng 几岁, còn thiếu niên và người lớn dùng <b>多大</b>.',
   words:['多','女儿','今年','大','你'], ans:['你女儿今年多大？','你女儿多大？'],
@@ -444,9 +444,9 @@ const PICKQ = [
  {n:14, t:'Em muốn hỏi lớp của cô giáo có bao nhiêu học sinh — em đoán khoảng vài chục.',
   sit:'Đoán con số LỚN thì dùng <b>多少</b>; và sau 多少 thì lượng từ có thể bỏ.',
   opts:[
-   {z:'她有多少个学生？', ok:true,  w:'Đúng. Vài chục là số lớn nên dùng 多少. Nói gọn 多少学生 cũng đúng — sau 多少 lượng từ bỏ được, khác hẳn 几 (sau 几 bắt buộc có lượng từ).'},
-   {z:'她有几个学生？',   ok:false, w:'几 dùng khi đoán dưới 10. Hỏi số học sinh cả lớp bằng 几 nghe như đang nghĩ lớp chỉ có vài em.'},
-   {z:'她有多少学生吗？', ok:false, w:'Thừa 吗. Câu đã có từ hỏi 多少 rồi — quy tắc đã chốt từ Bài 3.'}
+   {z:'老师有多少个学生？', ok:true,  w:'Đúng. Vài chục là số lớn nên dùng 多少. Nói gọn 多少学生 cũng đúng — sau 多少 lượng từ bỏ được, khác hẳn 几 (sau 几 bắt buộc có lượng từ).'},
+   {z:'老师有几个学生？',   ok:false, w:'几 dùng khi đoán dưới 10. Hỏi số học sinh cả lớp bằng 几 nghe như đang nghĩ lớp chỉ có vài em.'},
+   {z:'老师有多少学生吗？', ok:false, w:'Thừa 吗. Câu đã có từ hỏi 多少 rồi — quy tắc đã chốt từ Bài 3.'}
   ]}
 ];
 
@@ -464,7 +464,7 @@ const CHATS = [
      {z:'你爸爸妈妈忙吗？', ok:true,  note:'Đúng. Chuyển sang hỏi thăm bố mẹ, dùng 吗 vì câu không có từ hỏi nào khác.', to:'c'},
      {z:'你爸爸妈妈是忙吗？', ok:false, note:'Chèn 是 trước tính từ 忙 — lỗi của Bài 3 quay lại. Bỏ 是 đi.', to:'c'},
      {z:'你爸爸妈妈几忙？',   ok:false, note:'几 dùng để hỏi SỐ LƯỢNG, không dùng để hỏi mức độ.', to:'c'}]},
-   c:{them:'他们很忙。我妹妹今年七岁。', picks:[
+   c:{them:'爸爸妈妈很忙。我妹妹今年七岁。', picks:[
      {z:'你妹妹上学吗？',   ok:false, note:'上学 là từ của Bài 14, chưa học tới. Ở bài này nên hỏi bằng từ đã có.', to:null},
      {z:'她和你一样大吗？', ok:false, note:'一样 là từ chưa học. Giữ câu trong phạm vi từ của Bài 1–4.', to:null},
      {z:'她也是学生吗？',   ok:true,  note:'Đúng. 也 kẹp giữa chủ ngữ và 是, dùng 吗 vì không có từ hỏi nào khác. Toàn từ đã học.', to:null}]}
@@ -486,16 +486,16 @@ const TYPE = [
          {z:'我有不哥哥', w:'Sai vị trí. 没 luôn đứng TRƯỚC động từ 有.'},
          {z:'我不哥哥',   w:'Thiếu động từ. 哥哥 là danh từ nên phải có 有 nối vào.'}]},
 
- {n:17, t:'Có người hỏi tuổi con gái 12 tuổi của em. Em trả lời bằng một câu tiếng Trung.',
+ {n:17, t:'Có người hỏi tuổi con gái 14 tuổi của em. Em trả lời bằng một câu tiếng Trung.',
   ask:'您女儿多大？',
   need:[
-   {lbl:'今年 hoặc số tuổi', any:['今年','十二','12'], tip:'Câu nói tuổi thường mở bằng 今年, rồi tới con số.'}],
+   {lbl:'今年 hoặc số tuổi', any:['今年','十四','14'], tip:'Câu nói tuổi thường mở bằng 今年, rồi tới con số.'}],
   order:['今年','是','Câu nói tuổi KHÔNG dùng động từ <b>是</b> — đây là câu vị ngữ danh từ, bỏ 是 đi.'],
-  model:'她今年十二岁。',
-  why:'Ba ô: <b>她</b> (ai) + <b>今年</b> (khi nào) + <b>十二岁</b> (bao nhiêu). Cả câu KHÔNG có động từ nào — đó chính là câu vị ngữ danh từ. Với người đã lớn, chữ 岁 bỏ được: 她今年十二。',
-  more:'她今年十二。 · 我女儿今年十二岁。 · 她十二岁。 · 我女儿十二。 · 她今年十二岁，上学了。',
-  avoid:[{z:'她今年是十二岁', w:'Thừa 是. Câu nói tuổi không cần động từ.'},
-         {z:'她十二今年岁',   w:'Sai thứ tự — 今年 đứng ngay sau chủ ngữ.'},
+  model:'她今年十四岁。',
+  why:'Ba ô: <b>她</b> (ai) + <b>今年</b> (khi nào) + <b>十四岁</b> (bao nhiêu). Cả câu KHÔNG có động từ nào — đó chính là câu vị ngữ danh từ. Với người đã lớn, chữ 岁 bỏ được: 她今年十四。',
+  more:'她今年十四。 · 我女儿今年十四岁。 · 她十四岁。 · 我女儿十四。 · 她今年十四岁，她是学生。',
+  avoid:[{z:'她今年是十四岁', w:'Thừa 是. Câu nói tuổi không cần động từ.'},
+         {z:'她十四今年岁',   w:'Sai thứ tự — 今年 đứng ngay sau chủ ngữ.'},
          {z:'她今年多大',     w:'多大 là cụm HỎI, không dùng trong câu trả lời.'}]},
 
  {n:18, t:'Có người hỏi nhà em có mấy người. Em kể luôn gồm những ai. Viết một câu tiếng Trung.',

@@ -366,10 +366,10 @@ const SORT = [
   sit:'<b>们</b> gắn sau từ chỉ người để nói số nhiều. Cô gọi học trò là <b>同学</b>, không gọi là 学生.',
   words:['再见','同学','们'], ans:['同学们，再见！'],
   why:'同学 + 们 = các em, gọi cả lớp. 再见 đứng sau cùng. Chú ý: khi gọi học trò, người Trung dùng 同学们 chứ không dùng 学生们 — 学生 là từ để KỂ (nghề/vai), 同学 là từ để GỌI.'},
- {n:3, t:'Cô giáo vừa giúp em. Em cảm ơn cô. Xếp lại câu (có hai cách đều đúng).',
-  sit:'<b>谢谢</b> có thể đứng trước hoặc sau người được cảm ơn — cả hai đều tự nhiên.',
-  words:['老师','谢谢'], ans:['谢谢老师！','老师，谢谢！'],
-  why:'谢谢老师 = cảm ơn cô (nói thẳng vào đối tượng). 老师，谢谢 = gọi cô trước rồi mới cảm ơn. Cả hai đều dùng được; câu đầu phổ biến hơn trong lớp học.'}
+ {n:3, t:'Cô giáo vừa giúp em. Em gọi cô rồi cảm ơn cô. Xếp lại câu.',
+  sit:'Gọi người ta TRƯỚC, rồi mới nói lời cảm ơn. Với thầy cô thì dùng <b>您</b>, không dùng 你.',
+  words:['老师','谢谢','您'], ans:['老师，谢谢您！'],
+  why:'Ba ô theo đúng thứ tự: <b>老师</b> (gọi ai) + <b>谢谢</b> (cảm ơn) + <b>您</b> (cảm ơn ai).<br>Nói gọn 谢谢老师！cũng đúng và rất phổ biến trong lớp, nhưng khi đã dùng tới chữ 您 thì phải gọi 老师 lên trước — không nói ✗谢谢您老师.<br>Nhớ: 您 là cách gọi kính trọng của 你, chỉ dùng với thầy cô và người lớn tuổi.'}
 ];
 
 /* Tầng 2 — nghe và viết lại (giọng đọc của trình duyệt) */
@@ -525,14 +525,14 @@ const TYPE = [
   avoid:[{z:'谢谢', w:'Em là người ĐƯỢC cảm ơn, không phải người cảm ơn. Câu đáp là 不客气, không phải 谢谢.'},
          {z:'再见', w:'再见 là lời tạm biệt, không trả lời được cho 谢谢.'}]},
 
- {n:20, t:'Các bạn trong lớp vừa chào tạm biệt em. Em chào lại cả nhóm bằng một câu tiếng Trung.',
-  ask:'同学们，再见！',
+ {n:20, t:'Tan học, trong phòng có cả thầy cô lẫn các bạn. Em chào tạm biệt tất cả mọi người bằng một câu tiếng Trung.',
+  ask:'再见！',
   need:[
    {lbl:'một từ có 们', any:['同学们','你们','老师们','大家'], tip:'Chào nhiều người thì gọi cả nhóm: 同学们 · 你们 · 老师们 hoặc 大家. Một bạn thôi mới nói 同学.'},
    {lbl:'再见', any:['再见'], tip:'Lời tạm biệt là 再见. 好 là lời chào lúc GẶP, không dùng lúc về.'}],
-  model:'同学们，再见！',
-  why:'Vẫn là khuôn quen thuộc: <b>gọi người trước, lời chào sau</b> — 同学们 + 再见. Nói 你们，再见！cũng được. Nếu muốn chào cô giáo thì đổi người được gọi: 老师，再见！',
-  more:'同学们，再见！ · 大家，再见！ · 你们，再见！ · 老师们，再见！ · 同学们再见！',
+  model:'大家，再见！',
+  why:'Vẫn là khuôn quen thuộc: <b>gọi người trước, lời chào sau</b>. Trong phòng có nhiều hạng người khác nhau thì gọi chung bằng <b>大家</b> là hợp nhất — gọi 同学们 thì bỏ sót thầy cô, gọi 老师 thì bỏ sót các bạn.<br>Nói 你们，再见！cũng được. Chào riêng một nhóm thì đổi người được gọi: 同学们，再见！· 老师，再见！',
+  more:'大家，再见！ · 你们，再见！ · 大家再见！ · 老师，同学们，再见！ · 再见，大家！',
   avoid:[{z:'同学再见们', w:'们 phải dán SÁT sau 同学: 同学们，再见！'},
          {z:'大家们',     w:'大家 đã là số nhiều, không gắn thêm 们. Nói 大家，再见！là đủ.'},
          {z:'同学们好',   w:'好 là lời chào lúc GẶP. Lúc về phải dùng 再见: 同学们，再见！'}]}

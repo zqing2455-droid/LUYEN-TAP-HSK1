@@ -361,14 +361,14 @@ footer{margin-top:46px; padding-top:18px; border-top:1px solid var(--line);
 
 /* Tầng 1 — xếp câu (ô chữ đã xáo, không theo trình tự đáp án) */
 const SORT = [
- {n:1, t:'Bạn hỏi hôm nay ngày mấy. Hôm nay mùng 8 tháng 9. Xếp lại câu.',
+ {n:1, t:'Bạn hỏi hôm nay ngày mấy. Hôm nay mùng 3 tháng 10. Xếp lại câu.',
   sit:'Câu nói ngày tháng KHÔNG cần động từ 是. Thứ tự đọc ngày tháng của tiếng Trung đi từ ĐƠN VỊ LỚN xuống nhỏ.',
-  words:['号','九','今天','八','月'], ans:['今天九月八号。'],
-  why:'Đây là câu vị ngữ danh từ — cả câu không có động từ mà vẫn đủ nghĩa. Tuyệt đối không viết ✗今天是九月八号 ở cấp 1.<br>Thứ tự LỚN → NHỎ: 年 → 月 → 号. Tiếng Việt nói ngược (mùng 8 tháng 9) nên đây là chỗ sai nhiều nhất của bài.'},
- {n:2, t:'Em nấu được vài món. Xếp lại câu.',
+  words:['号','十','今天','三','月'], ans:['今天十月三号。'],
+  why:'Đây là câu vị ngữ danh từ — cả câu không có động từ mà vẫn đủ nghĩa. Tuyệt đối không viết ✗今天是十月三号 ở cấp 1.<br>Thứ tự LỚN → NHỎ: 年 → 月 → 号. Tiếng Việt nói ngược (mùng 3 tháng 10) nên đây là chỗ sai nhiều nhất của bài.'},
+ {n:2, t:'Chị ấy nấu được vài món ăn Trung Quốc. Xếp lại câu.',
   sit:'<b>会</b> là động từ năng nguyện, luôn đứng TRƯỚC động từ chính. <b>一些</b> là lượng từ, đứng giữa động từ và danh từ.',
-  words:['菜','我','一些','做','会'], ans:['我会做一些菜。'],
-  why:'Năm ô: <b>我</b> + <b>会</b> + <b>做</b> + <b>一些</b> + <b>菜</b>. Hai phần dễ sai: 会 phải đứng trước 做 (✗我做会一些菜), và 一些 phải nằm giữa động từ với danh từ (✗我会做菜一些).<br>一些 nghĩa là "một ít, vài" — dùng khi không muốn nói con số chính xác.'},
+  words:['菜','她','一些','做','会','中国'], ans:['她会做一些中国菜。'],
+  why:'Sáu ô: <b>她</b> + <b>会</b> + <b>做</b> + <b>一些</b> + <b>中国菜</b>. Ba phần dễ sai: 会 phải đứng trước 做 (✗她做会一些中国菜), 一些 phải nằm giữa động từ với danh từ (✗她会做中国菜一些), và 中国 dính liền với 菜 thành một khối, không tách ra được.<br>一些 nghĩa là "một ít, vài" — dùng khi không muốn nói con số chính xác.'},
  {n:3, t:'Em khoe với bạn chiếc máy tính vừa mua. Xếp lại câu.',
   sit:'Trước ĐỒ VẬT thì chữ <b>的</b> BẮT BUỘC phải có. Tính từ 新 đứng ngay trước danh từ nó bổ nghĩa.',
   words:['电脑','我','新','是','的','这'], ans:['这是我的新电脑。'],
@@ -413,12 +413,12 @@ const PICKQ = [
    {z:'今天十号。',   ok:true,  w:'Đúng. Cả câu không có động từ nào mà vẫn đủ nghĩa. Cùng kiểu với 他今年五岁 (Bài 4). Đang trong mạch chuyện nên bỏ cả phần tháng đi cũng được.'},
    {z:'今天很十号。', ok:false, w:'很 chỉ đi với TÍNH TỪ. 十号 là cụm danh từ nên không dùng 很.'}
   ]},
- {n:10, t:'Em muốn hỏi bạn có biết nấu ăn không.',
+ {n:10, t:'Em muốn hỏi bạn có biết làm sủi cảo không.',
   sit:'<b>会</b> = BIẾT LÀM (kỹ năng đã học) · <b>喜欢</b> = THÍCH (sở thích). Hai việc khác hẳn nhau.',
   opts:[
-   {z:'你喜欢做饭吗？', ok:false, w:'Câu này đúng ngữ pháp nhưng hỏi chuyện KHÁC — hỏi bạn có THÍCH nấu ăn không, chứ không phải có BIẾT nấu không. Người ghét nấu ăn vẫn có thể nấu rất giỏi.'},
-   {z:'你会做饭吗？',   ok:true,  w:'Đúng. 会 hỏi về kỹ năng đã học được. Trả lời: 我会做饭。hoặc 我不会做饭。'},
-   {z:'你做饭会吗？',   ok:false, w:'Sai thứ tự. 会 là động từ năng nguyện, luôn đứng TRƯỚC động từ chính: 会做饭.'}
+   {z:'你喜欢做饺子吗？', ok:false, w:'Câu này đúng ngữ pháp nhưng hỏi chuyện KHÁC — hỏi bạn có THÍCH làm sủi cảo không, chứ không phải có BIẾT làm không. Người ghét vào bếp vẫn có thể làm rất khéo.'},
+   {z:'你会做饺子吗？',   ok:true,  w:'Đúng. 会 hỏi về kỹ năng đã học được. Trả lời: 我会做饺子。hoặc 我不会做饺子。'},
+   {z:'你做饺子会吗？',   ok:false, w:'Sai thứ tự. 会 là động từ năng nguyện, luôn đứng TRƯỚC động từ chính: 会做饺子.'}
   ]},
  {n:11, t:'Em muốn nói "chủ nhật".',
   sit:'Chủ nhật là ngày DUY NHẤT trong tuần không dùng số — dùng <b>日</b> hoặc <b>天</b>.',
@@ -464,7 +464,7 @@ const CHATS = [
      {z:'这是你的新电脑吗？', ok:true,  note:'Đúng, đủ năm ô: 这是 + 你的 + 新 + 电脑 + 吗. Trước đồ vật thì 的 bắt buộc giữ.', to:'c'},
      {z:'这是你新电脑吗？',   ok:false, note:'Thiếu 的. Bỏ 的 chỉ áp dụng với người thân, không áp dụng với đồ vật.', to:'c'},
      {z:'这是新你的电脑吗？', ok:false, note:'Sai thứ tự. Phần sở hữu 你的 đứng trước, rồi mới tới tính từ 新.', to:'c'}]},
-   c:{them:'是的，真好看吧？我很喜欢它。', picks:[
+   c:{them:'是的，真好看！我很喜欢它。', picks:[
      {z:'我也很喜欢它。', ok:true,  note:'Đúng cả hai chỗ: 也 kẹp giữa chủ ngữ và 很喜欢, và dùng 它 vì máy tính là ĐỒ VẬT.', to:null},
      {z:'我也很喜欢他。', ok:false, note:'Sai chữ 他/它. Máy tính là đồ vật nên dùng 它 — ba chữ 他·她·它 đọc giống hệt nhau, chỉ phân biệt khi VIẾT.', to:null},
      {z:'也我很喜欢它。', ok:false, note:'也 không đứng đầu câu — quy tắc đã chốt từ Bài 2.', to:null}]}
