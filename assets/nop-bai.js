@@ -13,7 +13,7 @@
 (function () {
   'use strict';
 
-  var ENDPOINT = '';   // ← DÁN LINK WEB APP VÀO GIỮA HAI DẤU NHÁY NÀY
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyR29mubASk1W77IMTmdCR0DCCC24rPlmYMw71anC6o4hETniz9xutFPnIjMVWfVKTGKQ/exec';
 
   var TEN_CO     = 'cô Thanh Trúc';
   var K_TEN      = 'hsk1-ten-hoc-vien';
