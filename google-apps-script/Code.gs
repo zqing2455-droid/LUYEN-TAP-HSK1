@@ -38,20 +38,23 @@ function json(o) {
     .setMimeType(ContentService.MimeType.JSON);
 }
 
-/* ── Lấy sheet, chưa có thì tạo kèm dòng tiêu đề ── */
+/* ── Lấy sheet, chưa có thì tạo kèm dòng tiêu đề.
+      Nếu sheet đã có mà tiêu đề cũ không khớp thì ghi đè tiêu đề mới. ── */
 function sheet(ss, ten, tieuDe) {
   var sh = ss.getSheetByName(ten);
   if (!sh) {
     sh = ss.insertSheet(ten);
     sh.appendRow(tieuDe);
-    sh.getRange(1, 1, 1, tieuDe.length)
-      .setFontWeight('bold')
-      .setBackground('#efe7df');
     sh.setFrozenRows(1);
     sh.getRange('A:A').setNumberFormat('dd/MM/yyyy HH:mm');
     sh.setColumnWidth(1, 140);
     sh.setColumnWidth(2, 170);
+  } else {
+    var soCot = Math.max(sh.getLastColumn(), 1);
+    var cu    = sh.getRange(1, 1, 1, soCot).getValues()[0];
+    if (cu.join('|') !== tieuDe.join('|')) sh.getRange(1, 1, 1, tieuDe.length).setValues([tieuDe]);
   }
+  sh.getRange(1, 1, 1, tieuDe.length).setFontWeight('bold').setBackground('#efe7df');
   return sh;
 }
 
@@ -82,18 +85,25 @@ function ghiTong(ss, d) {
   ]);
 }
 
-/* ── Sheet 2: mỗi CÂU SAI một dòng, kèm nội dung học viên đã trả lời ── */
+/* ── Sheet 2: mỗi CÂU SAI một dòng — đề bài, em trả lời gì, đáp án đúng là gì ── */
 function ghiChiTiet(ss, d) {
   var ds = d.cauSai || [];
   if (!ds.length) return;
   var sh  = sheet(ss, TEN_SHEET_CHITIET,
-    ['Thời gian', 'Họ tên', 'Bài', 'Câu', 'Tầng', 'Em đã trả lời']);
+    ['Thời gian', 'Họ tên', 'Bài', 'Câu', 'Tầng', 'Đề bài', 'Em đã trả lời', 'Đáp án đúng']);
   var luc = new Date(d.luc || Date.now());
   var ten = d.ten || '(chưa ghi tên)';
   var bai = d.bai || '';
-  sh.getRange(sh.getLastRow() + 1, 1, ds.length, 6).setValues(
+  var dau = sh.getLastRow() + 1;
+  sh.getRange(dau, 1, ds.length, 8).setValues(
     ds.map(function (c) {
-      return [luc, ten, bai, Number(c.cau), c.tang || '', c.traLoi || '(bỏ trống)'];
+      return [luc, ten, bai, Number(c.cau), c.tang || '',
+              c.de || '', c.traLoi || '(bỏ trống)', c.dapAn || ''];
     })
   );
+  // cho chữ xuống dòng trong ô, đừng tràn ngang
+  sh.getRange(dau, 6, ds.length, 3).setWrap(true).setVerticalAlignment('top');
+  sh.setColumnWidth(6, 320);
+  sh.setColumnWidth(7, 240);
+  sh.setColumnWidth(8, 240);
 }
