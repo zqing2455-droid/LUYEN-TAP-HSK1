@@ -627,6 +627,7 @@ function buildSort(d, host){
   const wants=d.ans.map(norm);
   Q.push({
     n:d.n, tier:'Xếp câu',
+    got:()=>cur(),
     answered:()=>cur().length>0,
     correct:()=>wants.indexOf(norm(cur()))>-1,
     reveal(){
@@ -687,6 +688,7 @@ function buildDictate(d, host){
 
   Q.push({
     n:d.n, tier:'Nghe viết lại',
+    got:()=>ta.value.trim(),
     answered:()=>ta.value.trim().length>0,
     correct:()=>norm(ta.value)===norm(d.zh),
     reveal(){
@@ -730,6 +732,7 @@ function buildPick(d, host){
   const fb=feedback(q);
   Q.push({
     n:d.n, tier:'Phân biệt',
+    got:()=>chosen>-1?('ABC'[chosen]+'. '+d.opts[chosen].z):'',
     answered:()=>chosen>-1,
     correct:()=>chosen>-1 && d.opts[chosen].ok,
     reveal(){
@@ -789,6 +792,7 @@ function buildChat(d, host){
   const turns = Object.keys(d.nodes).length;
   Q.push({
     n:d.n, tier:'Hội thoại',
+    got:()=>picked.map(p=>p.z).join(' / '),
     answered:()=>finished,
     correct:()=>finished && picked.every(p=>p.ok),
     reveal(){
@@ -837,6 +841,7 @@ function buildType(d, host){
 
   Q.push({
     n:d.n, tier:'Tự viết',
+    got:()=>ta.value.trim(),
     answered:()=>ta.value.trim().length>0,
     correct:()=>judge().ok,
     reveal(){
@@ -895,6 +900,12 @@ bSub.onclick=()=>{
       : '<div class="yours" style="margin-top:14px">Không có câu nào sai. Em vẫn nên lướt lại lời giải một lượt.</div>');
   res.classList.add('on');
   saveScore();
+  /* gửi kết quả về Google Trang tính của cô — xem assets/nop-bai.js */
+  if(window.guiBaiNop) window.guiBaiNop({
+    diem:s, tong:TOTAL,
+    tang:Object.fromEntries(Object.entries(byTier).map(([k,v])=>[k,v.ok+'/'+v.all])),
+    cauSai:wrong.map(x=>({cau:x.n, tang:x.tier, traLoi:(x.got?x.got():'')}))
+  });
   bSub.textContent='LÀM LẠI TỪ ĐẦU';
   note.textContent='Đáp án và lời giải của cả '+TOTAL+' câu đã mở ở phía trên.';
   paintProgress();
@@ -903,4 +914,5 @@ bSub.onclick=()=>{
 document.getElementById('reset').onclick=()=>{ try{ localStorage.removeItem(KEY); }catch(e){} location.reload(); };
 paintProgress();
 </script>
+<script src="../assets/nop-bai.js"></script>
 
