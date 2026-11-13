@@ -661,6 +661,8 @@ function buildSort(d, host){
   Q.push({
     n:d.n, tier:'Xếp câu',
     got:()=>cur(),
+    de:()=>d.t,
+    dap:()=>d.ans.join('  /  '),
     answered:()=>cur().length>0,
     correct:()=>wants.indexOf(norm(cur()))>-1,
     reveal(){
@@ -722,6 +724,8 @@ function buildDictate(d, host){
   Q.push({
     n:d.n, tier:'Nghe viết lại',
     got:()=>ta.value.trim(),
+    de:()=>'Nghe rồi viết lại câu bằng chữ Hán',
+    dap:()=>d.zh,
     answered:()=>ta.value.trim().length>0,
     correct:()=>norm(ta.value)===norm(d.zh),
     reveal(){
@@ -766,6 +770,8 @@ function buildPick(d, host){
   Q.push({
     n:d.n, tier:'Phân biệt',
     got:()=>chosen>-1?('ABC'[chosen]+'. '+d.opts[chosen].z):'',
+    de:()=>d.t,
+    dap:()=>{const i=d.opts.findIndex(o=>o.ok); return i>-1?('ABC'[i]+'. '+d.opts[i].z):'';},
     answered:()=>chosen>-1,
     correct:()=>chosen>-1 && d.opts[chosen].ok,
     reveal(){
@@ -825,7 +831,9 @@ function buildChat(d, host){
   const turns = Object.keys(d.nodes).length;
   Q.push({
     n:d.n, tier:'Hội thoại',
-    got:()=>picked.map(p=>p.z).join(' / '),
+    got:()=>picked.map((p,i)=>'Lượt '+(i+1)+': '+(p.ok?'✓ ':'✗ ')+p.z).join('   |   '),
+    de:()=>d.title,
+    dap:()=>{let k=d.start,o=[],g=0; while(k&&d.nodes[k]&&g++<12){const p=d.nodes[k].picks.find(x=>x.ok); if(!p)break; o.push(p.z); k=p.to;} return o.map((z,i)=>'Lượt '+(i+1)+': '+z).join('   |   ');},
     answered:()=>finished,
     correct:()=>finished && picked.every(p=>p.ok),
     reveal(){
@@ -875,6 +883,8 @@ function buildType(d, host){
   Q.push({
     n:d.n, tier:'Tự viết',
     got:()=>ta.value.trim(),
+    de:()=>d.t+(d.ask?'  —  '+d.ask:''),
+    dap:()=>d.model,
     answered:()=>ta.value.trim().length>0,
     correct:()=>judge().ok,
     reveal(){
@@ -937,7 +947,8 @@ bSub.onclick=()=>{
   if(window.guiBaiNop) window.guiBaiNop({
     diem:s, tong:TOTAL,
     tang:Object.fromEntries(Object.entries(byTier).map(([k,v])=>[k,v.ok+'/'+v.all])),
-    cauSai:wrong.map(x=>({cau:x.n, tang:x.tier, traLoi:(x.got?x.got():'')}))
+    cauSai:wrong.map(x=>{const _t=v=>String(v==null?'':v).replace(/<[^>]*>/g,'').replace(/\s+/g,' ').trim();
+      return {cau:x.n, tang:x.tier, de:_t(x.de?x.de():''), traLoi:_t(x.got?x.got():''), dapAn:_t(x.dap?x.dap():'')};})
   });
   bSub.textContent='LÀM LẠI TỪ ĐẦU';
   note.textContent='Đáp án và lời giải của cả '+TOTAL+' câu đã mở ở phía trên.';

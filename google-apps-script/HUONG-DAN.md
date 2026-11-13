@@ -88,12 +88,13 @@ Không cần tạo cột gì cả. Hai trang tính **Tổng hợp** và **Chi ti
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 13/11/2026 21:40 | Nguyễn Thị Lan | Bài 01 | 16 | 20 | 80% | 4 | 03 · 07 · 12 · 19 | 3/3 | 4/5 | 5/6 | 2/3 | 2/3 |
 
-**Trang `Chi tiết câu sai`** — mỗi câu sai một dòng, kèm đúng thứ học viên đã gõ hoặc đã chọn:
+**Trang `Chi tiết câu sai`** — mỗi câu sai một dòng, có đủ ba thứ để thấy em sai ở chỗ nào: đề bài, em trả lời gì, đáp án đúng là gì.
 
-| Thời gian | Họ tên | Bài | Câu | Tầng | Em đã trả lời |
-|---|---|---|---|---|---|
-| 13/11/2026 21:40 | Nguyễn Thị Lan | Bài 01 | 03 | Xếp câu | 老师好您 |
-| 13/11/2026 21:40 | Nguyễn Thị Lan | Bài 01 | 12 | Phân biệt | C. 谢谢！ |
+| Thời gian | Họ tên | Bài | Câu | Tầng | Đề bài | Em đã trả lời | Đáp án đúng |
+|---|---|---|---|---|---|---|---|
+| 13/11 21:40 | Nguyễn Thị Lan | Bài 01 | 03 | Xếp câu | Cô giáo vừa giúp em. Em cảm ơn cô. | 老师好您 | 老师，谢谢您！ / 谢谢老师！ |
+| 13/11 21:40 | Nguyễn Thị Lan | Bài 01 | 12 | Phân biệt | Bạn cảm ơn em. Em đáp lại thế nào? | C. 谢谢！ | B. 不客气。 |
+| 13/11 21:40 | Nguyễn Thị Lan | Bài 01 | 15 | Hội thoại | Buổi học đầu tiên — cô Vương bước vào lớp | Lượt 1: ✓ 老师，您好！ ｜ Lượt 2: ✗ 小语，您好！ | Lượt 1: 老师，您好！ ｜ Lượt 2: 小语，你好！ |
 
 Muốn xem nhanh cả lớp thì bôi đen trang `Tổng hợp` → **Chèn → Bảng tổng hợp**, kéo *Họ tên* xuống hàng và *Bài* sang cột.
 
@@ -106,4 +107,5 @@ Muốn xem nhanh cả lớp thì bôi đen trang `Tổng hợp` → **Chèn → 
 - **Làm lại nhiều lần thì ghi nhiều dòng.** Đây là cố ý — cô nhìn được tiến bộ qua từng lượt. Muốn chỉ lấy lượt cao nhất thì dùng bảng tổng hợp với hàm `MAX`.
 - **Tên do học viên tự gõ nên có thể sai chính tả hoặc trùng nhau.** Nếu sau này thấy phiền, nói em một tiếng, em đổi sang danh sách lớp cho chọn.
 - **Đây là trang web công khai**, nên về lý thuyết ai biết link Web App cũng gửi dữ liệu vào bảng tính được. Với bài tập tiếng Trung thì không sao; chỉ đừng dùng cùng một script này cho việc gì cần bảo mật.
+- **Thêm bài ôn mới (bài 06 trở đi)** chỉ cần gắn `<script src="../assets/nop-bai.js"></script>` vào cuối trang và gọi `guiBaiNop()` sau khi chấm — không phải đụng tới Apps Script.
 - **Mỗi lần sửa mã trong Apps Script** đều phải vào **Triển khai → Quản lý lượt triển khai → ✏ → Phiên bản: Phiên bản mới → Triển khai**, nếu không thì bản cũ vẫn chạy.
