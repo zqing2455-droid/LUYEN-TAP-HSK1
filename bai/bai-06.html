@@ -269,6 +269,8 @@ footer{margin-top:46px; padding-top:18px; border-top:1px solid var(--line);
 .listen .seek{flex:1 1 200px; min-width:160px; accent-color:var(--jade)}
 .listen .tm{font-size:12.5px; color:var(--muted); font-variant-numeric:tabular-nums; min-width:76px}
 .listen .speedrow{margin-bottom:4px}
+.listen > .kind{font-size:11.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); margin-bottom:6px}
+.listen ~ .listen{margin-top:26px}
 .script{display:none; margin-top:12px}
 .script.on{display:flex}
 mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; padding:0 2px}
@@ -288,7 +290,7 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
     <a href="#t3"><span class="num">三</span> Phân biệt</a>
     <a href="#t4"><span class="num">四</span> Hội thoại</a>
     <a href="#t5"><span class="num">五</span> Trả lời</a>
-    <span class="meter"><span class="bar"><i id="pbar"></i></span><span id="pnum">0/12</span></span>
+    <span class="meter"><span class="bar"><i id="pbar"></i></span><span id="pnum">0/14</span></span>
   </div>
 </nav>
 
@@ -296,7 +298,7 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
 <header class="top">
   <div class="eyebrow">《新 HSK 教程 1》· 第六课</div>
   <h1><span class="zh">你的手机号是多少</span></h1>
-  <p class="sub">12 câu. Làm hết rồi bấm <b>NỘP BÀI</b> để xem điểm và lời giải.</p>
+  <p class="sub">14 câu. Làm hết rồi bấm <b>NỘP BÀI</b> để xem điểm và lời giải.</p>
   <div class="facts">
     <span class="fact">问号码 · 多少</span>
     <span class="fact">想 + V</span>
@@ -321,9 +323,9 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
   <div class="tier-h">
     <div class="seal">二</div>
     <div>
-      <div class="kind">Phần 2 · 4–5</div>
+      <div class="kind">Phần 2 · 4–7</div>
       <h2>Nghe</h2>
-      <p>Đọc hai câu trước, rồi nghe. Nghe lại bao nhiêu lần cũng được.</p>
+      <p>Hai bài nghe: một hội thoại (chọn 对 / 不对) và một đoạn kể (gõ câu trả lời). Đọc câu hỏi trước rồi mới nghe.</p>
     </div>
   </div>
   <div id="w2"></div>
@@ -333,7 +335,7 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
   <div class="tier-h">
     <div class="seal">三</div>
     <div>
-      <div class="kind">Phần 3 · 6–8</div>
+      <div class="kind">Phần 3 · 8–10</div>
       <h2>Phân biệt</h2>
     </div>
   </div>
@@ -344,7 +346,7 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
   <div class="tier-h">
     <div class="seal">四</div>
     <div>
-      <div class="kind">Phần 4 · 9</div>
+      <div class="kind">Phần 4 · 11</div>
       <h2>Hội thoại</h2>
       <p>4 lượt. Đúng cả 4 lượt mới tính điểm.</p>
     </div>
@@ -356,7 +358,7 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
   <div class="tier-h">
     <div class="seal">五</div>
     <div>
-      <div class="kind">Phần 5 · 10–12</div>
+      <div class="kind">Phần 5 · 12–14</div>
       <h2>Trả lời</h2>
     </div>
   </div>
@@ -390,9 +392,10 @@ const FIX = [
   why:'<b>去 + nơi chốn</b> trước, <b>việc định làm</b> sau: 去超市 + 买些牛奶. Không đẩy nơi chốn xuống cuối như tiếng Việt.'}
 ];
 
-/* Phần 2 — nghe một bài, hai câu đúng/sai.
-   Có file audio-bai-06/nghe.mp3 thì phát file; chưa có thì trình duyệt tự đọc. */
-const LISTEN = {
+/* Phần 2 — hai bài nghe: hội thoại (2 câu đúng/sai) + đoạn kể (2 câu gõ trả lời).
+   Có file mp3 thì phát file; chưa có thì trình duyệt tự đọc. */
+const LISTEN = [{
+ label:'Bài nghe 1 · Hội thoại',
  audio:'audio-bai-06/nghe.mp3',
  lines:[
   ['A','天中，明天你忙吗？'],
@@ -408,23 +411,50 @@ const LISTEN = {
   {n:5, s:'明天他们坐出租车去超市，也去吃包子。', ok:true,
    w:'Hỏi 我们怎么去？ → 坐出租车去; câu cuối rủ 我们也去吃包子.'}
  ]
-};
+},{
+ label:'Bài nghe 2 · Đoạn kể',
+ audio:'audio-bai-06/nghe-2.mp3', story:true,
+ lines:[
+  ['A','我叫白家月。'],
+  ['A','明天星期日，我不工作。'],
+  ['A','我想去超市买些东西。'],
+  ['A','超市那边的包子非常好吃，我想买一些。'],
+  ['A','我坐出租车去。'],
+  ['A','晚饭我想做饺子，我妈妈很喜欢吃饺子。']
+ ],
+ qs:[
+  {n:6, ask:'白家月明天怎么去超市？',
+   need:[{lbl:'坐出租车', any:['坐出租车'], tip:'Câu then chốt: 我坐出租车去 — cần đủ động từ 坐.'}],
+   order:[['坐'],['去'],'Cách đi đứng TRƯỚC 去: 坐出租车去.','last'],
+   avoid:[{z:'去坐出租车', w:'去坐出租车 = đi để bắt taxi. Phải là 坐出租车去.'}],
+   model:'她坐出租车去。',
+   why:'Câu then chốt: 我坐出租车去。',
+   more:'坐出租车去。 · 她坐出租车去超市。 · 坐出租车。'},
+  {n:7, ask:'晚饭白家月想做什么？',
+   need:[{lbl:'饺子', any:['饺子'], tip:'Nghe lại câu cuối: 晚饭我想做⋯'}],
+   avoid:[{z:'包子', w:'包子 là món cô ấy MUA ở siêu thị. Bữa tối cô ấy LÀM 饺子.'},
+          {z:'想饺子', w:'Thiếu động từ: 想做饺子.'}],
+   model:'她想做饺子。',
+   why:'Bẫy của bài: 包子 (mua ở siêu thị) ↔ 饺子 (tự làm bữa tối).',
+   more:'做饺子。 · 饺子。 · 晚饭她想做饺子。'}
+ ]
+}];
 
 /* Phần 3 — phân biệt: chọn câu điền vào chỗ trống */
 const PICKQ = [
- {n:6, dlg:[['A',null],['B','我的手机号是13912876540。']],
+ {n:8, dlg:[['A',null],['B','我的手机号是13912876540。']],
   opts:[
    {z:'你的手机号是几？',   ok:false, w:'几 hỏi số nhỏ. Số điện thoại dài → 多少.'},
    {z:'你的手机号是多少？', ok:true,  w:'Đúng. Đọc số điện thoại: số 1 đọc <b>yāo</b>.'},
    {z:'你的手机号是多少吗？', ok:false, w:'Đã có 多少 thì không thêm 吗.'}
   ]},
- {n:7, dlg:[['A',null],['B','坐出租车去。']],
+ {n:9, dlg:[['A',null],['B','坐出租车去。']],
   opts:[
    {z:'我们去哪儿？', ok:false, w:'哪儿 hỏi NƠI CHỐN → phải đáp 去超市, 去那边⋯'},
    {z:'我们怎么去？', ok:true,  w:'Đúng. 怎么 + động từ hỏi CÁCH làm → đáp 坐出租车去.'},
    {z:'我们去什么？', ok:false, w:'Không nói 去什么. Hỏi nơi đến dùng 去哪儿.'}
   ]},
- {n:8, dlg:[['A','你想吃什么？'],['B',null]],
+ {n:10, dlg:[['A','你想吃什么？'],['B',null]],
   opts:[
    {z:'我想包子，那边的包子非常好吃。',   ok:false, w:'Thiếu động từ: 想 + <b>吃</b> + 包子.'},
    {z:'我想吃包子，那边的包子非常好吃。', ok:true,  w:'Đúng cả ba chỗ: 想吃, 那边<b>的</b>包子, 非常好吃.'},
@@ -434,7 +464,7 @@ const PICKQ = [
 
 /* Phần 4 — hội thoại rẽ nhánh, 4 lượt */
 const CHATS = [
- {n:9, title:'', who:'白家月', sit:null,
+ {n:11, title:'', who:'白家月', sit:null,
   start:'a',
   nodes:{
    a:{them:'喂，你好！我是白家月。', picks:[
@@ -459,7 +489,7 @@ const CHATS = [
 
 /* Phần 5 — trả lời câu hỏi */
 const TYPE = [
- {n:10, ask:'明天你想去哪儿？去那儿做什么？',
+ {n:12, ask:'明天你想去哪儿？去那儿做什么？',
   need:[
    {lbl:'去 + nơi chốn', any:['去'], tip:'Nói nơi em muốn đến: 去超市 · 去那边⋯'},
    {lbl:'việc định làm', any:['买','吃','做','看','工作'], tip:'Thêm việc em sẽ làm ở đó: 买东西 · 吃包子⋯'}],
@@ -470,7 +500,7 @@ const TYPE = [
   why:'去 + nơi chốn + việc định làm.',
   more:'我想去超市买牛奶。 · 明天我想去那边吃包子。 · 我想去姐姐家做饭。'},
 
- {n:11, ask:'我们去那边的超市，怎么去？',
+ {n:13, ask:'我们去那边的超市，怎么去？',
   need:[{lbl:'坐', any:['坐'], tip:'Nói phương tiện: 坐出租车.'}],
   order:[['坐'],['去'],'Cách đi đứng TRƯỚC 去: 坐出租车去.','last'],
   avoid:[{z:'去坐出租车', w:'去坐出租车 = đi để bắt taxi. Phải là 坐出租车去.'},
@@ -479,7 +509,7 @@ const TYPE = [
   why:'Hỏi 怎么去 → đáp 坐出租车去.',
   more:'坐出租车去。 · 我们坐出租车去超市。 · 坐出租车去那边的超市。'},
 
- {n:12, ask:'你喜欢吃包子吗？晚饭你想吃什么？',
+ {n:14, ask:'你喜欢吃包子吗？晚饭你想吃什么？',
   need:[
    {lbl:'喜欢 / 不喜欢', any:['喜欢'], tip:'Trả lời câu hỏi thứ nhất trước.'},
    {lbl:'想吃 + món', any:['想吃'], tip:'想 + 吃 + món ăn.'}],
@@ -499,7 +529,7 @@ const TYPE = [
    Trước khi nộp: không câu nào hiện đúng/sai.                              */
 
 const KEY   = 'hsk1b6-ontap';            // trang chủ đọc dòng này để hiện tiến độ
-const TOTAL = 12;            // trang chủ đọc dòng này để hiện số câu
+const TOTAL = 14;            // trang chủ đọc dòng này để hiện số câu
 const Q = [];                       // mỗi câu đăng ký một bộ chấm vào đây
 let graded = false;
 
@@ -578,6 +608,7 @@ function buildFix(d, host){
 /* ═══════════ PHẦN 2 · NGHE ═══════════ */
 function buildListen(d, host){
   const q=el('div','q listen');
+  if(d.label) q.append(el('div','kind',d.label));
   const row=el('div','row');
   const play=el('button','act','▶ Nghe'); play.type='button';
   const back=el('button','act ghost','⟲ 5s'); back.type='button'; back.title='Tua lại 5 giây';
@@ -597,7 +628,7 @@ function buildListen(d, host){
     file.addEventListener('play', ()=>{ speaking=true;  play.textContent='❚❚ Dừng'; });
     file.addEventListener('pause',()=>{ speaking=false; play.textContent='▶ Nghe'; });
     file.addEventListener('ended',()=>{ speaking=false; play.textContent='▶ Nghe lại'; });
-    file.addEventListener('error',()=>{ fileOk=false; });
+    file.addEventListener('error',()=>{ fileOk=false; noFile(); });
     seek.oninput=()=>{ if(file.duration) file.currentTime=seek.value/1000*file.duration; };
     back.onclick=()=>{ file.currentTime=Math.max(0,file.currentTime-5); };
   }
@@ -637,11 +668,19 @@ function buildListen(d, host){
   const prow=el('div','row'); prow.append(seek, time);
   row.append(play, back); q.append(row, prow);
   q.append(srow);
-  const script=dlgBox(d.lines); script.classList.add('script');
+  const script = d.story ? el('div','dlg','<span class="zh">'+d.lines.map(l=>l[1]).join('')+'</span>')
+                         : dlgBox(d.lines);
+  script.classList.add('script');
   q.append(script);
   host.append(q);
 
   d.qs.forEach(s=>{
+    if(s.ask){                          /* câu gõ trả lời: dùng bộ chấm của phần Trả lời */
+      buildType(Object.assign({tier:'Nghe hiểu'}, s), host);
+      const it=Q[Q.length-1], rv=it.reveal;
+      it.reveal=function(){ script.classList.add('on'); rv.call(this); };
+      return;
+    }
     const c=card(s.n, ''); c.querySelector('.q-t').remove();
     c.append(el('div','tf-s','<span class="zh">'+s.s+'</span>'));
     const box=el('div','tf');
@@ -811,9 +850,9 @@ function buildType(d, host){
   }
 
   Q.push({
-    n:d.n, tier:'Trả lời',
+    n:d.n, tier:d.tier||'Trả lời',
     got:()=>ta.value.trim(),
-    de:()=>d.ask,
+    de:()=>(d.tier?'Nghe — ':'')+d.ask,
     dap:()=>d.model,
     answered:()=>ta.value.trim().length>0,
     correct:()=>judge().ok,
@@ -834,7 +873,7 @@ function buildType(d, host){
 
 /* ═══════════ DỰNG TRANG ═══════════ */
 FIX.forEach(d=>buildFix(d,document.getElementById('w1')));
-buildListen(LISTEN,document.getElementById('w2'));
+LISTEN.forEach(d=>buildListen(d,document.getElementById('w2')));
 PICKQ.forEach(d=>buildPick(d,document.getElementById('w3')));
 CHATS.forEach(d=>buildChat(d,document.getElementById('w4')));
 TYPE.forEach(d=>buildType(d,document.getElementById('w5')));
