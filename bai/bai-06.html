@@ -266,6 +266,9 @@ footer{margin-top:46px; padding-top:18px; border-top:1px solid var(--line);
 .tf-s{font-size:19px; margin:2px 0 4px}
 .listen{border-left-color:var(--blue)}
 .listen .row{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:4px 0 6px}
+.listen .seek{flex:1 1 200px; min-width:160px; accent-color:var(--jade)}
+.listen .tm{font-size:12.5px; color:var(--muted); font-variant-numeric:tabular-nums; min-width:76px}
+.listen .speedrow{margin-bottom:4px}
 .script{display:none; margin-top:12px}
 .script.on{display:flex}
 mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; padding:0 2px}
@@ -577,18 +580,32 @@ function buildListen(d, host){
   const q=el('div','q listen');
   const row=el('div','row');
   const play=el('button','act','▶ Nghe'); play.type='button';
+  const back=el('button','act ghost','⟲ 5s'); back.type='button'; back.title='Tua lại 5 giây';
+  const seek=document.createElement('input'); seek.type='range'; seek.className='seek';
+  seek.min=0; seek.max=1000; seek.value=0; seek.setAttribute('aria-label','Vị trí bài nghe');
+  const time=el('span','tm','0:00');
   const srow=el('div','speedrow');
   let rate=1, file=null, fileOk=!!d.audio, speaking=false;
   const canTTS='speechSynthesis' in window && typeof SpeechSynthesisUtterance!=='undefined';
-  if(d.audio){ file=new Audio(); file.preload='none'; file.src=d.audio; }
-
-  function stop(){ speaking=false; play.textContent='▶ Nghe';
-    if(file){ file.pause(); } if(canTTS) speechSynthesis.cancel(); }
+  const mmss=t=>{ t=Math.max(0,Math.floor(t||0)); return Math.floor(t/60)+':'+String(t%60).padStart(2,'0'); };
+  if(d.audio){
+    file=new Audio(); file.preload='metadata'; file.src=d.audio;
+    file.addEventListener('timeupdate',()=>{
+      if(file.duration){ seek.value=Math.round(file.currentTime/file.duration*1000);
+        time.textContent=mmss(file.currentTime)+' / '+mmss(file.duration); } });
+    file.addEventListener('loadedmetadata',()=>{ time.textContent='0:00 / '+mmss(file.duration); });
+    file.addEventListener('play', ()=>{ speaking=true;  play.textContent='❚❚ Dừng'; });
+    file.addEventListener('pause',()=>{ speaking=false; play.textContent='▶ Nghe'; });
+    file.addEventListener('ended',()=>{ speaking=false; play.textContent='▶ Nghe lại'; });
+    file.addEventListener('error',()=>{ fileOk=false; });
+    seek.oninput=()=>{ if(file.duration) file.currentTime=seek.value/1000*file.duration; };
+    back.onclick=()=>{ file.currentTime=Math.max(0,file.currentTime-5); };
+  }
   function tts(){
     if(!canTTS){ play.disabled=true; play.textContent='Trình duyệt chưa có giọng đọc'; return; }
     speechSynthesis.cancel();
     const vs=speechSynthesis.getVoices().filter(v=>/^zh/i.test(v.lang));
-    speaking=true; play.textContent='■ Dừng';
+    speaking=true; play.textContent='❚❚ Dừng';
     d.lines.forEach(([sp,z],i)=>{
       const u=new SpeechSynthesisUtterance(z); u.lang='zh-CN'; u.rate=rate*0.9;
       if(vs.length>1){ u.voice = vs[sp==='A'?0:1]; } else if(vs[0]) u.voice=vs[0];
@@ -597,25 +614,29 @@ function buildListen(d, host){
       speechSynthesis.speak(u);
     });
   }
+  function noFile(){ back.remove(); seek.remove(); time.remove(); }
   play.onclick=()=>{
-    if(speaking){ stop(); return; }
     if(file && fileOk){
-      file.playbackRate=rate; file.currentTime=0;
-      file.play().then(()=>{ speaking=true; play.textContent='■ Dừng'; })
-                 .catch(()=>{ fileOk=false; tts(); });
-      file.onended=()=>{ speaking=false; play.textContent='▶ Nghe'; };
+      if(!file.paused){ file.pause(); return; }
+      if(file.ended) file.currentTime=0;
+      file.playbackRate=rate;
+      file.play().catch(()=>{ fileOk=false; noFile(); tts(); });
       return;
     }
+    if(speaking){ speaking=false; speechSynthesis.cancel(); play.textContent='▶ Nghe'; return; }
     tts();
   };
+  if(!file) noFile();
   srow.append(el('span',null,'Tốc độ:'));
-  [0.75,1,1.25].forEach(r=>{
+  [0.5,0.75,1,1.25].forEach(r=>{
     const b=el('button','spd'+(r===1?' on':''), r+'x'); b.type='button';
     b.onclick=()=>{ rate=r; if(file) file.playbackRate=r;
       srow.querySelectorAll('.spd').forEach(x=>x.classList.remove('on')); b.classList.add('on'); };
     srow.append(b);
   });
-  row.append(play, srow); q.append(row);
+  const prow=el('div','row'); prow.append(seek, time);
+  row.append(play, back); q.append(row, prow);
+  q.append(srow);
   const script=dlgBox(d.lines); script.classList.add('script');
   q.append(script);
   host.append(q);
