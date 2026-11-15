@@ -88,6 +88,10 @@ Không cần tạo cột gì cả. Hai trang tính **Tổng hợp** và **Chi ti
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 13/11/2026 21:40 | Nguyễn Thị Lan | Bài 01 | 16 | 20 | 80% | 4 | 03 · 07 · 12 · 19 | 3/3 | 4/5 | 5/6 | 2/3 | 2/3 |
 
+Từ Bài 6, bài ôn theo dạng mới (Sửa lỗi · Nghe · Phân biệt · Hội thoại · Trả lời), nên trang này có thêm ba cột cuối: **Sửa lỗi · Nghe hiểu · Trả lời**. Bài 1–5 để trống ba cột đó, Bài 6 trở đi để trống ba cột Xếp câu · Nghe viết lại · Tự viết. Cột Phân biệt và Hội thoại dùng chung.
+
+> Ba cột mới chỉ có sau khi cô dán lại `Code.gs` mới vào Apps Script và **Triển khai → Quản lý bản triển khai → sửa → Phiên bản mới** (giữ nguyên link). Chưa làm bước này thì điểm tổng và trang `Chi tiết câu sai` vẫn ghi đầy đủ, chỉ thiếu điểm từng phần.
+
 **Trang `Chi tiết câu sai`** — mỗi câu sai một dòng, có đủ ba thứ để thấy em sai ở chỗ nào: đề bài, em trả lời gì, đáp án đúng là gì.
 
 | Thời gian | Họ tên | Bài | Câu | Tầng | Đề bài | Em đã trả lời | Đáp án đúng |
