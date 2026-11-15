@@ -62,7 +62,8 @@ function sheet(ss, ten, tieuDe) {
 function ghiTong(ss, d) {
   var sh = sheet(ss, TEN_SHEET_TONG, [
     'Thời gian', 'Họ tên', 'Bài', 'Đúng', 'Tổng', '%', 'Số câu sai', 'Các câu sai',
-    'Xếp câu', 'Nghe viết lại', 'Phân biệt', 'Hội thoại', 'Tự viết'
+    'Xếp câu', 'Nghe viết lại', 'Phân biệt', 'Hội thoại', 'Tự viết',
+    'Sửa lỗi', 'Nghe hiểu', 'Trả lời'          // ba phần của bài ôn dạng mới (Bài 6–10)
   ]);
   var t   = d.tang   || {};
   var sai = (d.cauSai || []).map(function (c) {
@@ -81,7 +82,10 @@ function ghiTong(ss, d) {
     t['Nghe viết lại'] || '',
     t['Phân biệt']     || '',
     t['Hội thoại']     || '',
-    t['Tự viết']       || ''
+    t['Tự viết']       || '',
+    t['Sửa lỗi']       || '',
+    t['Nghe hiểu']     || '',
+    t['Trả lời']       || ''
   ]);
 }
 
