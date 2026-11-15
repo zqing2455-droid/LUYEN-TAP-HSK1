@@ -414,32 +414,32 @@ const LISTEN = [{
    w:'三点不能 (còn tiết học), 四点能到 — bẫy hai mốc giờ.'}
  ]
 },{
- label:'Bài nghe 2 · Đoạn kể',
+ label:'Bài nghe 2 · Câu chuyện',
  audio:'audio-bai-08/nghe-2.mp3', story:true,
  lines:[
-  ['A','我叫李文，我是学生。'],
-  ['A','我家有一只小猫，它非常漂亮。'],
-  ['A','我在学校吃午饭。'],
-  ['A','我妈妈是医生，她在医院工作。'],
-  ['A','医院病人很多，妈妈非常忙。'],
-  ['A','她晚上六点半下班，我们在家里吃晚饭。']
+  ['A','今天下午，我在家里看书。'],
+  ['A','我的小猫不在房间里，也不在桌子下。它在哪儿呢？'],
+  ['A','我去外边看，它在学校书店前边呢！'],
+  ['A','它在书店外边的桌子上，非常漂亮。'],
+  ['A','很多人看它。'],
+  ['A','晚上六点，小猫在家里吃饭呢。']
  ],
  qs:[
-  {n:6, ask:'李文的妈妈在哪儿工作？',
-   need:[{lbl:'医院', any:['医院'], tip:'Nghe lại câu 4: 她在⋯⋯工作.'}],
-   avoid:[{z:'学校', w:'学校 là nơi LÝ VĂN ăn trưa. Mẹ làm ở 医院.'},
-          {z:'工作在', w:'在 + nơi chốn đứng TRƯỚC động từ: 在医院工作.'}],
-   model:'她在医院工作。',
-   why:'Bẫy của bài: 学校 (Lý Văn ăn trưa) ↔ 医院 (mẹ làm việc).',
-   more:'在医院。 · 医院。 · 她妈妈在医院工作。'},
-  {n:7, ask:'李文在哪儿吃午饭？晚饭呢？',
-   need:[{lbl:'学校 (午饭)', any:['学校'], tip:'Nghe lại câu 3.'},
-         {lbl:'家 (晚饭)', any:['家'], tip:'Nghe lại câu cuối: 我们在家里吃晚饭.'}],
-   avoid:[{z:'吃午饭在学校', w:'在 + nơi chốn đứng TRƯỚC động từ: 在学校吃午饭.'},
-          {z:'吃晚饭在家', w:'在 + nơi chốn đứng TRƯỚC động từ: 在家里吃晚饭.'}],
-   model:'她在学校吃午饭，在家里吃晚饭。',
-   why:'Hai câu hỏi, hai nơi: 午饭 ở 学校, 晚饭 ở 家里.',
-   more:'学校，家里。 · 在学校吃午饭，在家里吃晚饭。'}
+  {n:6, ask:'下午，小猫在哪儿？',
+   need:[{lbl:'书店', any:['书店'], tip:'Nghe lại câu 3–4: 它在学校书店前边呢.'}],
+   avoid:[{z:'房间', w:'Mèo KHÔNG ở trong phòng: 不在房间里.'},
+          {z:'桌子下', w:'Mèo KHÔNG ở dưới bàn trong nhà; nó ở TRÊN cái bàn ngoài hiệu sách.'}],
+   model:'它在学校书店前边。',
+   why:'Bẫy của bài: hai chỗ đầu (房间里 · 桌子下) là chỗ mèo KHÔNG ở.',
+   more:'在书店前边。 · 它在书店外边的桌子上。 · 学校书店前边。'},
+  {n:7, ask:'晚上六点，小猫在哪儿？做什么？',
+   need:[{lbl:'家 (ở đâu)', any:['家'], tip:'Nghe lại câu cuối.'},
+         {lbl:'吃 (làm gì)', any:['吃'], tip:'Nói việc mèo đang làm: 吃饭.'}],
+   order:[['家'],['吃'],'在 + nơi chốn đứng TRƯỚC động từ: 在家里吃饭.'],
+   avoid:[{z:'吃饭在家', w:'在 + nơi chốn đứng TRƯỚC động từ: 在家里吃饭.'}],
+   model:'它在家里吃饭呢。',
+   why:'在 + nơi chốn + động từ; 呢 ở cuối cho câu tự nhiên.',
+   more:'在家里吃饭。 · 小猫在家里吃饭。'}
  ]
 }];
 
