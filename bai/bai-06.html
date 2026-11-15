@@ -290,7 +290,7 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
     <a href="#t3"><span class="num">三</span> Phân biệt</a>
     <a href="#t4"><span class="num">四</span> Hội thoại</a>
     <a href="#t5"><span class="num">五</span> Trả lời</a>
-    <span class="meter"><span class="bar"><i id="pbar"></i></span><span id="pnum">0/14</span></span>
+    <span class="meter"><span class="bar"><i id="pbar"></i></span><span id="pnum">0/15</span></span>
   </div>
 </nav>
 
@@ -298,7 +298,7 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
 <header class="top">
   <div class="eyebrow">《新 HSK 教程 1》· 第六课</div>
   <h1><span class="zh">你的手机号是多少</span></h1>
-  <p class="sub">14 câu. Làm hết rồi bấm <b>NỘP BÀI</b> để xem điểm và lời giải.</p>
+  <p class="sub">15 câu. Làm hết rồi bấm <b>NỘP BÀI</b> để xem điểm và lời giải.</p>
   <div class="facts">
     <span class="fact">问号码 · 多少</span>
     <span class="fact">想 + V</span>
@@ -335,7 +335,7 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
   <div class="tier-h">
     <div class="seal">三</div>
     <div>
-      <div class="kind">Phần 3 · 8–10</div>
+      <div class="kind">Phần 3 · 8–11</div>
       <h2>Phân biệt</h2>
     </div>
   </div>
@@ -346,7 +346,7 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
   <div class="tier-h">
     <div class="seal">四</div>
     <div>
-      <div class="kind">Phần 4 · 11</div>
+      <div class="kind">Phần 4 · 12</div>
       <h2>Hội thoại</h2>
       <p>4 lượt. Đúng cả 4 lượt mới tính điểm.</p>
     </div>
@@ -358,7 +358,7 @@ mark.err{background:var(--cin-soft); color:var(--cin); border-radius:3px; paddin
   <div class="tier-h">
     <div class="seal">五</div>
     <div>
-      <div class="kind">Phần 5 · 12–14</div>
+      <div class="kind">Phần 5 · 13–15</div>
       <h2>Trả lời</h2>
     </div>
   </div>
@@ -450,21 +450,27 @@ const PICKQ = [
   ]},
  {n:9, dlg:[['A',null],['B','坐出租车去。']],
   opts:[
-   {z:'我们去哪儿？', ok:false, w:'哪儿 hỏi NƠI CHỐN → phải đáp 去超市, 去那边⋯'},
    {z:'我们怎么去？', ok:true,  w:'Đúng. 怎么 + động từ hỏi CÁCH làm → đáp 坐出租车去.'},
+   {z:'我们去哪儿？', ok:false, w:'哪儿 hỏi NƠI CHỐN → phải đáp 去超市, 去那边⋯'},
    {z:'我们去什么？', ok:false, w:'Không nói 去什么. Hỏi nơi đến dùng 去哪儿.'}
   ]},
  {n:10, dlg:[['A','你想吃什么？'],['B',null]],
   opts:[
    {z:'我想包子，那边的包子非常好吃。',   ok:false, w:'Thiếu động từ: 想 + <b>吃</b> + 包子.'},
-   {z:'我想吃包子，那边的包子非常好吃。', ok:true,  w:'Đúng cả ba chỗ: 想吃, 那边<b>的</b>包子, 非常好吃.'},
-   {z:'我想吃包子，那边包子非常很好吃。', ok:false, w:'Hai lỗi: đồ vật phải có 的 (那边的包子); 非常 và 很 không chồng lên nhau.'}
+   {z:'我想吃包子，那边包子非常很好吃。', ok:false, w:'Hai lỗi: đồ vật phải có 的 (那边的包子); 非常 và 很 không chồng lên nhau.'},
+   {z:'我想吃包子，那边的包子非常好吃。', ok:true,  w:'Đúng cả ba chỗ: 想吃, 那边<b>的</b>包子, 非常好吃.'}
+  ]},
+ {n:11, dlg:[['A',null],['B','我也很想你！明天我想去你家。']],
+  opts:[
+   {z:'我很想你。',   ok:true,  w:'Đúng. 想 + NGƯỜI = nhớ (我想你); 想 + ĐỘNG TỪ = muốn (想去你家). B dùng cả hai nghĩa.'},
+   {z:'我想你很。',   ok:false, w:'很 luôn đứng TRƯỚC: 很想你.'},
+   {z:'我很想去你。', ok:false, w:'去 phải đi với NƠI CHỐN (去你家), không đi thẳng với người. Nhớ ai thì chỉ cần 想你.'}
   ]}
 ];
 
 /* Phần 4 — hội thoại rẽ nhánh, 4 lượt */
 const CHATS = [
- {n:11, title:'', who:'白家月', sit:null,
+ {n:12, title:'', who:'白家月', sit:null,
   start:'a',
   nodes:{
    a:{them:'喂，你好！我是白家月。', picks:[
@@ -489,7 +495,7 @@ const CHATS = [
 
 /* Phần 5 — trả lời câu hỏi */
 const TYPE = [
- {n:12, ask:'明天你想去哪儿？去那儿做什么？',
+ {n:13, ask:'明天你想去哪儿？去那儿做什么？',
   need:[
    {lbl:'去 + nơi chốn', any:['去'], tip:'Nói nơi em muốn đến: 去超市 · 去那边⋯'},
    {lbl:'việc định làm', any:['买','吃','做','看','工作'], tip:'Thêm việc em sẽ làm ở đó: 买东西 · 吃包子⋯'}],
@@ -500,7 +506,7 @@ const TYPE = [
   why:'去 + nơi chốn + việc định làm.',
   more:'我想去超市买牛奶。 · 明天我想去那边吃包子。 · 我想去姐姐家做饭。'},
 
- {n:13, ask:'我们去那边的超市，怎么去？',
+ {n:14, ask:'我们去那边的超市，怎么去？',
   need:[{lbl:'坐', any:['坐'], tip:'Nói phương tiện: 坐出租车.'}],
   order:[['坐'],['去'],'Cách đi đứng TRƯỚC 去: 坐出租车去.','last'],
   avoid:[{z:'去坐出租车', w:'去坐出租车 = đi để bắt taxi. Phải là 坐出租车去.'},
@@ -509,7 +515,7 @@ const TYPE = [
   why:'Hỏi 怎么去 → đáp 坐出租车去.',
   more:'坐出租车去。 · 我们坐出租车去超市。 · 坐出租车去那边的超市。'},
 
- {n:14, ask:'你喜欢吃包子吗？晚饭你想吃什么？',
+ {n:15, ask:'你喜欢吃包子吗？晚饭你想吃什么？',
   need:[
    {lbl:'喜欢 / 不喜欢', any:['喜欢'], tip:'Trả lời câu hỏi thứ nhất trước.'},
    {lbl:'想吃 + món', any:['想吃'], tip:'想 + 吃 + món ăn.'}],
@@ -529,7 +535,7 @@ const TYPE = [
    Trước khi nộp: không câu nào hiện đúng/sai.                              */
 
 const KEY   = 'hsk1b6-ontap';            // trang chủ đọc dòng này để hiện tiến độ
-const TOTAL = 14;            // trang chủ đọc dòng này để hiện số câu
+const TOTAL = 15;            // trang chủ đọc dòng này để hiện số câu
 const Q = [];                       // mỗi câu đăng ký một bộ chấm vào đây
 let graded = false;
 
