@@ -841,7 +841,7 @@ function buildType(d, host){
   function judge(){
     const s=norm(ta.value);
     if(!s) return {ok:false, why:'Câu này em bỏ trống.'};
-    const bad=(d.avoid||[]).find(a=>s.includes(norm(a.z)));
+    const bad=(d.avoid||[]).find(a=>a.re ? new RegExp(a.re).test(s) : s.includes(norm(a.z)));
     if(bad) return {ok:false, why:'Câu của em có chỗ phải sửa: '+bad.w};
     const miss=d.need.filter(r=>!r.any.some(a=>s.includes(norm(a))));
     if(miss.length) return {ok:false,
