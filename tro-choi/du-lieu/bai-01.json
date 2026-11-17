@@ -1,0 +1,243 @@
+{
+ "so": 1,
+ "han": "AI小语，你好！",
+ "sub": "Chào hỏi · xưng hô trong lớp",
+ "pool": [
+  {
+   "h": "你好",
+   "p": "nǐ hǎo",
+   "v": "xin chào",
+   "hv": "NHĨ HẢO",
+   "loai": "cụm chào hỏi"
+  },
+  {
+   "h": "您",
+   "p": "nín",
+   "v": "ngài, ông/bà, thầy/cô (dạng tôn kính của 你)",
+   "hv": "NÂM",
+   "loai": "đại từ nhân xưng"
+  },
+  {
+   "h": "好",
+   "p": "hǎo",
+   "v": "tốt, khoẻ, ổn",
+   "hv": "HẢO",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "老师",
+   "p": "lǎoshī",
+   "v": "giáo viên, thầy giáo / cô giáo",
+   "hv": "LÃO SƯ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "王老师",
+   "p": "Wáng lǎoshī",
+   "v": "thầy Vương / cô Vương",
+   "hv": "VƯƠNG LÃO SƯ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "同学",
+   "p": "tóngxué",
+   "v": "bạn học, bạn cùng lớp; cách gọi học sinh",
+   "hv": "ĐỒNG HỌC",
+   "loai": "danh từ"
+  },
+  {
+   "h": "学生",
+   "p": "xuésheng",
+   "v": "học sinh, sinh viên",
+   "hv": "HỌC SINH",
+   "loai": "danh từ"
+  },
+  {
+   "h": "大家",
+   "p": "dàjiā",
+   "v": "mọi người, tất cả mọi người",
+   "hv": "ĐẠI GIA",
+   "loai": "đại từ"
+  },
+  {
+   "h": "们",
+   "p": "men",
+   "v": "các…, những… (đặt sau từ chỉ người)",
+   "hv": "MÔN",
+   "loai": "hậu tố số nhiều"
+  },
+  {
+   "h": "你们",
+   "p": "nǐmen",
+   "v": "các bạn, các anh/chị (số nhiều của 你)",
+   "hv": "NHĨ MÔN",
+   "loai": "đại từ nhân xưng"
+  },
+  {
+   "h": "谢谢",
+   "p": "xièxie",
+   "v": "cảm ơn",
+   "hv": "TẠ TẠ",
+   "loai": "động từ"
+  },
+  {
+   "h": "不客气",
+   "p": "bú kèqi",
+   "v": "không có gì, đừng khách sáo",
+   "hv": "BẤT KHÁCH KHÍ",
+   "loai": "cụm đáp lễ"
+  },
+  {
+   "h": "再见",
+   "p": "zàijiàn",
+   "v": "tạm biệt, hẹn gặp lại",
+   "hv": "TÁI KIẾN",
+   "loai": "động từ"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "老师，＿＿！",
+   "a": "你好",
+   "o": [
+    "们",
+    "大家",
+    "学生"
+   ],
+   "p": "Lǎoshī, nǐ hǎo!",
+   "v": "Em chào thầy/cô ạ!"
+  },
+  {
+   "q": "王老师，＿＿好！",
+   "a": "您",
+   "o": [
+    "再见",
+    "谢谢",
+    "不客气"
+   ],
+   "p": "Wáng lǎoshī, nín hǎo!",
+   "v": "Thầy/cô Vương, em chào thầy/cô ạ!"
+  },
+  {
+   "q": "我很＿＿，谢谢！",
+   "a": "好",
+   "o": [
+    "大家",
+    "王老师",
+    "们"
+   ],
+   "p": "Wǒ hěn hǎo, xièxie!",
+   "v": "Mình khoẻ, cảm ơn nhé!"
+  },
+  {
+   "q": "她是王＿＿。",
+   "a": "老师",
+   "o": [
+    "你们",
+    "们",
+    "谢谢"
+   ],
+   "p": "Tā shì Wáng lǎoshī.",
+   "v": "Cô ấy là cô Vương."
+  },
+  {
+   "q": "＿＿好！",
+   "a": "王老师",
+   "o": [
+    "你好",
+    "再见",
+    "谢谢"
+   ],
+   "p": "Wáng lǎoshī hǎo!",
+   "v": "Em chào thầy/cô Vương ạ!"
+  },
+  {
+   "q": "＿＿们好！",
+   "a": "同学",
+   "o": [
+    "再见",
+    "你好",
+    "不客气"
+   ],
+   "p": "Tóngxuémen hǎo!",
+   "v": "Chào các bạn!"
+  },
+  {
+   "q": "我是＿＿。",
+   "a": "学生",
+   "o": [
+    "谢谢",
+    "大家",
+    "不客气"
+   ],
+   "p": "Wǒ shì xuésheng.",
+   "v": "Mình là học sinh."
+  },
+  {
+   "q": "同学们，＿＿好！",
+   "a": "大家",
+   "o": [
+    "你好",
+    "学生",
+    "谢谢"
+   ],
+   "p": "Tóngxuémen, dàjiā hǎo!",
+   "v": "Các bạn ơi, chào mọi người!"
+  },
+  {
+   "q": "同学＿＿，再见！",
+   "a": "们",
+   "o": [
+    "您",
+    "大家",
+    "王老师"
+   ],
+   "p": "Tóngxuémen, zàijiàn!",
+   "v": "Các em, tạm biệt nhé!"
+  },
+  {
+   "q": "同学们，＿＿好！",
+   "a": "你们",
+   "o": [
+    "再见",
+    "你好",
+    "王老师"
+   ],
+   "p": "Tóngxuémen, nǐmen hǎo!",
+   "v": "Các bạn ơi, chào các bạn!"
+  },
+  {
+   "q": "＿＿你！",
+   "a": "谢谢",
+   "o": [
+    "学生",
+    "好",
+    "你好"
+   ],
+   "p": "Xièxie nǐ!",
+   "v": "Cảm ơn bạn!"
+  },
+  {
+   "q": "谢谢你！——＿＿！",
+   "a": "不客气",
+   "o": [
+    "学生",
+    "您",
+    "好"
+   ],
+   "p": "Xièxie nǐ! — Bú kèqi!",
+   "v": "Cảm ơn bạn! — Không có gì!"
+  },
+  {
+   "q": "老师，＿＿！",
+   "a": "再见",
+   "o": [
+    "好",
+    "你们",
+    "同学"
+   ],
+   "p": "Lǎoshī, zàijiàn!",
+   "v": "Thưa thầy/cô, em về ạ!"
+  }
+ ]
+}

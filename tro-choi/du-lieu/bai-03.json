@@ -1,0 +1,405 @@
+{
+ "so": 3,
+ "han": "我是中国人",
+ "sub": "Quốc tịch · gia đình · nghề nghiệp",
+ "pool": [
+  {
+   "h": "这",
+   "p": "zhè",
+   "v": "này, đây",
+   "hv": "GIÁ",
+   "loai": "đại từ chỉ thị"
+  },
+  {
+   "h": "哪",
+   "p": "nǎ",
+   "v": "nào",
+   "hv": "NA",
+   "loai": "đại từ nghi vấn"
+  },
+  {
+   "h": "国",
+   "p": "guó",
+   "v": "nước, quốc gia",
+   "hv": "QUỐC",
+   "loai": "danh từ"
+  },
+  {
+   "h": "人",
+   "p": "rén",
+   "v": "người",
+   "hv": "NHÂN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "中国",
+   "p": "Zhōngguó",
+   "v": "Trung Quốc",
+   "hv": "TRUNG QUỐC",
+   "loai": "danh từ"
+  },
+  {
+   "h": "中文",
+   "p": "Zhōngwén",
+   "v": "tiếng Trung, Trung văn",
+   "hv": "TRUNG VĂN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "法国",
+   "p": "Fǎguó",
+   "v": "nước Pháp",
+   "hv": "PHÁP QUỐC",
+   "loai": "danh từ"
+  },
+  {
+   "h": "泰国",
+   "p": "Tàiguó",
+   "v": "Thái Lan",
+   "hv": "THÁI QUỐC",
+   "loai": "danh từ"
+  },
+  {
+   "h": "她",
+   "p": "tā",
+   "v": "cô ấy, chị ấy, bà ấy",
+   "hv": "THA",
+   "loai": "đại từ nhân xưng"
+  },
+  {
+   "h": "我们",
+   "p": "wǒmen",
+   "v": "chúng tôi, chúng ta",
+   "hv": "NGÃ MÔN",
+   "loai": "đại từ nhân xưng"
+  },
+  {
+   "h": "谁",
+   "p": "shéi",
+   "v": "ai",
+   "hv": "THUỲ",
+   "loai": "đại từ nghi vấn"
+  },
+  {
+   "h": "的",
+   "p": "de",
+   "v": "của (nối định ngữ với danh từ)",
+   "hv": "ĐÍCH",
+   "loai": "trợ từ kết cấu"
+  },
+  {
+   "h": "姐姐",
+   "p": "jiějie",
+   "v": "chị gái",
+   "hv": "THƯ THƯ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "女朋友",
+   "p": "nǚpéngyou",
+   "v": "bạn gái (người yêu)",
+   "hv": "NỮ BẰNG HỮU",
+   "loai": "danh từ"
+  },
+  {
+   "h": "工作",
+   "p": "gōngzuò",
+   "v": "công việc; làm việc",
+   "hv": "CÔNG TÁC",
+   "loai": "danh từ"
+  },
+  {
+   "h": "忙",
+   "p": "máng",
+   "v": "bận, bận rộn",
+   "hv": "MANG",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "太",
+   "p": "tài",
+   "v": "quá, quá mức",
+   "hv": "THÁI",
+   "loai": "phó từ chỉ mức độ"
+  },
+  {
+   "h": "还",
+   "p": "hái",
+   "v": "vẫn, còn; còn có thêm",
+   "hv": "HOÀN",
+   "loai": "phó từ"
+  },
+  {
+   "h": "想",
+   "p": "xiǎng",
+   "v": "muốn; nhớ, nghĩ",
+   "hv": "TƯỞNG",
+   "loai": "động từ năng nguyện"
+  },
+  {
+   "h": "对",
+   "p": "duì",
+   "v": "đúng, phải",
+   "hv": "ĐỐI",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "吗",
+   "p": "ma",
+   "v": "(đặt cuối câu để hỏi “…không?”)",
+   "hv": "MA",
+   "loai": "trợ từ nghi vấn"
+  },
+  {
+   "h": "喂",
+   "p": "wèi",
+   "v": "a lô; này (gọi ai đó)",
+   "hv": "UY",
+   "loai": "thán từ"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "＿＿是我姐姐。",
+   "a": "这",
+   "o": [
+    "吗",
+    "中文",
+    "工作"
+   ],
+   "p": "Zhè shì wǒ jiějie.",
+   "v": "Đây là chị gái mình."
+  },
+  {
+   "q": "她是＿＿国人？",
+   "a": "哪",
+   "o": [
+    "我们",
+    "吗",
+    "忙"
+   ],
+   "p": "Tā shì nǎ guó rén?",
+   "v": "Cô ấy là người nước nào?"
+  },
+  {
+   "q": "中＿＿人很多。",
+   "a": "国",
+   "o": [
+    "她",
+    "这",
+    "的"
+   ],
+   "p": "Zhōngguó rén hěn duō.",
+   "v": "Người Trung Quốc rất đông."
+  },
+  {
+   "q": "我是中国＿＿。",
+   "a": "人",
+   "o": [
+    "忙",
+    "哪",
+    "谁"
+   ],
+   "p": "Wǒ shì Zhōngguó rén.",
+   "v": "Mình là người Trung Quốc."
+  },
+  {
+   "q": "她也是＿＿人。",
+   "a": "中国",
+   "o": [
+    "的",
+    "我们",
+    "想"
+   ],
+   "p": "Tā yě shì Zhōngguó rén.",
+   "v": "Cô ấy cũng là người Trung Quốc."
+  },
+  {
+   "q": "她是＿＿老师。",
+   "a": "中文",
+   "o": [
+    "的",
+    "吗",
+    "谁"
+   ],
+   "p": "Tā shì Zhōngwén lǎoshī.",
+   "v": "Cô ấy là giáo viên tiếng Trung."
+  },
+  {
+   "q": "我女朋友是＿＿人。",
+   "a": "法国",
+   "o": [
+    "对",
+    "太",
+    "还"
+   ],
+   "p": "Wǒ nǚpéngyou shì Fǎguó rén.",
+   "v": "Bạn gái mình là người Pháp."
+  },
+  {
+   "q": "他是＿＿人。",
+   "a": "泰国",
+   "o": [
+    "吗",
+    "谁",
+    "还"
+   ],
+   "p": "Tā shì Tàiguó rén.",
+   "v": "Cậu ấy là người Thái Lan."
+  },
+  {
+   "q": "＿＿是我姐姐。",
+   "a": "她",
+   "o": [
+    "哪",
+    "泰国",
+    "太"
+   ],
+   "p": "Tā shì wǒ jiějie.",
+   "v": "Cô ấy là chị gái mình."
+  },
+  {
+   "q": "＿＿是中国人。",
+   "a": "我们",
+   "o": [
+    "想",
+    "的",
+    "吗"
+   ],
+   "p": "Wǒmen shì Zhōngguó rén.",
+   "v": "Chúng mình là người Trung Quốc."
+  },
+  {
+   "q": "她是＿＿？",
+   "a": "谁",
+   "o": [
+    "忙",
+    "法国",
+    "太"
+   ],
+   "p": "Tā shì shéi?",
+   "v": "Cô ấy là ai vậy?"
+  },
+  {
+   "q": "这是我＿＿名字。",
+   "a": "的",
+   "o": [
+    "哪",
+    "中文",
+    "谁"
+   ],
+   "p": "Zhè shì wǒ de míngzi.",
+   "v": "Đây là tên của mình."
+  },
+  {
+   "q": "这是我＿＿。",
+   "a": "姐姐",
+   "o": [
+    "她",
+    "我们",
+    "太"
+   ],
+   "p": "Zhè shì wǒ jiějie.",
+   "v": "Đây là chị gái mình."
+  },
+  {
+   "q": "这是我＿＿。",
+   "a": "女朋友",
+   "o": [
+    "太",
+    "还",
+    "谁"
+   ],
+   "p": "Zhè shì wǒ nǚpéngyou.",
+   "v": "Đây là bạn gái mình."
+  },
+  {
+   "q": "她的＿＿很忙。",
+   "a": "工作",
+   "o": [
+    "吗",
+    "太",
+    "这"
+   ],
+   "p": "Tā de gōngzuò hěn máng.",
+   "v": "Công việc của cô ấy rất bận."
+  },
+  {
+   "q": "我姐姐很＿＿。",
+   "a": "忙",
+   "o": [
+    "还",
+    "女朋友",
+    "中国"
+   ],
+   "p": "Wǒ jiějie hěn máng.",
+   "v": "Chị gái mình rất bận."
+  },
+  {
+   "q": "她＿＿忙了。",
+   "a": "太",
+   "o": [
+    "国",
+    "对",
+    "人"
+   ],
+   "p": "Tā tài máng le.",
+   "v": "Cô ấy bận quá."
+  },
+  {
+   "q": "我＿＿好。",
+   "a": "还",
+   "o": [
+    "喂",
+    "谁",
+    "姐姐"
+   ],
+   "p": "Wǒ hái hǎo.",
+   "v": "Mình vẫn ổn."
+  },
+  {
+   "q": "我＿＿认识你。",
+   "a": "想",
+   "o": [
+    "她",
+    "姐姐",
+    "人"
+   ],
+   "p": "Wǒ xiǎng rènshi nǐ.",
+   "v": "Mình muốn làm quen với bạn."
+  },
+  {
+   "q": "＿＿，我是中国人。",
+   "a": "对",
+   "o": [
+    "太",
+    "中文",
+    "哪"
+   ],
+   "p": "Duì, wǒ shì Zhōngguó rén.",
+   "v": "Đúng, mình là người Trung Quốc."
+  },
+  {
+   "q": "你是老师＿＿？",
+   "a": "吗",
+   "o": [
+    "中国",
+    "喂",
+    "国"
+   ],
+   "p": "Nǐ shì lǎoshī ma?",
+   "v": "Bạn là giáo viên à?"
+  },
+  {
+   "q": "＿＿，你好！",
+   "a": "喂",
+   "o": [
+    "泰国",
+    "忙",
+    "这"
+   ],
+   "p": "Wèi, nǐ hǎo!",
+   "v": "A lô, xin chào!"
+  }
+ ]
+}

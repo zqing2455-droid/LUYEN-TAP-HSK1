@@ -1,0 +1,459 @@
+{
+ "so": 14,
+ "han": "我看了一个电影",
+ "sub": "Việc đã làm · bậc học · 汉语 và 汉字",
+ "pool": [
+  {
+   "h": "听",
+   "p": "tīng",
+   "v": "nghe",
+   "hv": "THÍNH",
+   "loai": "động từ"
+  },
+  {
+   "h": "听见",
+   "p": "tīngjiàn",
+   "v": "nghe thấy",
+   "hv": "THÍNH KIẾN",
+   "loai": "động từ"
+  },
+  {
+   "h": "写",
+   "p": "xiě",
+   "v": "viết",
+   "hv": "TẢ",
+   "loai": "động từ"
+  },
+  {
+   "h": "字",
+   "p": "zì",
+   "v": "chữ (một chữ viết)",
+   "hv": "TỰ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "汉字",
+   "p": "Hànzì",
+   "v": "chữ Hán",
+   "hv": "HÁN TỰ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "汉语",
+   "p": "Hànyǔ",
+   "v": "tiếng Hán, tiếng Trung",
+   "hv": "HÁN NGỮ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "说话",
+   "p": "shuōhuà",
+   "v": "nói chuyện",
+   "hv": "THUYẾT THOẠI",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "都",
+   "p": "dōu",
+   "v": "đều, tất cả",
+   "hv": "ĐÔ",
+   "loai": "phó từ"
+  },
+  {
+   "h": "有的",
+   "p": "yǒude",
+   "v": "có cái thì…, có người thì…",
+   "hv": "HỮU ĐÍCH",
+   "loai": "đại từ"
+  },
+  {
+   "h": "有些",
+   "p": "yǒuxiē",
+   "v": "một số…",
+   "hv": "HỮU TA",
+   "loai": "đại từ"
+  },
+  {
+   "h": "哪些",
+   "p": "nǎxiē",
+   "v": "những cái nào, những ai",
+   "hv": "NA TA",
+   "loai": "đại từ nghi vấn"
+  },
+  {
+   "h": "他们",
+   "p": "tāmen",
+   "v": "họ, các anh ấy",
+   "hv": "THA MÔN",
+   "loai": "đại từ nhân xưng"
+  },
+  {
+   "h": "她们",
+   "p": "tāmen",
+   "v": "họ (toàn nữ)",
+   "hv": "THA MÔN",
+   "loai": "đại từ nhân xưng"
+  },
+  {
+   "h": "它们",
+   "p": "tāmen",
+   "v": "chúng (đồ vật, con vật)",
+   "hv": "THA MÔN",
+   "loai": "đại từ nhân xưng"
+  },
+  {
+   "h": "上学",
+   "p": "shàngxué",
+   "v": "đi học (ở trường)",
+   "hv": "THƯỢNG HỌC",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "小学",
+   "p": "xiǎoxué",
+   "v": "trường tiểu học",
+   "hv": "TIỂU HỌC",
+   "loai": "danh từ"
+  },
+  {
+   "h": "小学生",
+   "p": "xiǎoxuéshēng",
+   "v": "học sinh tiểu học",
+   "hv": "TIỂU HỌC SINH",
+   "loai": "danh từ"
+  },
+  {
+   "h": "中学",
+   "p": "zhōngxué",
+   "v": "trường trung học",
+   "hv": "TRUNG HỌC",
+   "loai": "danh từ"
+  },
+  {
+   "h": "中学生",
+   "p": "zhōngxuéshēng",
+   "v": "học sinh trung học",
+   "hv": "TRUNG HỌC SINH",
+   "loai": "danh từ"
+  },
+  {
+   "h": "中午",
+   "p": "zhōngwǔ",
+   "v": "buổi trưa",
+   "hv": "TRUNG NGỌ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "明年",
+   "p": "míngnián",
+   "v": "năm sau, sang năm",
+   "hv": "MINH NIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "晚",
+   "p": "wǎn",
+   "v": "muộn, trễ",
+   "hv": "VÃN",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "开",
+   "p": "kāi",
+   "v": "mở; bật; lái",
+   "hv": "KHAI",
+   "loai": "động từ"
+  },
+  {
+   "h": "火车",
+   "p": "huǒchē",
+   "v": "tàu hoả, xe lửa",
+   "hv": "HOẢ XA",
+   "loai": "danh từ"
+  },
+  {
+   "h": "不要",
+   "p": "búyào",
+   "v": "đừng, không được",
+   "hv": "BẤT YẾU",
+   "loai": "phó từ phủ định"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "我喜欢＿＿歌。",
+   "a": "听",
+   "o": [
+    "汉字",
+    "火车",
+    "不要"
+   ],
+   "p": "Wǒ xǐhuan tīng gē.",
+   "v": "Mình thích nghe nhạc."
+  },
+  {
+   "q": "我＿＿了。",
+   "a": "听见",
+   "o": [
+    "汉字",
+    "火车",
+    "小学生"
+   ],
+   "p": "Wǒ tīngjiàn le.",
+   "v": "Mình nghe thấy rồi."
+  },
+  {
+   "q": "我＿＿字。",
+   "a": "写",
+   "o": [
+    "她们",
+    "晚",
+    "汉语"
+   ],
+   "p": "Wǒ xiě zì.",
+   "v": "Mình viết chữ."
+  },
+  {
+   "q": "他在写＿＿。",
+   "a": "字",
+   "o": [
+    "有的",
+    "晚",
+    "说话"
+   ],
+   "p": "Tā zài xiě zì.",
+   "v": "Cậu ấy đang viết chữ."
+  },
+  {
+   "q": "我喜欢写＿＿。",
+   "a": "汉字",
+   "o": [
+    "开",
+    "听见",
+    "不要"
+   ],
+   "p": "Wǒ xǐhuan xiě Hànzì.",
+   "v": "Mình thích viết chữ Hán."
+  },
+  {
+   "q": "我学＿＿。",
+   "a": "汉语",
+   "o": [
+    "它们",
+    "不要",
+    "听"
+   ],
+   "p": "Wǒ xué Hànyǔ.",
+   "v": "Mình học tiếng Trung."
+  },
+  {
+   "q": "老师＿＿了。",
+   "a": "说话",
+   "o": [
+    "哪些",
+    "有的",
+    "字"
+   ],
+   "p": "Lǎoshī shuōhuà le.",
+   "v": "Thầy cô lên tiếng rồi."
+  },
+  {
+   "q": "我们＿＿是学生。",
+   "a": "都",
+   "o": [
+    "小学生",
+    "说话",
+    "写"
+   ],
+   "p": "Wǒmen dōu shì xuésheng.",
+   "v": "Chúng mình đều là học sinh."
+  },
+  {
+   "q": "＿＿人喜欢喝茶。",
+   "a": "有的",
+   "o": [
+    "中学",
+    "中学生",
+    "上学"
+   ],
+   "p": "Yǒude rén xǐhuan hē chá.",
+   "v": "Có người thì thích uống trà."
+  },
+  {
+   "q": "＿＿人不喜欢吃鸡蛋。",
+   "a": "有些",
+   "o": [
+    "汉语",
+    "汉字",
+    "听"
+   ],
+   "p": "Yǒuxiē rén bù xǐhuan chī jīdàn.",
+   "v": "Một số người không thích ăn trứng."
+  },
+  {
+   "q": "＿＿人是你的朋友？",
+   "a": "哪些",
+   "o": [
+    "小学生",
+    "字",
+    "火车"
+   ],
+   "p": "Nǎxiē rén shì nǐ de péngyou?",
+   "v": "Những ai là bạn của bạn?"
+  },
+  {
+   "q": "＿＿是我的同学。",
+   "a": "他们",
+   "o": [
+    "汉字",
+    "听",
+    "听见"
+   ],
+   "p": "Tāmen shì wǒ de tóngxué.",
+   "v": "Các bạn ấy là bạn cùng lớp mình."
+  },
+  {
+   "q": "＿＿是我的学生。",
+   "a": "她们",
+   "o": [
+    "都",
+    "中学生",
+    "汉语"
+   ],
+   "p": "Tāmen shì wǒ de xuésheng.",
+   "v": "Các em ấy là học sinh của mình."
+  },
+  {
+   "q": "＿＿是我的猫。",
+   "a": "它们",
+   "o": [
+    "晚",
+    "火车",
+    "不要"
+   ],
+   "p": "Tāmen shì wǒ de māo.",
+   "v": "Chúng là mèo của mình."
+  },
+  {
+   "q": "我弟弟去＿＿。",
+   "a": "上学",
+   "o": [
+    "火车",
+    "他们",
+    "听"
+   ],
+   "p": "Wǒ dìdi qù shàngxué.",
+   "v": "Em trai mình đi học."
+  },
+  {
+   "q": "我弟弟上＿＿。",
+   "a": "小学",
+   "o": [
+    "不要",
+    "写",
+    "他们"
+   ],
+   "p": "Wǒ dìdi shàng xiǎoxué.",
+   "v": "Em trai mình học tiểu học."
+  },
+  {
+   "q": "我妹妹是＿＿。",
+   "a": "小学生",
+   "o": [
+    "开",
+    "都",
+    "听见"
+   ],
+   "p": "Wǒ mèimei shì xiǎoxuéshēng.",
+   "v": "Em gái mình là học sinh tiểu học."
+  },
+  {
+   "q": "我哥哥上＿＿。",
+   "a": "中学",
+   "o": [
+    "有些",
+    "它们",
+    "都"
+   ],
+   "p": "Wǒ gēge shàng zhōngxué.",
+   "v": "Anh mình học trung học."
+  },
+  {
+   "q": "我哥哥是＿＿。",
+   "a": "中学生",
+   "o": [
+    "哪些",
+    "都",
+    "他们"
+   ],
+   "p": "Wǒ gēge shì zhōngxuéshēng.",
+   "v": "Anh mình là học sinh trung học."
+  },
+  {
+   "q": "我＿＿吃饭。",
+   "a": "中午",
+   "o": [
+    "开",
+    "有的",
+    "有些"
+   ],
+   "p": "Wǒ zhōngwǔ chīfàn.",
+   "v": "Buổi trưa mình ăn cơm."
+  },
+  {
+   "q": "我＿＿去中国。",
+   "a": "明年",
+   "o": [
+    "有的",
+    "她们",
+    "它们"
+   ],
+   "p": "Wǒ míngnián qù Zhōngguó.",
+   "v": "Sang năm mình đi Trung Quốc."
+  },
+  {
+   "q": "现在很＿＿了。",
+   "a": "晚",
+   "o": [
+    "上学",
+    "写",
+    "小学生"
+   ],
+   "p": "Xiànzài hěn wǎn le.",
+   "v": "Giờ muộn lắm rồi."
+  },
+  {
+   "q": "我＿＿车去。",
+   "a": "开",
+   "o": [
+    "都",
+    "小学生",
+    "不要"
+   ],
+   "p": "Wǒ kāichē qù.",
+   "v": "Mình lái xe đi."
+  },
+  {
+   "q": "我坐＿＿去。",
+   "a": "火车",
+   "o": [
+    "写",
+    "不要",
+    "听"
+   ],
+   "p": "Wǒ zuò huǒchē qù.",
+   "v": "Mình đi tàu hoả."
+  },
+  {
+   "q": "请＿＿说话。",
+   "a": "不要",
+   "o": [
+    "字",
+    "听见",
+    "听"
+   ],
+   "p": "Qǐng búyào shuōhuà.",
+   "v": "Đừng nói chuyện nhé."
+  }
+ ]
+}

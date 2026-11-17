@@ -1,0 +1,639 @@
+{
+ "so": 4,
+ "han": "我有两个孩子",
+ "sub": "Số đếm · lượng từ · người thân",
+ "pool": [
+  {
+   "h": "一",
+   "p": "yī",
+   "v": "một",
+   "hv": "NHẤT",
+   "loai": "số từ"
+  },
+  {
+   "h": "二",
+   "p": "èr",
+   "v": "hai",
+   "hv": "NHỊ",
+   "loai": "số từ"
+  },
+  {
+   "h": "三",
+   "p": "sān",
+   "v": "ba",
+   "hv": "TAM",
+   "loai": "số từ"
+  },
+  {
+   "h": "四",
+   "p": "sì",
+   "v": "bốn",
+   "hv": "TỨ",
+   "loai": "số từ"
+  },
+  {
+   "h": "五",
+   "p": "wǔ",
+   "v": "năm",
+   "hv": "NGŨ",
+   "loai": "số từ"
+  },
+  {
+   "h": "六",
+   "p": "liù",
+   "v": "sáu",
+   "hv": "LỤC",
+   "loai": "số từ"
+  },
+  {
+   "h": "七",
+   "p": "qī",
+   "v": "bảy",
+   "hv": "THẤT",
+   "loai": "số từ"
+  },
+  {
+   "h": "八",
+   "p": "bā",
+   "v": "tám",
+   "hv": "BÁT",
+   "loai": "số từ"
+  },
+  {
+   "h": "九",
+   "p": "jiǔ",
+   "v": "chín",
+   "hv": "CỬU",
+   "loai": "số từ"
+  },
+  {
+   "h": "十",
+   "p": "shí",
+   "v": "mười",
+   "hv": "THẬP",
+   "loai": "số từ"
+  },
+  {
+   "h": "零",
+   "p": "líng",
+   "v": "không (số 0)",
+   "hv": "LINH",
+   "loai": "số từ"
+  },
+  {
+   "h": "百",
+   "p": "bǎi",
+   "v": "trăm",
+   "hv": "BÁCH",
+   "loai": "số từ"
+  },
+  {
+   "h": "千",
+   "p": "qiān",
+   "v": "nghìn",
+   "hv": "THIÊN",
+   "loai": "số từ"
+  },
+  {
+   "h": "两",
+   "p": "liǎng",
+   "v": "hai (đi với lượng từ)",
+   "hv": "LƯỠNG",
+   "loai": "số từ"
+  },
+  {
+   "h": "几",
+   "p": "jǐ",
+   "v": "mấy",
+   "hv": "KỶ",
+   "loai": "đại từ nghi vấn"
+  },
+  {
+   "h": "多少",
+   "p": "duōshao",
+   "v": "bao nhiêu",
+   "hv": "ĐA THIỂU",
+   "loai": "đại từ nghi vấn"
+  },
+  {
+   "h": "个",
+   "p": "ge",
+   "v": "cái, người (lượng từ thông dụng nhất)",
+   "hv": "CÁ",
+   "loai": "lượng từ"
+  },
+  {
+   "h": "口",
+   "p": "kǒu",
+   "v": "khẩu (đếm người trong gia đình)",
+   "hv": "KHẨU",
+   "loai": "lượng từ"
+  },
+  {
+   "h": "岁",
+   "p": "suì",
+   "v": "tuổi",
+   "hv": "TUẾ",
+   "loai": "lượng từ"
+  },
+  {
+   "h": "今年",
+   "p": "jīnnián",
+   "v": "năm nay",
+   "hv": "KIM NIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "有",
+   "p": "yǒu",
+   "v": "có",
+   "hv": "HỮU",
+   "loai": "động từ"
+  },
+  {
+   "h": "没有",
+   "p": "méiyǒu",
+   "v": "không có",
+   "hv": "MỘT HỮU",
+   "loai": "động từ"
+  },
+  {
+   "h": "和",
+   "p": "hé",
+   "v": "và, với",
+   "hv": "HOÀ",
+   "loai": "liên từ"
+  },
+  {
+   "h": "呢",
+   "p": "ne",
+   "v": "còn… thì sao?",
+   "hv": "NI",
+   "loai": "trợ từ ngữ khí"
+  },
+  {
+   "h": "他",
+   "p": "tā",
+   "v": "cậu ấy, anh ấy, ông ấy",
+   "hv": "THA",
+   "loai": "đại từ nhân xưng"
+  },
+  {
+   "h": "家",
+   "p": "jiā",
+   "v": "nhà, gia đình",
+   "hv": "GIA",
+   "loai": "danh từ"
+  },
+  {
+   "h": "爸爸",
+   "p": "bàba",
+   "v": "bố, ba",
+   "hv": "BA BA",
+   "loai": "danh từ"
+  },
+  {
+   "h": "妈妈",
+   "p": "māma",
+   "v": "mẹ, má",
+   "hv": "MA MA",
+   "loai": "danh từ"
+  },
+  {
+   "h": "哥哥",
+   "p": "gēge",
+   "v": "anh trai",
+   "hv": "CA CA",
+   "loai": "danh từ"
+  },
+  {
+   "h": "妹妹",
+   "p": "mèimei",
+   "v": "em gái",
+   "hv": "MUỘI MUỘI",
+   "loai": "danh từ"
+  },
+  {
+   "h": "儿子",
+   "p": "érzi",
+   "v": "con trai",
+   "hv": "NHI TỬ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "女儿",
+   "p": "nǚ'ér",
+   "v": "con gái",
+   "hv": "NỮ NHI",
+   "loai": "danh từ"
+  },
+  {
+   "h": "孩子",
+   "p": "háizi",
+   "v": "con; đứa trẻ",
+   "hv": "HÀI TỬ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "大",
+   "p": "dà",
+   "v": "to, lớn; (tuổi) lớn",
+   "hv": "ĐẠI",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "多",
+   "p": "duō",
+   "v": "nhiều",
+   "hv": "ĐA",
+   "loai": "hình dung từ"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "我有＿＿个孩子。",
+   "a": "一",
+   "o": [
+    "家",
+    "爸爸",
+    "今年"
+   ],
+   "p": "Wǒ yǒu yí ge háizi.",
+   "v": "Mình có một đứa con."
+  },
+  {
+   "q": "我有＿＿十个学生。",
+   "a": "二",
+   "o": [
+    "爸爸",
+    "妹妹",
+    "儿子"
+   ],
+   "p": "Wǒ yǒu èrshí ge xuésheng.",
+   "v": "Mình có hai mươi học sinh."
+  },
+  {
+   "q": "我有＿＿个学生。",
+   "a": "三",
+   "o": [
+    "多",
+    "他",
+    "口"
+   ],
+   "p": "Wǒ yǒu sān ge xuésheng.",
+   "v": "Mình có ba học sinh."
+  },
+  {
+   "q": "我有＿＿个学生。",
+   "a": "四",
+   "o": [
+    "呢",
+    "孩子",
+    "女儿"
+   ],
+   "p": "Wǒ yǒu sì ge xuésheng.",
+   "v": "Mình có bốn học sinh."
+  },
+  {
+   "q": "我有＿＿个学生。",
+   "a": "五",
+   "o": [
+    "今年",
+    "没有",
+    "妈妈"
+   ],
+   "p": "Wǒ yǒu wǔ ge xuésheng.",
+   "v": "Mình có năm học sinh."
+  },
+  {
+   "q": "她有＿＿个学生。",
+   "a": "六",
+   "o": [
+    "家",
+    "和",
+    "妹妹"
+   ],
+   "p": "Tā yǒu liù ge xuésheng.",
+   "v": "Cô ấy có sáu học sinh."
+  },
+  {
+   "q": "她有＿＿个孩子。",
+   "a": "七",
+   "o": [
+    "女儿",
+    "妹妹",
+    "爸爸"
+   ],
+   "p": "Tā yǒu qī ge háizi.",
+   "v": "Cô ấy có bảy đứa con."
+  },
+  {
+   "q": "我们有＿＿个老师。",
+   "a": "八",
+   "o": [
+    "岁",
+    "今年",
+    "呢"
+   ],
+   "p": "Wǒmen yǒu bā ge lǎoshī.",
+   "v": "Chỗ mình có tám giáo viên."
+  },
+  {
+   "q": "我有＿＿个同学。",
+   "a": "九",
+   "o": [
+    "呢",
+    "儿子",
+    "口"
+   ],
+   "p": "Wǒ yǒu jiǔ ge tóngxué.",
+   "v": "Mình có chín bạn cùng lớp."
+  },
+  {
+   "q": "我有＿＿个学生。",
+   "a": "十",
+   "o": [
+    "女儿",
+    "孩子",
+    "岁"
+   ],
+   "p": "Wǒ yǒu shí ge xuésheng.",
+   "v": "Mình có mười học sinh."
+  },
+  {
+   "q": "我们有一百＿＿一个学生。",
+   "a": "零",
+   "o": [
+    "爸爸",
+    "和",
+    "几"
+   ],
+   "p": "Wǒmen yǒu yìbǎi líng yī ge xuésheng.",
+   "v": "Chỗ mình có một trăm lẻ một học sinh."
+  },
+  {
+   "q": "我们有一＿＿个学生。",
+   "a": "百",
+   "o": [
+    "爸爸",
+    "家",
+    "和"
+   ],
+   "p": "Wǒmen yǒu yìbǎi ge xuésheng.",
+   "v": "Chỗ mình có một trăm học sinh."
+  },
+  {
+   "q": "我们学校有一＿＿个学生。",
+   "a": "千",
+   "o": [
+    "家",
+    "今年",
+    "多少"
+   ],
+   "p": "Wǒmen xuéxiào yǒu yìqiān ge xuésheng.",
+   "v": "Trường mình có một nghìn học sinh."
+  },
+  {
+   "q": "我有＿＿个孩子。",
+   "a": "两",
+   "o": [
+    "和",
+    "哥哥",
+    "爸爸"
+   ],
+   "p": "Wǒ yǒu liǎng ge háizi.",
+   "v": "Mình có hai đứa con."
+  },
+  {
+   "q": "你有＿＿个孩子？",
+   "a": "几",
+   "o": [
+    "女儿",
+    "岁",
+    "多"
+   ],
+   "p": "Nǐ yǒu jǐ ge háizi?",
+   "v": "Bạn có mấy đứa con?"
+  },
+  {
+   "q": "你们有＿＿个学生？",
+   "a": "多少",
+   "o": [
+    "他",
+    "妈妈",
+    "家"
+   ],
+   "p": "Nǐmen yǒu duōshao ge xuésheng?",
+   "v": "Bên bạn có bao nhiêu học sinh?"
+  },
+  {
+   "q": "我有一＿＿妹妹。",
+   "a": "个",
+   "o": [
+    "儿子",
+    "大",
+    "爸爸"
+   ],
+   "p": "Wǒ yǒu yí ge mèimei.",
+   "v": "Mình có một em gái."
+  },
+  {
+   "q": "你家有几＿＿人？",
+   "a": "口",
+   "o": [
+    "妹妹",
+    "爸爸",
+    "呢"
+   ],
+   "p": "Nǐ jiā yǒu jǐ kǒu rén?",
+   "v": "Nhà bạn có mấy người?"
+  },
+  {
+   "q": "你女儿几＿＿？",
+   "a": "岁",
+   "o": [
+    "儿子",
+    "哥哥",
+    "今年"
+   ],
+   "p": "Nǐ nǚ'ér jǐ suì?",
+   "v": "Con gái bạn mấy tuổi?"
+  },
+  {
+   "q": "我＿＿二十岁。",
+   "a": "今年",
+   "o": [
+    "多少",
+    "一",
+    "七"
+   ],
+   "p": "Wǒ jīnnián èrshí suì.",
+   "v": "Năm nay mình hai mươi tuổi."
+  },
+  {
+   "q": "我＿＿两个孩子。",
+   "a": "有",
+   "o": [
+    "六",
+    "一",
+    "二"
+   ],
+   "p": "Wǒ yǒu liǎng ge háizi.",
+   "v": "Mình có hai đứa con."
+  },
+  {
+   "q": "她＿＿孩子。",
+   "a": "没有",
+   "o": [
+    "他",
+    "女儿",
+    "爸爸"
+   ],
+   "p": "Tā méiyǒu háizi.",
+   "v": "Cô ấy chưa có con."
+  },
+  {
+   "q": "她＿＿我是同学。",
+   "a": "和",
+   "o": [
+    "没有",
+    "二",
+    "儿子"
+   ],
+   "p": "Tā hé wǒ shì tóngxué.",
+   "v": "Cô ấy với mình là bạn cùng lớp."
+  },
+  {
+   "q": "我很好，你＿＿？",
+   "a": "呢",
+   "o": [
+    "五",
+    "儿子",
+    "多少"
+   ],
+   "p": "Wǒ hěn hǎo, nǐ ne?",
+   "v": "Mình khoẻ, còn bạn thì sao?"
+  },
+  {
+   "q": "＿＿是我哥哥。",
+   "a": "他",
+   "o": [
+    "大",
+    "没有",
+    "今年"
+   ],
+   "p": "Tā shì wǒ gēge.",
+   "v": "Cậu ấy là anh trai mình."
+  },
+  {
+   "q": "我＿＿有三口人。",
+   "a": "家",
+   "o": [
+    "和",
+    "几",
+    "九"
+   ],
+   "p": "Wǒ jiā yǒu sān kǒu rén.",
+   "v": "Nhà mình có ba người."
+  },
+  {
+   "q": "我＿＿是老师。",
+   "a": "爸爸",
+   "o": [
+    "口",
+    "四",
+    "五"
+   ],
+   "p": "Wǒ bàba shì lǎoshī.",
+   "v": "Bố mình là giáo viên."
+  },
+  {
+   "q": "我＿＿今年五十岁。",
+   "a": "妈妈",
+   "o": [
+    "没有",
+    "呢",
+    "有"
+   ],
+   "p": "Wǒ māma jīnnián wǔshí suì.",
+   "v": "Năm nay mẹ mình năm mươi tuổi."
+  },
+  {
+   "q": "我＿＿今年三十岁。",
+   "a": "哥哥",
+   "o": [
+    "千",
+    "有",
+    "八"
+   ],
+   "p": "Wǒ gēge jīnnián sānshí suì.",
+   "v": "Năm nay anh trai mình ba mươi tuổi."
+  },
+  {
+   "q": "我＿＿是学生。",
+   "a": "妹妹",
+   "o": [
+    "百",
+    "岁",
+    "他"
+   ],
+   "p": "Wǒ mèimei shì xuésheng.",
+   "v": "Em gái mình là học sinh."
+  },
+  {
+   "q": "我＿＿今年十岁。",
+   "a": "儿子",
+   "o": [
+    "呢",
+    "八",
+    "七"
+   ],
+   "p": "Wǒ érzi jīnnián shí suì.",
+   "v": "Năm nay con trai mình mười tuổi."
+  },
+  {
+   "q": "我＿＿五岁。",
+   "a": "女儿",
+   "o": [
+    "三",
+    "七",
+    "千"
+   ],
+   "p": "Wǒ nǚ'ér wǔ suì.",
+   "v": "Con gái mình năm tuổi."
+  },
+  {
+   "q": "我有两个＿＿。",
+   "a": "孩子",
+   "o": [
+    "六",
+    "一",
+    "二"
+   ],
+   "p": "Wǒ yǒu liǎng ge háizi.",
+   "v": "Mình có hai đứa con."
+  },
+  {
+   "q": "你今年多＿＿？",
+   "a": "大",
+   "o": [
+    "爸爸",
+    "妈妈",
+    "七"
+   ],
+   "p": "Nǐ jīnnián duō dà?",
+   "v": "Năm nay bạn bao nhiêu tuổi?"
+  },
+  {
+   "q": "中国人很＿＿。",
+   "a": "多",
+   "o": [
+    "个",
+    "呢",
+    "八"
+   ],
+   "p": "Zhōngguó rén hěn duō.",
+   "v": "Người Trung Quốc rất đông."
+  }
+ ]
+}

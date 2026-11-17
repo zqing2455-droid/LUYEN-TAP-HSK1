@@ -1,0 +1,423 @@
+{
+ "so": 10,
+ "han": "这儿的苹果真便宜！",
+ "sub": "Mua bán · giá tiền · khen chê",
+ "pool": [
+  {
+   "h": "商店",
+   "p": "shāngdiàn",
+   "v": "cửa hàng",
+   "hv": "THƯƠNG ĐIẾM",
+   "loai": "danh từ"
+  },
+  {
+   "h": "售货员",
+   "p": "shòuhuòyuán",
+   "v": "nhân viên bán hàng",
+   "hv": "THỤ HOÁ VIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "这儿",
+   "p": "zhèr",
+   "v": "ở đây, chỗ này",
+   "hv": "GIÁ NHI",
+   "loai": "đại từ chỉ nơi chốn"
+  },
+  {
+   "h": "那儿",
+   "p": "nàr",
+   "v": "ở kia, chỗ kia",
+   "hv": "NA NHI",
+   "loai": "đại từ chỉ nơi chốn"
+  },
+  {
+   "h": "这些",
+   "p": "zhèxiē",
+   "v": "những cái này",
+   "hv": "GIÁ TA",
+   "loai": "đại từ chỉ thị"
+  },
+  {
+   "h": "那些",
+   "p": "nàxiē",
+   "v": "những cái kia",
+   "hv": "NA TA",
+   "loai": "đại từ chỉ thị"
+  },
+  {
+   "h": "这边",
+   "p": "zhèbian",
+   "v": "bên này, phía này",
+   "hv": "GIÁ BIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "水果",
+   "p": "shuǐguǒ",
+   "v": "hoa quả, trái cây",
+   "hv": "THUỶ QUẢ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "苹果",
+   "p": "píngguǒ",
+   "v": "quả táo",
+   "hv": "BÌNH QUẢ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "斤",
+   "p": "jīn",
+   "v": "cân (500 gram)",
+   "hv": "CÂN",
+   "loai": "lượng từ"
+  },
+  {
+   "h": "钱",
+   "p": "qián",
+   "v": "tiền",
+   "hv": "TIỀN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "块",
+   "p": "kuài",
+   "v": "đồng (cách nói miệng)",
+   "hv": "KHỐI",
+   "loai": "lượng từ chỉ tiền"
+  },
+  {
+   "h": "元",
+   "p": "yuán",
+   "v": "đồng (văn viết)",
+   "hv": "NGUYÊN",
+   "loai": "lượng từ chỉ tiền"
+  },
+  {
+   "h": "贵",
+   "p": "guì",
+   "v": "đắt",
+   "hv": "QUÝ",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "便宜",
+   "p": "piányi",
+   "v": "rẻ",
+   "hv": "TIỆN NGHI",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "少",
+   "p": "shǎo",
+   "v": "ít",
+   "hv": "THIỂU",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "怎么样",
+   "p": "zěnmeyàng",
+   "v": "thế nào, ra sao",
+   "hv": "TRẪM MA DẠNG",
+   "loai": "đại từ nghi vấn"
+  },
+  {
+   "h": "衣服",
+   "p": "yīfu",
+   "v": "quần áo",
+   "hv": "Y PHỤC",
+   "loai": "danh từ"
+  },
+  {
+   "h": "件",
+   "p": "jiàn",
+   "v": "chiếc, cái (áo); việc",
+   "hv": "KIỆN",
+   "loai": "lượng từ"
+  },
+  {
+   "h": "穿",
+   "p": "chuān",
+   "v": "mặc, đi (giày)",
+   "hv": "XUYÊN",
+   "loai": "động từ"
+  },
+  {
+   "h": "男",
+   "p": "nán",
+   "v": "nam, con trai",
+   "hv": "NAM",
+   "loai": "danh từ"
+  },
+  {
+   "h": "女",
+   "p": "nǚ",
+   "v": "nữ, con gái",
+   "hv": "NỮ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "杯子",
+   "p": "bēizi",
+   "v": "cái cốc, cái ly",
+   "hv": "BÔI TỬ",
+   "loai": "danh từ"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "我去＿＿买衣服。",
+   "a": "商店",
+   "o": [
+    "少",
+    "贵",
+    "这些"
+   ],
+   "p": "Wǒ qù shāngdiàn mǎi yīfu.",
+   "v": "Mình ra cửa hàng mua quần áo."
+  },
+  {
+   "q": "她是＿＿。",
+   "a": "售货员",
+   "o": [
+    "这些",
+    "怎么样",
+    "斤"
+   ],
+   "p": "Tā shì shòuhuòyuán.",
+   "v": "Chị ấy là nhân viên bán hàng."
+  },
+  {
+   "q": "我在＿＿。",
+   "a": "这儿",
+   "o": [
+    "杯子",
+    "件",
+    "少"
+   ],
+   "p": "Wǒ zài zhèr.",
+   "v": "Mình ở đây."
+  },
+  {
+   "q": "商店在＿＿。",
+   "a": "那儿",
+   "o": [
+    "钱",
+    "便宜",
+    "斤"
+   ],
+   "p": "Shāngdiàn zài nàr.",
+   "v": "Cửa hàng ở đằng kia."
+  },
+  {
+   "q": "＿＿苹果很便宜。",
+   "a": "这些",
+   "o": [
+    "钱",
+    "穿",
+    "块"
+   ],
+   "p": "Zhèxiē píngguǒ hěn piányi.",
+   "v": "Mấy quả táo này rẻ lắm."
+  },
+  {
+   "q": "＿＿水果很好吃。",
+   "a": "那些",
+   "o": [
+    "售货员",
+    "斤",
+    "穿"
+   ],
+   "p": "Nàxiē shuǐguǒ hěn hǎochī.",
+   "v": "Mấy loại trái cây kia ngon lắm."
+  },
+  {
+   "q": "水果在＿＿。",
+   "a": "这边",
+   "o": [
+    "怎么样",
+    "件",
+    "贵"
+   ],
+   "p": "Shuǐguǒ zài zhèbian.",
+   "v": "Trái cây ở bên này."
+  },
+  {
+   "q": "我去商店买＿＿。",
+   "a": "水果",
+   "o": [
+    "怎么样",
+    "那些",
+    "这儿"
+   ],
+   "p": "Wǒ qù shāngdiàn mǎi shuǐguǒ.",
+   "v": "Mình ra cửa hàng mua trái cây."
+  },
+  {
+   "q": "我买一斤＿＿。",
+   "a": "苹果",
+   "o": [
+    "穿",
+    "怎么样",
+    "块"
+   ],
+   "p": "Wǒ mǎi yì jīn píngguǒ.",
+   "v": "Mình mua nửa ký táo."
+  },
+  {
+   "q": "我买一＿＿苹果。",
+   "a": "斤",
+   "o": [
+    "商店",
+    "衣服",
+    "穿"
+   ],
+   "p": "Wǒ mǎi yì jīn píngguǒ.",
+   "v": "Mình mua nửa ký táo."
+  },
+  {
+   "q": "苹果多少＿＿？",
+   "a": "钱",
+   "o": [
+    "件",
+    "那些",
+    "穿"
+   ],
+   "p": "Píngguǒ duōshao qián?",
+   "v": "Táo bao nhiêu tiền ạ?"
+  },
+  {
+   "q": "一斤苹果十＿＿。",
+   "a": "块",
+   "o": [
+    "杯子",
+    "这边",
+    "男"
+   ],
+   "p": "Yì jīn píngguǒ shí kuài.",
+   "v": "Nửa ký táo mười đồng."
+  },
+  {
+   "q": "一斤苹果十＿＿。",
+   "a": "元",
+   "o": [
+    "商店",
+    "贵",
+    "这边"
+   ],
+   "p": "Yì jīn píngguǒ shí yuán.",
+   "v": "Nửa ký táo mười đồng."
+  },
+  {
+   "q": "那些衣服很＿＿。",
+   "a": "贵",
+   "o": [
+    "块",
+    "这些",
+    "件"
+   ],
+   "p": "Nàxiē yīfu hěn guì.",
+   "v": "Mấy bộ quần áo kia đắt lắm."
+  },
+  {
+   "q": "这些苹果很＿＿。",
+   "a": "便宜",
+   "o": [
+    "钱",
+    "穿",
+    "块"
+   ],
+   "p": "Zhèxiē píngguǒ hěn piányi.",
+   "v": "Mấy quả táo này rẻ lắm."
+  },
+  {
+   "q": "这儿人很＿＿。",
+   "a": "少",
+   "o": [
+    "这些",
+    "那些",
+    "女"
+   ],
+   "p": "Zhèr rén hěn shǎo.",
+   "v": "Ở đây ít người lắm."
+  },
+  {
+   "q": "这件衣服＿＿？",
+   "a": "怎么样",
+   "o": [
+    "水果",
+    "斤",
+    "穿"
+   ],
+   "p": "Zhè jiàn yīfu zěnmeyàng?",
+   "v": "Cái áo này thế nào?"
+  },
+  {
+   "q": "我去商店买＿＿。",
+   "a": "衣服",
+   "o": [
+    "少",
+    "这儿",
+    "这些"
+   ],
+   "p": "Wǒ qù shāngdiàn mǎi yīfu.",
+   "v": "Mình ra cửa hàng mua quần áo."
+  },
+  {
+   "q": "我买一＿＿衣服。",
+   "a": "件",
+   "o": [
+    "钱",
+    "这儿",
+    "元"
+   ],
+   "p": "Wǒ mǎi yí jiàn yīfu.",
+   "v": "Mình mua một cái áo."
+  },
+  {
+   "q": "我现在＿＿衣服。",
+   "a": "穿",
+   "o": [
+    "块",
+    "这些",
+    "售货员"
+   ],
+   "p": "Wǒ xiànzài chuān yīfu.",
+   "v": "Giờ mình đang mặc quần áo."
+  },
+  {
+   "q": "他是我＿＿朋友。",
+   "a": "男",
+   "o": [
+    "便宜",
+    "贵",
+    "这些"
+   ],
+   "p": "Tā shì wǒ nán péngyou.",
+   "v": "Anh ấy là bạn trai mình."
+  },
+  {
+   "q": "她是我＿＿朋友。",
+   "a": "女",
+   "o": [
+    "斤",
+    "少",
+    "这些"
+   ],
+   "p": "Tā shì wǒ nǚ péngyou.",
+   "v": "Cô ấy là bạn gái mình."
+  },
+  {
+   "q": "我买一个＿＿。",
+   "a": "杯子",
+   "o": [
+    "块",
+    "穿",
+    "那儿"
+   ],
+   "p": "Wǒ mǎi yí ge bēizi.",
+   "v": "Mình mua một cái cốc."
+  }
+ ]
+}

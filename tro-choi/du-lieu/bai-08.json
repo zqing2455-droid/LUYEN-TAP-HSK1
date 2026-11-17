@@ -1,0 +1,369 @@
+{
+ "so": 8,
+ "han": "我爸爸也在医院工作",
+ "sub": "Nơi chốn · phương vị · 在 và 能",
+ "pool": [
+  {
+   "h": "医生",
+   "p": "yīshēng",
+   "v": "bác sĩ",
+   "hv": "Y SINH",
+   "loai": "danh từ"
+  },
+  {
+   "h": "胡医生",
+   "p": "Hú yīshēng",
+   "v": "bác sĩ Hồ",
+   "hv": "HỒ Y SINH",
+   "loai": "danh từ"
+  },
+  {
+   "h": "病人",
+   "p": "bìngrén",
+   "v": "bệnh nhân",
+   "hv": "BỆNH NHÂN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "学校",
+   "p": "xuéxiào",
+   "v": "trường học",
+   "hv": "HỌC HIỆU",
+   "loai": "danh từ"
+  },
+  {
+   "h": "书店",
+   "p": "shūdiàn",
+   "v": "hiệu sách",
+   "hv": "THƯ ĐIẾM",
+   "loai": "danh từ"
+  },
+  {
+   "h": "房间",
+   "p": "fángjiān",
+   "v": "phòng, căn phòng",
+   "hv": "PHÒNG GIAN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "桌子",
+   "p": "zhuōzi",
+   "v": "cái bàn",
+   "hv": "TRÁC TỬ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "猫",
+   "p": "māo",
+   "v": "con mèo",
+   "hv": "MIÊU",
+   "loai": "danh từ"
+  },
+  {
+   "h": "只",
+   "p": "zhī",
+   "v": "con (đếm động vật)",
+   "hv": "CHÍCH",
+   "loai": "lượng từ"
+  },
+  {
+   "h": "小",
+   "p": "xiǎo",
+   "v": "nhỏ, bé",
+   "hv": "TIỂU",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "漂亮",
+   "p": "piàoliang",
+   "v": "xinh, đẹp",
+   "hv": "PHIÊU LƯỢNG",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "前",
+   "p": "qián",
+   "v": "trước (vị trí, thời gian)",
+   "hv": "TIỀN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "外",
+   "p": "wài",
+   "v": "ngoài, bên ngoài",
+   "hv": "NGOẠI",
+   "loai": "danh từ"
+  },
+  {
+   "h": "下",
+   "p": "xià",
+   "v": "dưới; sau (trong 下午, 下班)",
+   "hv": "HẠ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "到",
+   "p": "dào",
+   "v": "đến, tới (nơi)",
+   "hv": "ĐÁO",
+   "loai": "động từ"
+  },
+  {
+   "h": "看见",
+   "p": "kànjiàn",
+   "v": "nhìn thấy, trông thấy",
+   "hv": "KHÁN KIẾN",
+   "loai": "động từ"
+  },
+  {
+   "h": "没",
+   "p": "méi",
+   "v": "không, chưa (phủ định 有 và việc đã xảy ra)",
+   "hv": "MỘT",
+   "loai": "phó từ phủ định"
+  },
+  {
+   "h": "能",
+   "p": "néng",
+   "v": "có thể (có điều kiện)",
+   "hv": "NĂNG",
+   "loai": "động từ năng nguyện"
+  },
+  {
+   "h": "饭",
+   "p": "fàn",
+   "v": "cơm; bữa ăn",
+   "hv": "PHẠN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "午饭",
+   "p": "wǔfàn",
+   "v": "bữa trưa",
+   "hv": "NGỌ PHẠN",
+   "loai": "danh từ"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "他是一个好＿＿。",
+   "a": "医生",
+   "o": [
+    "没",
+    "漂亮",
+    "只"
+   ],
+   "p": "Tā shì yí ge hǎo yīshēng.",
+   "v": "Anh ấy là một bác sĩ giỏi."
+  },
+  {
+   "q": "＿＿好！",
+   "a": "胡医生",
+   "o": [
+    "能",
+    "看见",
+    "小"
+   ],
+   "p": "Hú yīshēng hǎo!",
+   "v": "Cháu chào bác sĩ Hồ ạ!"
+  },
+  {
+   "q": "医院里有很多＿＿。",
+   "a": "病人",
+   "o": [
+    "到",
+    "看见",
+    "能"
+   ],
+   "p": "Yīyuàn li yǒu hěn duō bìngrén.",
+   "v": "Trong bệnh viện có rất nhiều bệnh nhân."
+  },
+  {
+   "q": "我妹妹在＿＿。",
+   "a": "学校",
+   "o": [
+    "没",
+    "看见",
+    "小"
+   ],
+   "p": "Wǒ mèimei zài xuéxiào.",
+   "v": "Em gái mình đang ở trường."
+  },
+  {
+   "q": "我下午去＿＿。",
+   "a": "书店",
+   "o": [
+    "漂亮",
+    "小",
+    "没"
+   ],
+   "p": "Wǒ xiàwǔ qù shūdiàn.",
+   "v": "Chiều nay mình ra hiệu sách."
+  },
+  {
+   "q": "这是我的＿＿。",
+   "a": "房间",
+   "o": [
+    "能",
+    "小",
+    "没"
+   ],
+   "p": "Zhè shì wǒ de fángjiān.",
+   "v": "Đây là phòng của mình."
+  },
+  {
+   "q": "手机在＿＿上。",
+   "a": "桌子",
+   "o": [
+    "看见",
+    "小",
+    "只"
+   ],
+   "p": "Shǒujī zài zhuōzi shang.",
+   "v": "Điện thoại ở trên bàn."
+  },
+  {
+   "q": "我家有一只＿＿。",
+   "a": "猫",
+   "o": [
+    "到",
+    "小",
+    "看见"
+   ],
+   "p": "Wǒ jiā yǒu yì zhī māo.",
+   "v": "Nhà mình có một con mèo."
+  },
+  {
+   "q": "房间里有一＿＿猫。",
+   "a": "只",
+   "o": [
+    "桌子",
+    "前",
+    "饭"
+   ],
+   "p": "Fángjiān li yǒu yì zhī māo.",
+   "v": "Trong phòng có một con mèo."
+  },
+  {
+   "q": "我的房间很＿＿。",
+   "a": "小",
+   "o": [
+    "猫",
+    "午饭",
+    "到"
+   ],
+   "p": "Wǒ de fángjiān hěn xiǎo.",
+   "v": "Phòng mình nhỏ lắm."
+  },
+  {
+   "q": "她很＿＿。",
+   "a": "漂亮",
+   "o": [
+    "房间",
+    "饭",
+    "胡医生"
+   ],
+   "p": "Tā hěn piàoliang.",
+   "v": "Cô ấy xinh lắm."
+  },
+  {
+   "q": "医院在学校＿＿。",
+   "a": "前",
+   "o": [
+    "到",
+    "看见",
+    "没"
+   ],
+   "p": "Yīyuàn zài xuéxiào qián.",
+   "v": "Bệnh viện nằm trước trường."
+  },
+  {
+   "q": "猫在房间＿＿。",
+   "a": "外",
+   "o": [
+    "能",
+    "只",
+    "小"
+   ],
+   "p": "Māo zài fángjiān wài.",
+   "v": "Con mèo ở ngoài phòng."
+  },
+  {
+   "q": "猫在桌子＿＿。",
+   "a": "下",
+   "o": [
+    "小",
+    "到",
+    "只"
+   ],
+   "p": "Māo zài zhuōzi xià.",
+   "v": "Con mèo nằm dưới gầm bàn."
+  },
+  {
+   "q": "我八点＿＿学校。",
+   "a": "到",
+   "o": [
+    "下",
+    "小",
+    "桌子"
+   ],
+   "p": "Wǒ bā diǎn dào xuéxiào.",
+   "v": "Tám giờ mình tới trường."
+  },
+  {
+   "q": "我＿＿一只猫。",
+   "a": "看见",
+   "o": [
+    "胡医生",
+    "外",
+    "书店"
+   ],
+   "p": "Wǒ kànjiàn yì zhī māo.",
+   "v": "Mình nhìn thấy một con mèo."
+  },
+  {
+   "q": "我＿＿看见他。",
+   "a": "没",
+   "o": [
+    "到",
+    "只",
+    "猫"
+   ],
+   "p": "Wǒ méi kànjiàn tā.",
+   "v": "Mình không thấy cậu ấy."
+  },
+  {
+   "q": "我明天＿＿去。",
+   "a": "能",
+   "o": [
+    "书店",
+    "看见",
+    "胡医生"
+   ],
+   "p": "Wǒ míngtiān néng qù.",
+   "v": "Mai mình đi được."
+  },
+  {
+   "q": "我十二点吃＿＿。",
+   "a": "饭",
+   "o": [
+    "没",
+    "能",
+    "只"
+   ],
+   "p": "Wǒ shí'èr diǎn chīfàn.",
+   "v": "Mười hai giờ mình ăn cơm."
+  },
+  {
+   "q": "我十二点吃＿＿。",
+   "a": "午饭",
+   "o": [
+    "只",
+    "没",
+    "看见"
+   ],
+   "p": "Wǒ shí'èr diǎn chī wǔfàn.",
+   "v": "Mười hai giờ mình ăn trưa."
+  }
+ ]
+}

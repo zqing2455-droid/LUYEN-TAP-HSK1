@@ -1,0 +1,405 @@
+{
+ "so": 5,
+ "han": "今天我休息",
+ "sub": "Ngày tháng · thứ · sở thích",
+ "pool": [
+  {
+   "h": "今天",
+   "p": "jīntiān",
+   "v": "hôm nay",
+   "hv": "KIM THIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "月",
+   "p": "yuè",
+   "v": "tháng; mặt trăng",
+   "hv": "NGUYỆT",
+   "loai": "danh từ"
+  },
+  {
+   "h": "日",
+   "p": "rì",
+   "v": "ngày; mặt trời",
+   "hv": "NHẬT",
+   "loai": "danh từ"
+  },
+  {
+   "h": "号",
+   "p": "hào",
+   "v": "ngày (trong tháng); số",
+   "hv": "HIỆU",
+   "loai": "danh từ"
+  },
+  {
+   "h": "星期",
+   "p": "xīngqī",
+   "v": "tuần; thứ (trong tuần)",
+   "hv": "TINH KỲ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "星期天",
+   "p": "xīngqītiān",
+   "v": "Chủ nhật",
+   "hv": "TINH KỲ THIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "星期日",
+   "p": "xīngqīrì",
+   "v": "Chủ nhật (văn viết)",
+   "hv": "TINH KỲ NHẬT",
+   "loai": "danh từ"
+  },
+  {
+   "h": "休息",
+   "p": "xiūxi",
+   "v": "nghỉ, nghỉ ngơi",
+   "hv": "HƯU TỨC",
+   "loai": "động từ"
+  },
+  {
+   "h": "下班",
+   "p": "xiàbān",
+   "v": "tan làm, hết giờ làm",
+   "hv": "HẠ BAN",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "做",
+   "p": "zuò",
+   "v": "làm",
+   "hv": "TỐ",
+   "loai": "động từ"
+  },
+  {
+   "h": "做饭",
+   "p": "zuòfàn",
+   "v": "nấu cơm, nấu ăn",
+   "hv": "TỐ PHẠN",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "菜",
+   "p": "cài",
+   "v": "món ăn; rau",
+   "hv": "THÁI",
+   "loai": "danh từ"
+  },
+  {
+   "h": "饺子",
+   "p": "jiǎozi",
+   "v": "sủi cảo",
+   "hv": "GIẢO TỬ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "面条儿",
+   "p": "miàntiáor",
+   "v": "mì sợi",
+   "hv": "DIỆN ĐIỀU NHI",
+   "loai": "danh từ"
+  },
+  {
+   "h": "喜欢",
+   "p": "xǐhuan",
+   "v": "thích",
+   "hv": "HỶ HOAN",
+   "loai": "động từ"
+  },
+  {
+   "h": "会",
+   "p": "huì",
+   "v": "biết (nhờ học mà biết làm)",
+   "hv": "HỘI",
+   "loai": "động từ năng nguyện"
+  },
+  {
+   "h": "电脑",
+   "p": "diànnǎo",
+   "v": "máy tính",
+   "hv": "ĐIỆN NÃO",
+   "loai": "danh từ"
+  },
+  {
+   "h": "新",
+   "p": "xīn",
+   "v": "mới",
+   "hv": "TÂN",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "好看",
+   "p": "hǎokàn",
+   "v": "đẹp, dễ nhìn",
+   "hv": "HẢO KHÁN",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "真",
+   "p": "zhēn",
+   "v": "thật là, thật",
+   "hv": "CHÂN",
+   "loai": "phó từ"
+  },
+  {
+   "h": "一些",
+   "p": "yìxiē",
+   "v": "một ít, một vài",
+   "hv": "NHẤT TA",
+   "loai": "số lượng từ"
+  },
+  {
+   "h": "它",
+   "p": "tā",
+   "v": "nó (chỉ đồ vật, con vật)",
+   "hv": "THA",
+   "loai": "đại từ nhân xưng"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "＿＿我休息。",
+   "a": "今天",
+   "o": [
+    "喜欢",
+    "新",
+    "下班"
+   ],
+   "p": "Jīntiān wǒ xiūxi.",
+   "v": "Hôm nay mình nghỉ."
+  },
+  {
+   "q": "今天是一＿＿一号。",
+   "a": "月",
+   "o": [
+    "会",
+    "休息",
+    "喜欢"
+   ],
+   "p": "Jīntiān shì yī yuè yī hào.",
+   "v": "Hôm nay là mùng một tháng Một."
+  },
+  {
+   "q": "今天是五月一＿＿。",
+   "a": "日",
+   "o": [
+    "做",
+    "好看",
+    "做饭"
+   ],
+   "p": "Jīntiān shì wǔ yuè yī rì.",
+   "v": "Hôm nay là ngày 1 tháng 5."
+  },
+  {
+   "q": "今天几＿＿？",
+   "a": "号",
+   "o": [
+    "它",
+    "会",
+    "休息"
+   ],
+   "p": "Jīntiān jǐ hào?",
+   "v": "Hôm nay ngày mấy?"
+  },
+  {
+   "q": "今天＿＿几？",
+   "a": "星期",
+   "o": [
+    "会",
+    "喜欢",
+    "好看"
+   ],
+   "p": "Jīntiān xīngqī jǐ?",
+   "v": "Hôm nay thứ mấy?"
+  },
+  {
+   "q": "今天是＿＿。",
+   "a": "星期天",
+   "o": [
+    "喜欢",
+    "新",
+    "做"
+   ],
+   "p": "Jīntiān shì xīngqītiān.",
+   "v": "Hôm nay là Chủ nhật."
+  },
+  {
+   "q": "＿＿我休息。",
+   "a": "星期日",
+   "o": [
+    "它",
+    "做饭",
+    "做"
+   ],
+   "p": "Xīngqīrì wǒ xiūxi.",
+   "v": "Chủ nhật mình nghỉ."
+  },
+  {
+   "q": "今天我＿＿。",
+   "a": "休息",
+   "o": [
+    "月",
+    "新",
+    "菜"
+   ],
+   "p": "Jīntiān wǒ xiūxi.",
+   "v": "Hôm nay mình nghỉ."
+  },
+  {
+   "q": "我＿＿了。",
+   "a": "下班",
+   "o": [
+    "号",
+    "好看",
+    "星期日"
+   ],
+   "p": "Wǒ xiàbān le.",
+   "v": "Mình tan làm rồi."
+  },
+  {
+   "q": "你今天＿＿什么？",
+   "a": "做",
+   "o": [
+    "新",
+    "下班",
+    "星期"
+   ],
+   "p": "Nǐ jīntiān zuò shénme?",
+   "v": "Hôm nay bạn làm gì?"
+  },
+  {
+   "q": "我今天＿＿。",
+   "a": "做饭",
+   "o": [
+    "菜",
+    "真",
+    "喜欢"
+   ],
+   "p": "Wǒ jīntiān zuòfàn.",
+   "v": "Hôm nay mình nấu cơm."
+  },
+  {
+   "q": "我会做＿＿。",
+   "a": "菜",
+   "o": [
+    "做饭",
+    "喜欢",
+    "好看"
+   ],
+   "p": "Wǒ huì zuò cài.",
+   "v": "Mình biết nấu ăn."
+  },
+  {
+   "q": "我会做＿＿。",
+   "a": "饺子",
+   "o": [
+    "喜欢",
+    "做饭",
+    "真"
+   ],
+   "p": "Wǒ huì zuò jiǎozi.",
+   "v": "Mình biết làm sủi cảo."
+  },
+  {
+   "q": "我会做＿＿。",
+   "a": "面条儿",
+   "o": [
+    "好看",
+    "休息",
+    "真"
+   ],
+   "p": "Wǒ huì zuò miàntiáor.",
+   "v": "Mình biết làm mì."
+  },
+  {
+   "q": "我很＿＿中国菜。",
+   "a": "喜欢",
+   "o": [
+    "星期",
+    "一些",
+    "新"
+   ],
+   "p": "Wǒ hěn xǐhuan Zhōngguó cài.",
+   "v": "Mình rất thích món Trung Quốc."
+  },
+  {
+   "q": "我＿＿做菜。",
+   "a": "会",
+   "o": [
+    "做饭",
+    "月",
+    "星期"
+   ],
+   "p": "Wǒ huì zuò cài.",
+   "v": "Mình biết nấu ăn."
+  },
+  {
+   "q": "这是我的新＿＿。",
+   "a": "电脑",
+   "o": [
+    "下班",
+    "做",
+    "好看"
+   ],
+   "p": "Zhè shì wǒ de xīn diànnǎo.",
+   "v": "Đây là máy tính mới của mình."
+  },
+  {
+   "q": "我有一个＿＿电脑。",
+   "a": "新",
+   "o": [
+    "星期",
+    "下班",
+    "星期日"
+   ],
+   "p": "Wǒ yǒu yí ge xīn diànnǎo.",
+   "v": "Mình có một cái máy tính mới."
+  },
+  {
+   "q": "我的电脑很＿＿。",
+   "a": "好看",
+   "o": [
+    "星期日",
+    "做饭",
+    "星期天"
+   ],
+   "p": "Wǒ de diànnǎo hěn hǎokàn.",
+   "v": "Máy tính của mình đẹp lắm."
+  },
+  {
+   "q": "你的电脑＿＿好看！",
+   "a": "真",
+   "o": [
+    "星期",
+    "休息",
+    "面条儿"
+   ],
+   "p": "Nǐ de diànnǎo zhēn hǎokàn!",
+   "v": "Máy tính của bạn đẹp thật đấy!"
+  },
+  {
+   "q": "我会做＿＿菜。",
+   "a": "一些",
+   "o": [
+    "真",
+    "休息",
+    "做饭"
+   ],
+   "p": "Wǒ huì zuò yìxiē cài.",
+   "v": "Mình biết nấu vài món."
+  },
+  {
+   "q": "＿＿是我的新电脑。",
+   "a": "它",
+   "o": [
+    "真",
+    "休息",
+    "饺子"
+   ],
+   "p": "Tā shì wǒ de xīn diànnǎo.",
+   "v": "Nó là máy tính mới của mình."
+  }
+ ]
+}

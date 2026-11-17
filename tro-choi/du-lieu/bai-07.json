@@ -1,0 +1,441 @@
+{
+ "so": 7,
+ "han": "我晚上六点半下班",
+ "sub": "Giờ giấc · lịch sinh hoạt",
+ "pool": [
+  {
+   "h": "现在",
+   "p": "xiànzài",
+   "v": "bây giờ, hiện tại",
+   "hv": "HIỆN TẠI",
+   "loai": "danh từ"
+  },
+  {
+   "h": "点",
+   "p": "diǎn",
+   "v": "giờ (trên đồng hồ)",
+   "hv": "ĐIỂM",
+   "loai": "lượng từ chỉ giờ"
+  },
+  {
+   "h": "分",
+   "p": "fēn",
+   "v": "phút (thời điểm)",
+   "hv": "PHÂN",
+   "loai": "lượng từ chỉ phút"
+  },
+  {
+   "h": "半",
+   "p": "bàn",
+   "v": "rưỡi; một nửa",
+   "hv": "BÁN",
+   "loai": "số từ"
+  },
+  {
+   "h": "分钟",
+   "p": "fēnzhōng",
+   "v": "phút (khoảng thời gian)",
+   "hv": "PHÂN CHUNG",
+   "loai": "lượng từ"
+  },
+  {
+   "h": "早上",
+   "p": "zǎoshang",
+   "v": "buổi sáng sớm",
+   "hv": "TẢO THƯỢNG",
+   "loai": "danh từ"
+  },
+  {
+   "h": "上午",
+   "p": "shàngwǔ",
+   "v": "buổi sáng (trước trưa)",
+   "hv": "THƯỢNG NGỌ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "下午",
+   "p": "xiàwǔ",
+   "v": "buổi chiều",
+   "hv": "HẠ NGỌ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "晚上",
+   "p": "wǎnshang",
+   "v": "buổi tối",
+   "hv": "VÃN THƯỢNG",
+   "loai": "danh từ"
+  },
+  {
+   "h": "在",
+   "p": "zài",
+   "v": "ở, tại",
+   "hv": "TẠI",
+   "loai": "giới từ"
+  },
+  {
+   "h": "上班",
+   "p": "shàngbān",
+   "v": "đi làm, vào ca",
+   "hv": "THƯỢNG BAN",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "上课",
+   "p": "shàngkè",
+   "v": "vào học, lên lớp",
+   "hv": "THƯỢNG KHOÁ",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "下课",
+   "p": "xiàkè",
+   "v": "tan học, hết tiết",
+   "hv": "HẠ KHOÁ",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "课",
+   "p": "kè",
+   "v": "tiết học, bài học",
+   "hv": "KHOÁ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "看",
+   "p": "kàn",
+   "v": "xem, nhìn, đọc",
+   "hv": "KHÁN",
+   "loai": "động từ"
+  },
+  {
+   "h": "电影",
+   "p": "diànyǐng",
+   "v": "phim, điện ảnh",
+   "hv": "ĐIỆN ẢNH",
+   "loai": "danh từ"
+  },
+  {
+   "h": "电影院",
+   "p": "diànyǐngyuàn",
+   "v": "rạp chiếu phim",
+   "hv": "ĐIỆN ẢNH VIỆN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "医院",
+   "p": "yīyuàn",
+   "v": "bệnh viện",
+   "hv": "Y VIỆN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "店",
+   "p": "diàn",
+   "v": "cửa hàng, tiệm",
+   "hv": "ĐIẾM",
+   "loai": "danh từ"
+  },
+  {
+   "h": "里",
+   "p": "lǐ",
+   "v": "ở trong",
+   "hv": "LÝ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "后",
+   "p": "hòu",
+   "v": "sau, sau khi",
+   "hv": "HẬU",
+   "loai": "danh từ"
+  },
+  {
+   "h": "事",
+   "p": "shì",
+   "v": "việc, chuyện",
+   "hv": "SỰ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "见",
+   "p": "jiàn",
+   "v": "gặp, thấy",
+   "hv": "KIẾN",
+   "loai": "động từ"
+  },
+  {
+   "h": "吧",
+   "p": "ba",
+   "v": "…nhé, …đi (rủ rê, đồng ý)",
+   "hv": "BA",
+   "loai": "trợ từ ngữ khí"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "＿＿几点？",
+   "a": "现在",
+   "o": [
+    "见",
+    "吧",
+    "里"
+   ],
+   "p": "Xiànzài jǐ diǎn?",
+   "v": "Bây giờ mấy giờ rồi?"
+  },
+  {
+   "q": "现在几＿＿？",
+   "a": "点",
+   "o": [
+    "见",
+    "下午",
+    "上课"
+   ],
+   "p": "Xiànzài jǐ diǎn?",
+   "v": "Bây giờ mấy giờ rồi?"
+  },
+  {
+   "q": "现在六点十＿＿。",
+   "a": "分",
+   "o": [
+    "吧",
+    "晚上",
+    "电影院"
+   ],
+   "p": "Xiànzài liù diǎn shí fēn.",
+   "v": "Bây giờ là 6 giờ 10."
+  },
+  {
+   "q": "我晚上六点＿＿下班。",
+   "a": "半",
+   "o": [
+    "上课",
+    "事",
+    "看"
+   ],
+   "p": "Wǒ wǎnshang liù diǎn bàn xiàbān.",
+   "v": "Buổi tối sáu rưỡi mình tan làm."
+  },
+  {
+   "q": "我十＿＿后下班。",
+   "a": "分钟",
+   "o": [
+    "看",
+    "事",
+    "半"
+   ],
+   "p": "Wǒ shí fēnzhōng hòu xiàbān.",
+   "v": "Mười phút nữa mình tan làm."
+  },
+  {
+   "q": "＿＿好！",
+   "a": "早上",
+   "o": [
+    "看",
+    "分钟",
+    "吧"
+   ],
+   "p": "Zǎoshang hǎo!",
+   "v": "Chào buổi sáng!"
+  },
+  {
+   "q": "我＿＿十点上课。",
+   "a": "上午",
+   "o": [
+    "在",
+    "分",
+    "分钟"
+   ],
+   "p": "Wǒ shàngwǔ shí diǎn shàngkè.",
+   "v": "Mười giờ sáng mình vào học."
+  },
+  {
+   "q": "我＿＿三点下课。",
+   "a": "下午",
+   "o": [
+    "半",
+    "在",
+    "上课"
+   ],
+   "p": "Wǒ xiàwǔ sān diǎn xiàkè.",
+   "v": "Ba giờ chiều mình tan học."
+  },
+  {
+   "q": "＿＿好！",
+   "a": "晚上",
+   "o": [
+    "下课",
+    "看",
+    "分钟"
+   ],
+   "p": "Wǎnshang hǎo!",
+   "v": "Chào buổi tối!"
+  },
+  {
+   "q": "我上午＿＿学校。",
+   "a": "在",
+   "o": [
+    "半",
+    "后",
+    "点"
+   ],
+   "p": "Wǒ shàngwǔ zài xuéxiào.",
+   "v": "Buổi sáng mình ở trường."
+  },
+  {
+   "q": "我早上七点去＿＿。",
+   "a": "上班",
+   "o": [
+    "下午",
+    "半",
+    "店"
+   ],
+   "p": "Wǒ zǎoshang qī diǎn qù shàngbān.",
+   "v": "Bảy giờ sáng mình đi làm."
+  },
+  {
+   "q": "我上午去＿＿。",
+   "a": "上课",
+   "o": [
+    "吧",
+    "事",
+    "里"
+   ],
+   "p": "Wǒ shàngwǔ qù shàngkè.",
+   "v": "Buổi sáng mình đi học."
+  },
+  {
+   "q": "＿＿了！",
+   "a": "下课",
+   "o": [
+    "晚上",
+    "吧",
+    "上午"
+   ],
+   "p": "Xiàkè le!",
+   "v": "Tan học rồi!"
+  },
+  {
+   "q": "我喜欢中文＿＿。",
+   "a": "课",
+   "o": [
+    "在",
+    "分钟",
+    "看"
+   ],
+   "p": "Wǒ xǐhuan Zhōngwén kè.",
+   "v": "Mình thích giờ tiếng Trung."
+  },
+  {
+   "q": "我晚上＿＿电影。",
+   "a": "看",
+   "o": [
+    "半",
+    "早上",
+    "店"
+   ],
+   "p": "Wǒ wǎnshang kàn diànyǐng.",
+   "v": "Buổi tối mình xem phim."
+  },
+  {
+   "q": "我们晚上去看＿＿。",
+   "a": "电影",
+   "o": [
+    "见",
+    "点",
+    "半"
+   ],
+   "p": "Wǒmen wǎnshang qù kàn diànyǐng.",
+   "v": "Tối nay chúng mình đi xem phim."
+  },
+  {
+   "q": "我们去＿＿看电影。",
+   "a": "电影院",
+   "o": [
+    "上班",
+    "上课",
+    "下课"
+   ],
+   "p": "Wǒmen qù diànyǐngyuàn kàn diànyǐng.",
+   "v": "Chúng mình ra rạp xem phim."
+  },
+  {
+   "q": "我下午去＿＿。",
+   "a": "医院",
+   "o": [
+    "看",
+    "分钟",
+    "半"
+   ],
+   "p": "Wǒ xiàwǔ qù yīyuàn.",
+   "v": "Chiều nay mình đi bệnh viện."
+  },
+  {
+   "q": "我去书＿＿买书。",
+   "a": "店",
+   "o": [
+    "在",
+    "下课",
+    "半"
+   ],
+   "p": "Wǒ qù shūdiàn mǎi shū.",
+   "v": "Mình ra hiệu sách mua sách."
+  },
+  {
+   "q": "我在家＿＿看电影。",
+   "a": "里",
+   "o": [
+    "下课",
+    "分钟",
+    "半"
+   ],
+   "p": "Wǒ zài jiā li kàn diànyǐng.",
+   "v": "Mình xem phim ở nhà."
+  },
+  {
+   "q": "我十分钟＿＿下班。",
+   "a": "后",
+   "o": [
+    "看",
+    "半",
+    "点"
+   ],
+   "p": "Wǒ shí fēnzhōng hòu xiàbān.",
+   "v": "Mười phút nữa mình tan làm."
+  },
+  {
+   "q": "我明天有＿＿。",
+   "a": "事",
+   "o": [
+    "上班",
+    "见",
+    "在"
+   ],
+   "p": "Wǒ míngtiān yǒu shì.",
+   "v": "Mai mình có việc rồi."
+  },
+  {
+   "q": "明天＿＿！",
+   "a": "见",
+   "o": [
+    "半",
+    "现在",
+    "上午"
+   ],
+   "p": "Míngtiān jiàn!",
+   "v": "Mai gặp nhé!"
+  },
+  {
+   "q": "我们晚上看电影＿＿！",
+   "a": "吧",
+   "o": [
+    "分钟",
+    "半",
+    "在"
+   ],
+   "p": "Wǒmen wǎnshang kàn diànyǐng ba!",
+   "v": "Tối nay mình đi xem phim nhé!"
+  }
+ ]
+}

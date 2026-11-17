@@ -1,0 +1,387 @@
+{
+ "so": 6,
+ "han": "你的手机号是多少？",
+ "sub": "Số điện thoại · mua sắm · ăn uống",
+ "pool": [
+  {
+   "h": "手机",
+   "p": "shǒujī",
+   "v": "điện thoại di động",
+   "hv": "THỦ CƠ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "电话",
+   "p": "diànhuà",
+   "v": "điện thoại; cuộc gọi",
+   "hv": "ĐIỆN THOẠI",
+   "loai": "danh từ"
+  },
+  {
+   "h": "哪儿",
+   "p": "nǎr",
+   "v": "ở đâu, chỗ nào",
+   "hv": "NA NHI",
+   "loai": "đại từ nghi vấn"
+  },
+  {
+   "h": "去",
+   "p": "qù",
+   "v": "đi (đến đâu đó)",
+   "hv": "KHỨ",
+   "loai": "động từ"
+  },
+  {
+   "h": "坐",
+   "p": "zuò",
+   "v": "ngồi; đi (bằng phương tiện)",
+   "hv": "TOẠ",
+   "loai": "động từ"
+  },
+  {
+   "h": "出租车",
+   "p": "chūzūchē",
+   "v": "xe taxi",
+   "hv": "XUẤT TÔ XA",
+   "loai": "danh từ"
+  },
+  {
+   "h": "买",
+   "p": "mǎi",
+   "v": "mua",
+   "hv": "MÃI",
+   "loai": "động từ"
+  },
+  {
+   "h": "东西",
+   "p": "dōngxi",
+   "v": "đồ, đồ vật",
+   "hv": "ĐÔNG TÂY",
+   "loai": "danh từ"
+  },
+  {
+   "h": "些",
+   "p": "xiē",
+   "v": "một ít, vài, những",
+   "hv": "TA",
+   "loai": "lượng từ"
+  },
+  {
+   "h": "超市",
+   "p": "chāoshì",
+   "v": "siêu thị",
+   "hv": "SIÊU THỊ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "那边",
+   "p": "nàbian",
+   "v": "bên kia, đằng kia",
+   "hv": "NA BIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "吃",
+   "p": "chī",
+   "v": "ăn",
+   "hv": "NGẬT",
+   "loai": "động từ"
+  },
+  {
+   "h": "米饭",
+   "p": "mǐfàn",
+   "v": "cơm (gạo)",
+   "hv": "MỄ PHẠN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "包子",
+   "p": "bāozi",
+   "v": "bánh bao",
+   "hv": "BAO TỬ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "牛奶",
+   "p": "niúnǎi",
+   "v": "sữa bò",
+   "hv": "NGƯU NÃI",
+   "loai": "danh từ"
+  },
+  {
+   "h": "晚饭",
+   "p": "wǎnfàn",
+   "v": "bữa tối, cơm tối",
+   "hv": "VÃN PHẠN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "好吃",
+   "p": "hǎochī",
+   "v": "ngon (đồ ăn)",
+   "hv": "HẢO NGẬT",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "非常",
+   "p": "fēicháng",
+   "v": "vô cùng, cực kỳ",
+   "hv": "PHI THƯỜNG",
+   "loai": "phó từ chỉ mức độ"
+  },
+  {
+   "h": "怎么",
+   "p": "zěnme",
+   "v": "thế nào, làm sao",
+   "hv": "TRẪM MA",
+   "loai": "đại từ nghi vấn"
+  },
+  {
+   "h": "明天",
+   "p": "míngtiān",
+   "v": "ngày mai",
+   "hv": "MINH THIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "西安饭店",
+   "p": "Xī'ān Fàndiàn",
+   "v": "Nhà hàng (khách sạn) Tây An",
+   "hv": "TÂY AN PHẠN ĐIẾM",
+   "loai": "danh từ"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "你的＿＿号是多少？",
+   "a": "手机",
+   "o": [
+    "坐",
+    "好吃",
+    "吃"
+   ],
+   "p": "Nǐ de shǒujī hào shì duōshao?",
+   "v": "Số điện thoại của bạn là bao nhiêu?"
+  },
+  {
+   "q": "你的＿＿号是多少？",
+   "a": "电话",
+   "o": [
+    "非常",
+    "买",
+    "好吃"
+   ],
+   "p": "Nǐ de diànhuà hào shì duōshao?",
+   "v": "Số điện thoại của bạn là bao nhiêu?"
+  },
+  {
+   "q": "你去＿＿？",
+   "a": "哪儿",
+   "o": [
+    "吃",
+    "牛奶",
+    "些"
+   ],
+   "p": "Nǐ qù nǎr?",
+   "v": "Bạn đi đâu đấy?"
+  },
+  {
+   "q": "我＿＿超市买东西。",
+   "a": "去",
+   "o": [
+    "西安饭店",
+    "非常",
+    "米饭"
+   ],
+   "p": "Wǒ qù chāoshì mǎi dōngxi.",
+   "v": "Mình đi siêu thị mua đồ."
+  },
+  {
+   "q": "我＿＿出租车去超市。",
+   "a": "坐",
+   "o": [
+    "晚饭",
+    "牛奶",
+    "好吃"
+   ],
+   "p": "Wǒ zuò chūzūchē qù chāoshì.",
+   "v": "Mình đi taxi tới siêu thị."
+  },
+  {
+   "q": "我坐＿＿去。",
+   "a": "出租车",
+   "o": [
+    "买",
+    "些",
+    "好吃"
+   ],
+   "p": "Wǒ zuò chūzūchē qù.",
+   "v": "Mình đi taxi tới."
+  },
+  {
+   "q": "妈妈去超市＿＿东西。",
+   "a": "买",
+   "o": [
+    "西安饭店",
+    "明天",
+    "那边"
+   ],
+   "p": "Māma qù chāoshì mǎi dōngxi.",
+   "v": "Mẹ đi siêu thị mua đồ."
+  },
+  {
+   "q": "我去买＿＿。",
+   "a": "东西",
+   "o": [
+    "怎么",
+    "吃",
+    "哪儿"
+   ],
+   "p": "Wǒ qù mǎi dōngxi.",
+   "v": "Mình đi mua đồ đây."
+  },
+  {
+   "q": "我买一＿＿东西。",
+   "a": "些",
+   "o": [
+    "米饭",
+    "出租车",
+    "手机"
+   ],
+   "p": "Wǒ mǎi yìxiē dōngxi.",
+   "v": "Mình mua một ít đồ."
+  },
+  {
+   "q": "我们明天去＿＿。",
+   "a": "超市",
+   "o": [
+    "好吃",
+    "坐",
+    "非常"
+   ],
+   "p": "Wǒmen míngtiān qù chāoshì.",
+   "v": "Mai chúng mình đi siêu thị."
+  },
+  {
+   "q": "超市在＿＿。",
+   "a": "那边",
+   "o": [
+    "吃",
+    "怎么",
+    "些"
+   ],
+   "p": "Chāoshì zài nàbian.",
+   "v": "Siêu thị ở đằng kia."
+  },
+  {
+   "q": "他喜欢＿＿包子。",
+   "a": "吃",
+   "o": [
+    "西安饭店",
+    "手机",
+    "电话"
+   ],
+   "p": "Tā xǐhuan chī bāozi.",
+   "v": "Cậu ấy thích ăn bánh bao."
+  },
+  {
+   "q": "我们晚饭吃＿＿。",
+   "a": "米饭",
+   "o": [
+    "非常",
+    "些",
+    "好吃"
+   ],
+   "p": "Wǒmen wǎnfàn chī mǐfàn.",
+   "v": "Bữa tối nhà mình ăn cơm."
+  },
+  {
+   "q": "我去买＿＿。",
+   "a": "包子",
+   "o": [
+    "好吃",
+    "吃",
+    "坐"
+   ],
+   "p": "Wǒ qù mǎi bāozi.",
+   "v": "Mình đi mua bánh bao."
+  },
+  {
+   "q": "我早上喝＿＿。",
+   "a": "牛奶",
+   "o": [
+    "去",
+    "哪儿",
+    "怎么"
+   ],
+   "p": "Wǒ zǎoshang hē niúnǎi.",
+   "v": "Buổi sáng mình uống sữa."
+  },
+  {
+   "q": "我六点吃＿＿。",
+   "a": "晚饭",
+   "o": [
+    "买",
+    "坐",
+    "好吃"
+   ],
+   "p": "Wǒ liù diǎn chī wǎnfàn.",
+   "v": "Sáu giờ mình ăn tối."
+  },
+  {
+   "q": "这些包子很＿＿。",
+   "a": "好吃",
+   "o": [
+    "超市",
+    "西安饭店",
+    "明天"
+   ],
+   "p": "Zhèxiē bāozi hěn hǎochī.",
+   "v": "Mấy cái bánh bao này ngon lắm."
+  },
+  {
+   "q": "这些包子＿＿好吃！",
+   "a": "非常",
+   "o": [
+    "电话",
+    "米饭",
+    "去"
+   ],
+   "p": "Zhèxiē bāozi fēicháng hǎochī!",
+   "v": "Mấy cái bánh bao này ngon cực!"
+  },
+  {
+   "q": "我们＿＿去超市？",
+   "a": "怎么",
+   "o": [
+    "些",
+    "电话",
+    "晚饭"
+   ],
+   "p": "Wǒmen zěnme qù chāoshì?",
+   "v": "Mình đi siêu thị bằng gì đây?"
+  },
+  {
+   "q": "＿＿见！",
+   "a": "明天",
+   "o": [
+    "去",
+    "好吃",
+    "吃"
+   ],
+   "p": "Míngtiān jiàn!",
+   "v": "Mai gặp nhé!"
+  },
+  {
+   "q": "我们去＿＿。",
+   "a": "西安饭店",
+   "o": [
+    "怎么",
+    "非常",
+    "坐"
+   ],
+   "p": "Wǒmen qù Xī'ān Fàndiàn.",
+   "v": "Chúng mình tới nhà hàng Tây An nhé."
+  }
+ ]
+}

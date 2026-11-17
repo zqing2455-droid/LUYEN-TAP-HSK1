@@ -1,0 +1,315 @@
+{
+ "so": 15,
+ "han": "大兴机场见！",
+ "sub": "Đi lại · sân bay · thời gian",
+ "pool": [
+  {
+   "h": "飞机",
+   "p": "fēijī",
+   "v": "máy bay",
+   "hv": "PHI CƠ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "机场",
+   "p": "jīchǎng",
+   "v": "sân bay",
+   "hv": "CƠ TRƯỜNG",
+   "loai": "danh từ"
+  },
+  {
+   "h": "大兴机场",
+   "p": "Dàxīng Jīchǎng",
+   "v": "sân bay Đại Hưng (Bắc Kinh)",
+   "hv": "ĐẠI HƯNG CƠ TRƯỜNG",
+   "loai": "danh từ"
+  },
+  {
+   "h": "北京",
+   "p": "Běijīng",
+   "v": "Bắc Kinh",
+   "hv": "BẮC KINH",
+   "loai": "danh từ"
+  },
+  {
+   "h": "西安",
+   "p": "Xī'ān",
+   "v": "Tây An",
+   "hv": "TÂY AN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "接",
+   "p": "jiē",
+   "v": "đón; nhận",
+   "hv": "TIẾP",
+   "loai": "động từ"
+  },
+  {
+   "h": "住",
+   "p": "zhù",
+   "v": "ở, cư trú",
+   "hv": "TRÚ",
+   "loai": "động từ"
+  },
+  {
+   "h": "家人",
+   "p": "jiārén",
+   "v": "người nhà, người trong gia đình",
+   "hv": "GIA NHÂN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "男朋友",
+   "p": "nánpéngyou",
+   "v": "bạn trai (người yêu)",
+   "hv": "NAM BẰNG HỮU",
+   "loai": "danh từ"
+  },
+  {
+   "h": "爱",
+   "p": "ài",
+   "v": "yêu; rất thích",
+   "hv": "ÁI",
+   "loai": "động từ"
+  },
+  {
+   "h": "好玩儿",
+   "p": "hǎowánr",
+   "v": "vui, thú vị",
+   "hv": "HẢO NGOẠN NHI",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "时间",
+   "p": "shíjiān",
+   "v": "thời gian",
+   "hv": "THỜI GIAN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "小时",
+   "p": "xiǎoshí",
+   "v": "tiếng, giờ đồng hồ",
+   "hv": "TIỂU THỜI",
+   "loai": "lượng từ"
+  },
+  {
+   "h": "年",
+   "p": "nián",
+   "v": "năm",
+   "hv": "NIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "去年",
+   "p": "qùnián",
+   "v": "năm ngoái",
+   "hv": "KHỨ NIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "早",
+   "p": "zǎo",
+   "v": "sớm",
+   "hv": "TẢO",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "哪个",
+   "p": "nǎge",
+   "v": "cái nào, người nào",
+   "hv": "NA CÁ",
+   "loai": "đại từ nghi vấn"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "我坐＿＿去北京。",
+   "a": "飞机",
+   "o": [
+    "早",
+    "哪个",
+    "爱"
+   ],
+   "p": "Wǒ zuò fēijī qù Běijīng.",
+   "v": "Mình đi máy bay tới Bắc Kinh."
+  },
+  {
+   "q": "我去＿＿接你。",
+   "a": "机场",
+   "o": [
+    "早",
+    "好玩儿",
+    "小时"
+   ],
+   "p": "Wǒ qù jīchǎng jiē nǐ.",
+   "v": "Mình ra sân bay đón bạn."
+  },
+  {
+   "q": "我们去＿＿。",
+   "a": "大兴机场",
+   "o": [
+    "哪个",
+    "住",
+    "接"
+   ],
+   "p": "Wǒmen qù Dàxīng Jīchǎng.",
+   "v": "Chúng mình tới sân bay Đại Hưng."
+  },
+  {
+   "q": "我明年去＿＿。",
+   "a": "北京",
+   "o": [
+    "住",
+    "接",
+    "爱"
+   ],
+   "p": "Wǒ míngnián qù Běijīng.",
+   "v": "Sang năm mình đi Bắc Kinh."
+  },
+  {
+   "q": "我想去＿＿。",
+   "a": "西安",
+   "o": [
+    "接",
+    "小时",
+    "爱"
+   ],
+   "p": "Wǒ xiǎng qù Xī'ān.",
+   "v": "Mình muốn đi Tây An."
+  },
+  {
+   "q": "我去机场＿＿你。",
+   "a": "接",
+   "o": [
+    "早",
+    "飞机",
+    "好玩儿"
+   ],
+   "p": "Wǒ qù jīchǎng jiē nǐ.",
+   "v": "Mình ra sân bay đón bạn."
+  },
+  {
+   "q": "我＿＿在北京。",
+   "a": "住",
+   "o": [
+    "西安",
+    "大兴机场",
+    "飞机"
+   ],
+   "p": "Wǒ zhù zài Běijīng.",
+   "v": "Mình sống ở Bắc Kinh."
+  },
+  {
+   "q": "这是我的＿＿。",
+   "a": "家人",
+   "o": [
+    "小时",
+    "好玩儿",
+    "接"
+   ],
+   "p": "Zhè shì wǒ de jiārén.",
+   "v": "Đây là gia đình mình."
+  },
+  {
+   "q": "这是我＿＿。",
+   "a": "男朋友",
+   "o": [
+    "接",
+    "早",
+    "爱"
+   ],
+   "p": "Zhè shì wǒ nánpéngyou.",
+   "v": "Đây là bạn trai mình."
+  },
+  {
+   "q": "我＿＿你。",
+   "a": "爱",
+   "o": [
+    "好玩儿",
+    "时间",
+    "北京"
+   ],
+   "p": "Wǒ ài nǐ.",
+   "v": "Mình yêu bạn."
+  },
+  {
+   "q": "北京很＿＿。",
+   "a": "好玩儿",
+   "o": [
+    "飞机",
+    "小时",
+    "哪个"
+   ],
+   "p": "Běijīng hěn hǎowánr.",
+   "v": "Bắc Kinh vui lắm."
+  },
+  {
+   "q": "你明天有＿＿吗？",
+   "a": "时间",
+   "o": [
+    "好玩儿",
+    "哪个",
+    "小时"
+   ],
+   "p": "Nǐ míngtiān yǒu shíjiān ma?",
+   "v": "Mai bạn rảnh không?"
+  },
+  {
+   "q": "我学习一个＿＿。",
+   "a": "小时",
+   "o": [
+    "大兴机场",
+    "爱",
+    "去年"
+   ],
+   "p": "Wǒ xuéxí yí ge xiǎoshí.",
+   "v": "Mình học một tiếng."
+  },
+  {
+   "q": "我在中国一＿＿。",
+   "a": "年",
+   "o": [
+    "爱",
+    "住",
+    "接"
+   ],
+   "p": "Wǒ zài Zhōngguó yì nián.",
+   "v": "Mình ở Trung Quốc một năm."
+  },
+  {
+   "q": "我＿＿来中国。",
+   "a": "去年",
+   "o": [
+    "好玩儿",
+    "接",
+    "小时"
+   ],
+   "p": "Wǒ qùnián lái Zhōngguó.",
+   "v": "Năm ngoái mình sang Trung Quốc."
+  },
+  {
+   "q": "我起床很＿＿。",
+   "a": "早",
+   "o": [
+    "男朋友",
+    "小时",
+    "北京"
+   ],
+   "p": "Wǒ qǐchuáng hěn zǎo.",
+   "v": "Mình dậy sớm lắm."
+  },
+  {
+   "q": "＿＿人是你男朋友？",
+   "a": "哪个",
+   "o": [
+    "大兴机场",
+    "北京",
+    "西安"
+   ],
+   "p": "Nǎge rén shì nǐ nánpéngyou?",
+   "v": "Người nào là bạn trai bạn thế?"
+  }
+ ]
+}

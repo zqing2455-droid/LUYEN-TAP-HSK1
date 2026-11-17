@@ -1,0 +1,423 @@
+{
+ "so": 11,
+ "han": "我读大学呢",
+ "sub": "Sinh hoạt hằng ngày · 正在 · học hành",
+ "pool": [
+  {
+   "h": "大学",
+   "p": "dàxué",
+   "v": "trường đại học",
+   "hv": "ĐẠI HỌC",
+   "loai": "danh từ"
+  },
+  {
+   "h": "大学生",
+   "p": "dàxuéshēng",
+   "v": "sinh viên đại học",
+   "hv": "ĐẠI HỌC SINH",
+   "loai": "danh từ"
+  },
+  {
+   "h": "读",
+   "p": "dú",
+   "v": "đọc; theo học",
+   "hv": "ĐỘC",
+   "loai": "động từ"
+  },
+  {
+   "h": "学",
+   "p": "xué",
+   "v": "học",
+   "hv": "HỌC",
+   "loai": "động từ"
+  },
+  {
+   "h": "小朋友",
+   "p": "xiǎopéngyou",
+   "v": "bạn nhỏ, các cháu",
+   "hv": "TIỂU BẰNG HỮU",
+   "loai": "danh từ"
+  },
+  {
+   "h": "弟弟",
+   "p": "dìdi",
+   "v": "em trai",
+   "hv": "ĐỆ ĐỆ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "昨天",
+   "p": "zuótiān",
+   "v": "hôm qua",
+   "hv": "TẠC THIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "时候",
+   "p": "shíhou",
+   "v": "lúc, khi",
+   "hv": "THỜI HẦU",
+   "loai": "danh từ"
+  },
+  {
+   "h": "起床",
+   "p": "qǐchuáng",
+   "v": "ngủ dậy",
+   "hv": "KHỞI SÀNG",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "睡",
+   "p": "shuì",
+   "v": "ngủ",
+   "hv": "THUỲ",
+   "loai": "động từ"
+  },
+  {
+   "h": "睡觉",
+   "p": "shuìjiào",
+   "v": "đi ngủ",
+   "hv": "THUỲ GIÁC",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "正在",
+   "p": "zhèngzài",
+   "v": "đang (làm gì)",
+   "hv": "CHÍNH TẠI",
+   "loai": "phó từ"
+  },
+  {
+   "h": "要",
+   "p": "yào",
+   "v": "muốn, định; sẽ",
+   "hv": "YẾU",
+   "loai": "động từ năng nguyện"
+  },
+  {
+   "h": "说",
+   "p": "shuō",
+   "v": "nói",
+   "hv": "THUYẾT",
+   "loai": "động từ"
+  },
+  {
+   "h": "问",
+   "p": "wèn",
+   "v": "hỏi",
+   "hv": "VẤN",
+   "loai": "động từ"
+  },
+  {
+   "h": "知道",
+   "p": "zhīdào",
+   "v": "biết (thông tin)",
+   "hv": "TRI ĐẠO",
+   "loai": "động từ"
+  },
+  {
+   "h": "找",
+   "p": "zhǎo",
+   "v": "tìm; tìm gặp",
+   "hv": "TRẢO",
+   "loai": "động từ"
+  },
+  {
+   "h": "车",
+   "p": "chē",
+   "v": "xe",
+   "hv": "XA",
+   "loai": "danh từ"
+  },
+  {
+   "h": "开车",
+   "p": "kāichē",
+   "v": "lái xe",
+   "hv": "KHAI XA",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "饭店",
+   "p": "fàndiàn",
+   "v": "nhà hàng; khách sạn",
+   "hv": "PHẠN ĐIẾM",
+   "loai": "danh từ"
+  },
+  {
+   "h": "哪里",
+   "p": "nǎli",
+   "v": "ở đâu",
+   "hv": "NA LÝ",
+   "loai": "đại từ nghi vấn"
+  },
+  {
+   "h": "那里",
+   "p": "nàli",
+   "v": "ở kia, chỗ đó",
+   "hv": "NA LÝ",
+   "loai": "đại từ chỉ nơi chốn"
+  },
+  {
+   "h": "医",
+   "p": "yī",
+   "v": "chữa bệnh; y (trong từ ghép)",
+   "hv": "Y",
+   "loai": "ngữ tố cấu tạo từ"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "我读＿＿。",
+   "a": "大学",
+   "o": [
+    "正在",
+    "知道",
+    "哪里"
+   ],
+   "p": "Wǒ dú dàxué.",
+   "v": "Mình học đại học."
+  },
+  {
+   "q": "我是＿＿。",
+   "a": "大学生",
+   "o": [
+    "知道",
+    "睡",
+    "开车"
+   ],
+   "p": "Wǒ shì dàxuéshēng.",
+   "v": "Mình là sinh viên."
+  },
+  {
+   "q": "我弟弟＿＿大学。",
+   "a": "读",
+   "o": [
+    "睡觉",
+    "昨天",
+    "开车"
+   ],
+   "p": "Wǒ dìdi dú dàxué.",
+   "v": "Em trai mình học đại học."
+  },
+  {
+   "q": "我＿＿中文。",
+   "a": "学",
+   "o": [
+    "要",
+    "医",
+    "小朋友"
+   ],
+   "p": "Wǒ xué Zhōngwén.",
+   "v": "Mình học tiếng Trung."
+  },
+  {
+   "q": "＿＿们好！",
+   "a": "小朋友",
+   "o": [
+    "睡",
+    "正在",
+    "要"
+   ],
+   "p": "Xiǎopéngyou men hǎo!",
+   "v": "Chào các bạn nhỏ!"
+  },
+  {
+   "q": "我＿＿是大学生。",
+   "a": "弟弟",
+   "o": [
+    "说",
+    "那里",
+    "正在"
+   ],
+   "p": "Wǒ dìdi shì dàxuéshēng.",
+   "v": "Em trai mình là sinh viên."
+  },
+  {
+   "q": "＿＿晚上我看电影。",
+   "a": "昨天",
+   "o": [
+    "那里",
+    "睡觉",
+    "找"
+   ],
+   "p": "Zuótiān wǎnshang wǒ kàn diànyǐng.",
+   "v": "Tối qua mình xem phim."
+  },
+  {
+   "q": "你什么＿＿去？",
+   "a": "时候",
+   "o": [
+    "那里",
+    "学",
+    "开车"
+   ],
+   "p": "Nǐ shénme shíhou qù?",
+   "v": "Khi nào bạn đi?"
+  },
+  {
+   "q": "你几点＿＿？",
+   "a": "起床",
+   "o": [
+    "昨天",
+    "时候",
+    "哪里"
+   ],
+   "p": "Nǐ jǐ diǎn qǐchuáng?",
+   "v": "Mấy giờ bạn dậy?"
+  },
+  {
+   "q": "我现在想＿＿。",
+   "a": "睡",
+   "o": [
+    "哪里",
+    "昨天",
+    "那里"
+   ],
+   "p": "Wǒ xiànzài xiǎng shuì.",
+   "v": "Giờ mình buồn ngủ rồi."
+  },
+  {
+   "q": "你几点＿＿？",
+   "a": "睡觉",
+   "o": [
+    "知道",
+    "问",
+    "医"
+   ],
+   "p": "Nǐ jǐ diǎn shuìjiào?",
+   "v": "Mấy giờ bạn đi ngủ?"
+  },
+  {
+   "q": "我＿＿看电影。",
+   "a": "正在",
+   "o": [
+    "弟弟",
+    "饭店",
+    "时候"
+   ],
+   "p": "Wǒ zhèngzài kàn diànyǐng.",
+   "v": "Mình đang xem phim."
+  },
+  {
+   "q": "我明天＿＿去学校。",
+   "a": "要",
+   "o": [
+    "医",
+    "哪里",
+    "正在"
+   ],
+   "p": "Wǒ míngtiān yào qù xuéxiào.",
+   "v": "Mai mình phải tới trường."
+  },
+  {
+   "q": "我会＿＿中文。",
+   "a": "说",
+   "o": [
+    "大学",
+    "大学生",
+    "睡觉"
+   ],
+   "p": "Wǒ huì shuō Zhōngwén.",
+   "v": "Mình biết nói tiếng Trung."
+  },
+  {
+   "q": "我要＿＿老师。",
+   "a": "问",
+   "o": [
+    "弟弟",
+    "饭店",
+    "大学生"
+   ],
+   "p": "Wǒ yào wèn lǎoshī.",
+   "v": "Mình muốn hỏi thầy cô."
+  },
+  {
+   "q": "我＿＿了。",
+   "a": "知道",
+   "o": [
+    "要",
+    "饭店",
+    "弟弟"
+   ],
+   "p": "Wǒ zhīdào le.",
+   "v": "Mình hiểu rồi."
+  },
+  {
+   "q": "我姐姐在＿＿工作。",
+   "a": "找",
+   "o": [
+    "小朋友",
+    "起床",
+    "时候"
+   ],
+   "p": "Wǒ jiějie zài zhǎo gōngzuò.",
+   "v": "Chị mình đang tìm việc."
+  },
+  {
+   "q": "我会开＿＿。",
+   "a": "车",
+   "o": [
+    "知道",
+    "医",
+    "睡觉"
+   ],
+   "p": "Wǒ huì kāichē.",
+   "v": "Mình biết lái xe."
+  },
+  {
+   "q": "我会＿＿。",
+   "a": "开车",
+   "o": [
+    "知道",
+    "小朋友",
+    "饭店"
+   ],
+   "p": "Wǒ huì kāichē.",
+   "v": "Mình biết lái xe."
+  },
+  {
+   "q": "我们去＿＿吃饭。",
+   "a": "饭店",
+   "o": [
+    "说",
+    "开车",
+    "知道"
+   ],
+   "p": "Wǒmen qù fàndiàn chīfàn.",
+   "v": "Chúng mình ra nhà hàng ăn."
+  },
+  {
+   "q": "你在＿＿？",
+   "a": "哪里",
+   "o": [
+    "正在",
+    "时候",
+    "问"
+   ],
+   "p": "Nǐ zài nǎli?",
+   "v": "Bạn đang ở đâu đấy?"
+  },
+  {
+   "q": "饭店在＿＿。",
+   "a": "那里",
+   "o": [
+    "车",
+    "弟弟",
+    "睡觉"
+   ],
+   "p": "Fàndiàn zài nàli.",
+   "v": "Nhà hàng ở đằng kia."
+  },
+  {
+   "q": "他是＿＿生。",
+   "a": "医",
+   "o": [
+    "小朋友",
+    "说",
+    "大学生"
+   ],
+   "p": "Tā shì yīshēng.",
+   "v": "Anh ấy là bác sĩ."
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "so": 2,
+ "han": "我叫李文",
+ "sub": "Làm quen · hỏi tên · xin lỗi",
+ "pool": [
+  {
+   "h": "我",
+   "p": "wǒ",
+   "v": "tôi, mình, em, con…",
+   "hv": "NGÃ",
+   "loai": "đại từ nhân xưng"
+  },
+  {
+   "h": "你",
+   "p": "nǐ",
+   "v": "bạn, cậu, anh/chị/em",
+   "hv": "NHĨ",
+   "loai": "đại từ nhân xưng"
+  },
+  {
+   "h": "是",
+   "p": "shì",
+   "v": "là",
+   "hv": "THỊ",
+   "loai": "động từ"
+  },
+  {
+   "h": "叫",
+   "p": "jiào",
+   "v": "tên là; gọi",
+   "hv": "KHIẾU",
+   "loai": "động từ"
+  },
+  {
+   "h": "什么",
+   "p": "shénme",
+   "v": "gì, cái gì",
+   "hv": "THẬP MA",
+   "loai": "đại từ nghi vấn"
+  },
+  {
+   "h": "名字",
+   "p": "míngzi",
+   "v": "tên, tên gọi",
+   "hv": "DANH TỰ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "请问",
+   "p": "qǐngwèn",
+   "v": "xin hỏi, cho hỏi",
+   "hv": "THỈNH VẤN",
+   "loai": "động từ (cụm lịch sự)"
+  },
+  {
+   "h": "认识",
+   "p": "rènshi",
+   "v": "quen, biết (người); nhận mặt chữ",
+   "hv": "NHẬN THỨC",
+   "loai": "động từ"
+  },
+  {
+   "h": "很",
+   "p": "hěn",
+   "v": "rất",
+   "hv": "NGẬN",
+   "loai": "phó từ chỉ mức độ"
+  },
+  {
+   "h": "高兴",
+   "p": "gāoxìng",
+   "v": "vui, vui mừng",
+   "hv": "CAO HƯNG",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "也",
+   "p": "yě",
+   "v": "cũng",
+   "hv": "DÃ",
+   "loai": "phó từ"
+  },
+  {
+   "h": "不",
+   "p": "bù",
+   "v": "không",
+   "hv": "BẤT",
+   "loai": "phó từ phủ định"
+  },
+  {
+   "h": "对不起",
+   "p": "duìbuqǐ",
+   "v": "xin lỗi",
+   "hv": "ĐỐI BẤT KHỞI",
+   "loai": "cụm xin lỗi"
+  },
+  {
+   "h": "没关系",
+   "p": "méi guānxi",
+   "v": "không sao đâu",
+   "hv": "MỘT QUAN HỆ",
+   "loai": "cụm đáp lễ"
+  },
+  {
+   "h": "没事",
+   "p": "méi shì",
+   "v": "không sao, không có gì",
+   "hv": "MỘT SỰ",
+   "loai": "cụm đáp lễ"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "＿＿是学生。",
+   "a": "我",
+   "o": [
+    "高兴",
+    "什么",
+    "很"
+   ],
+   "p": "Wǒ shì xuésheng.",
+   "v": "Mình là học sinh."
+  },
+  {
+   "q": "＿＿是老师。",
+   "a": "你",
+   "o": [
+    "什么",
+    "没事",
+    "不"
+   ],
+   "p": "Nǐ shì lǎoshī.",
+   "v": "Bạn là giáo viên."
+  },
+  {
+   "q": "我＿＿学生。",
+   "a": "是",
+   "o": [
+    "高兴",
+    "你",
+    "什么"
+   ],
+   "p": "Wǒ shì xuésheng.",
+   "v": "Mình là học sinh."
+  },
+  {
+   "q": "我＿＿李文。",
+   "a": "叫",
+   "o": [
+    "没关系",
+    "对不起",
+    "没事"
+   ],
+   "p": "Wǒ jiào Lǐ Wén.",
+   "v": "Mình tên là Lý Văn."
+  },
+  {
+   "q": "你叫＿＿？",
+   "a": "什么",
+   "o": [
+    "是",
+    "对不起",
+    "也"
+   ],
+   "p": "Nǐ jiào shénme?",
+   "v": "Bạn tên gì?"
+  },
+  {
+   "q": "你叫什么＿＿？",
+   "a": "名字",
+   "o": [
+    "请问",
+    "我",
+    "对不起"
+   ],
+   "p": "Nǐ jiào shénme míngzi?",
+   "v": "Bạn tên là gì?"
+  },
+  {
+   "q": "＿＿，你叫什么名字？",
+   "a": "请问",
+   "o": [
+    "我",
+    "认识",
+    "是"
+   ],
+   "p": "Qǐngwèn, nǐ jiào shénme míngzi?",
+   "v": "Cho hỏi, bạn tên là gì?"
+  },
+  {
+   "q": "我＿＿你。",
+   "a": "认识",
+   "o": [
+    "请问",
+    "什么",
+    "名字"
+   ],
+   "p": "Wǒ rènshi nǐ.",
+   "v": "Mình biết bạn mà."
+  },
+  {
+   "q": "我＿＿好。",
+   "a": "很",
+   "o": [
+    "名字",
+    "你",
+    "对不起"
+   ],
+   "p": "Wǒ hěn hǎo.",
+   "v": "Mình khoẻ."
+  },
+  {
+   "q": "很＿＿认识你！",
+   "a": "高兴",
+   "o": [
+    "请问",
+    "什么",
+    "我"
+   ],
+   "p": "Hěn gāoxìng rènshi nǐ!",
+   "v": "Rất vui được làm quen với bạn!"
+  },
+  {
+   "q": "我＿＿是学生。",
+   "a": "也",
+   "o": [
+    "很",
+    "没事",
+    "高兴"
+   ],
+   "p": "Wǒ yě shì xuésheng.",
+   "v": "Mình cũng là học sinh."
+  },
+  {
+   "q": "我＿＿是老师。",
+   "a": "不",
+   "o": [
+    "你",
+    "没事",
+    "没关系"
+   ],
+   "p": "Wǒ bú shì lǎoshī.",
+   "v": "Mình không phải giáo viên."
+  },
+  {
+   "q": "＿＿！我不认识你。",
+   "a": "对不起",
+   "o": [
+    "很",
+    "什么",
+    "叫"
+   ],
+   "p": "Duìbuqǐ! Wǒ bú rènshi nǐ.",
+   "v": "Xin lỗi! Mình không quen bạn."
+  },
+  {
+   "q": "对不起！——＿＿！",
+   "a": "没关系",
+   "o": [
+    "高兴",
+    "很",
+    "什么"
+   ],
+   "p": "Duìbuqǐ! — Méi guānxi!",
+   "v": "Xin lỗi! — Không sao đâu!"
+  },
+  {
+   "q": "对不起！——＿＿！",
+   "a": "没事",
+   "o": [
+    "请问",
+    "是",
+    "我"
+   ],
+   "p": "Duìbuqǐ! — Méi shì!",
+   "v": "Xin lỗi! — Không sao!"
+  }
+ ]
+}

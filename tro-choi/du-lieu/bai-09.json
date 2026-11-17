@@ -1,0 +1,369 @@
+{
+ "so": 9,
+ "han": "我明天上午在学校学习",
+ "sub": "Học tập · giải trí · phương vị",
+ "pool": [
+  {
+   "h": "学习",
+   "p": "xuéxí",
+   "v": "học, học tập",
+   "hv": "HỌC TẬP",
+   "loai": "động từ"
+  },
+  {
+   "h": "读书",
+   "p": "dúshū",
+   "v": "đọc sách; đi học",
+   "hv": "ĐỘC THƯ",
+   "loai": "động từ ly hợp"
+  },
+  {
+   "h": "书",
+   "p": "shū",
+   "v": "sách",
+   "hv": "THƯ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "本",
+   "p": "běn",
+   "v": "quyển (đếm sách vở)",
+   "hv": "BẢN",
+   "loai": "lượng từ"
+  },
+  {
+   "h": "电视",
+   "p": "diànshì",
+   "v": "tivi, truyền hình",
+   "hv": "ĐIỆN THỊ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "唱",
+   "p": "chàng",
+   "v": "hát",
+   "hv": "XƯỚNG",
+   "loai": "động từ"
+  },
+  {
+   "h": "歌",
+   "p": "gē",
+   "v": "bài hát",
+   "hv": "CA",
+   "loai": "danh từ"
+  },
+  {
+   "h": "好听",
+   "p": "hǎotīng",
+   "v": "hay (nghe)",
+   "hv": "HẢO THÍNH",
+   "loai": "hình dung từ"
+  },
+  {
+   "h": "玩",
+   "p": "wán",
+   "v": "chơi, đi chơi",
+   "hv": "NGOẠN",
+   "loai": "động từ"
+  },
+  {
+   "h": "朋友",
+   "p": "péngyou",
+   "v": "bạn, bạn bè",
+   "hv": "BẰNG HỮU",
+   "loai": "danh từ"
+  },
+  {
+   "h": "狗",
+   "p": "gǒu",
+   "v": "con chó",
+   "hv": "CẨU",
+   "loai": "danh từ"
+  },
+  {
+   "h": "椅子",
+   "p": "yǐzi",
+   "v": "cái ghế",
+   "hv": "Ỷ TỬ",
+   "loai": "danh từ"
+  },
+  {
+   "h": "上",
+   "p": "shàng",
+   "v": "trên, ở trên",
+   "hv": "THƯỢNG",
+   "loai": "danh từ"
+  },
+  {
+   "h": "边",
+   "p": "biān",
+   "v": "bên, phía",
+   "hv": "BIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "前边",
+   "p": "qiánbian",
+   "v": "phía trước",
+   "hv": "TIỀN BIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "外边",
+   "p": "wàibian",
+   "v": "bên ngoài",
+   "hv": "NGOẠI BIÊN",
+   "loai": "danh từ"
+  },
+  {
+   "h": "那",
+   "p": "nà",
+   "v": "kia, đó",
+   "hv": "NA",
+   "loai": "đại từ chỉ thị"
+  },
+  {
+   "h": "那个",
+   "p": "nàge",
+   "v": "cái kia, cái đó",
+   "hv": "NA CÁ",
+   "loai": "đại từ chỉ thị"
+  },
+  {
+   "h": "第",
+   "p": "dì",
+   "v": "thứ… (đứng trước số)",
+   "hv": "ĐỆ",
+   "loai": "tiền tố chỉ số thứ tự"
+  },
+  {
+   "h": "白天",
+   "p": "báitiān",
+   "v": "ban ngày",
+   "hv": "BẠCH THIÊN",
+   "loai": "danh từ"
+  }
+ ],
+ "cloze": [
+  {
+   "q": "我＿＿中文。",
+   "a": "学习",
+   "o": [
+    "前边",
+    "电视",
+    "读书"
+   ],
+   "p": "Wǒ xuéxí Zhōngwén.",
+   "v": "Mình học tiếng Trung."
+  },
+  {
+   "q": "我在家＿＿。",
+   "a": "读书",
+   "o": [
+    "那",
+    "第",
+    "好听"
+   ],
+   "p": "Wǒ zài jiā dúshū.",
+   "v": "Mình đọc sách ở nhà."
+  },
+  {
+   "q": "桌子上有一本＿＿。",
+   "a": "书",
+   "o": [
+    "唱",
+    "学习",
+    "第"
+   ],
+   "p": "Zhuōzi shang yǒu yì běn shū.",
+   "v": "Trên bàn có một quyển sách."
+  },
+  {
+   "q": "我有一＿＿书。",
+   "a": "本",
+   "o": [
+    "白天",
+    "电视",
+    "第"
+   ],
+   "p": "Wǒ yǒu yì běn shū.",
+   "v": "Mình có một quyển sách."
+  },
+  {
+   "q": "我晚上看＿＿。",
+   "a": "电视",
+   "o": [
+    "本",
+    "读书",
+    "唱"
+   ],
+   "p": "Wǒ wǎnshang kàn diànshì.",
+   "v": "Buổi tối mình xem tivi."
+  },
+  {
+   "q": "我喜欢＿＿歌。",
+   "a": "唱",
+   "o": [
+    "好听",
+    "狗",
+    "读书"
+   ],
+   "p": "Wǒ xǐhuan chànggē.",
+   "v": "Mình thích hát."
+  },
+  {
+   "q": "我们唱＿＿吧！",
+   "a": "歌",
+   "o": [
+    "那",
+    "好听",
+    "本"
+   ],
+   "p": "Wǒmen chànggē ba!",
+   "v": "Mình hát đi!"
+  },
+  {
+   "q": "那个歌很＿＿。",
+   "a": "好听",
+   "o": [
+    "边",
+    "读书",
+    "第"
+   ],
+   "p": "Nàge gē hěn hǎotīng.",
+   "v": "Bài hát kia hay lắm."
+  },
+  {
+   "q": "我和朋友＿＿。",
+   "a": "玩",
+   "o": [
+    "前边",
+    "电视",
+    "边"
+   ],
+   "p": "Wǒ hé péngyou wán.",
+   "v": "Mình đi chơi với bạn."
+  },
+  {
+   "q": "他是我的＿＿。",
+   "a": "朋友",
+   "o": [
+    "那",
+    "玩",
+    "那个"
+   ],
+   "p": "Tā shì wǒ de péngyou.",
+   "v": "Cậu ấy là bạn mình."
+  },
+  {
+   "q": "我家有一只＿＿。",
+   "a": "狗",
+   "o": [
+    "学习",
+    "那",
+    "第"
+   ],
+   "p": "Wǒ jiā yǒu yì zhī gǒu.",
+   "v": "Nhà mình nuôi một con chó."
+  },
+  {
+   "q": "房间里有一个＿＿。",
+   "a": "椅子",
+   "o": [
+    "玩",
+    "读书",
+    "第"
+   ],
+   "p": "Fángjiān li yǒu yí ge yǐzi.",
+   "v": "Trong phòng có một cái ghế."
+  },
+  {
+   "q": "书在桌子＿＿。",
+   "a": "上",
+   "o": [
+    "唱",
+    "好听",
+    "本"
+   ],
+   "p": "Shū zài zhuōzi shang.",
+   "v": "Sách ở trên bàn."
+  },
+  {
+   "q": "医院在学校前＿＿。",
+   "a": "边",
+   "o": [
+    "唱",
+    "读书",
+    "那个"
+   ],
+   "p": "Yīyuàn zài xuéxiào qiánbian.",
+   "v": "Bệnh viện ở phía trước trường."
+  },
+  {
+   "q": "书店在＿＿。",
+   "a": "前边",
+   "o": [
+    "唱",
+    "第",
+    "好听"
+   ],
+   "p": "Shūdiàn zài qiánbian.",
+   "v": "Hiệu sách ở phía trước."
+  },
+  {
+   "q": "他在＿＿。",
+   "a": "外边",
+   "o": [
+    "第",
+    "好听",
+    "本"
+   ],
+   "p": "Tā zài wàibian.",
+   "v": "Cậu ấy ở ngoài."
+  },
+  {
+   "q": "＿＿是我的狗。",
+   "a": "那",
+   "o": [
+    "书",
+    "前边",
+    "读书"
+   ],
+   "p": "Nà shì wǒ de gǒu.",
+   "v": "Kia là con chó nhà mình."
+  },
+  {
+   "q": "＿＿人是我朋友。",
+   "a": "那个",
+   "o": [
+    "歌",
+    "上",
+    "外边"
+   ],
+   "p": "Nàge rén shì wǒ péngyou.",
+   "v": "Người kia là bạn mình."
+  },
+  {
+   "q": "这是＿＿一。",
+   "a": "第",
+   "o": [
+    "外边",
+    "前边",
+    "好听"
+   ],
+   "p": "Zhè shì dì-yī.",
+   "v": "Đây là cái thứ nhất."
+  },
+  {
+   "q": "我＿＿工作。",
+   "a": "白天",
+   "o": [
+    "本",
+    "那个",
+    "唱"
+   ],
+   "p": "Wǒ báitiān gōngzuò.",
+   "v": "Ban ngày mình đi làm."
+  }
+ ]
+}
